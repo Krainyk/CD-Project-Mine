@@ -5,7 +5,7 @@
     color: white;
     padding: 200px;
 }
-
+/*--------------------HERO--------------------*/
 .hero-section {
     display: flex;
     flex-direction: column;
@@ -75,7 +75,7 @@
     width: 36px;
     height: 36px;
 }
-
+/*--------------------FEATURES--------------------*/
 .features-section {
     padding: 50px 0;
     text-align: center;
