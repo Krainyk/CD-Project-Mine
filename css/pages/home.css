@@ -6,6 +6,8 @@
     padding: 200px;
 }
 
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------- */
 /*--------------------HERO--------------------*/
 .hero-section {
     display: flex;
@@ -77,6 +79,8 @@
     height: 36px;
 }
 
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------- */
 /*--------------------FEATURES--------------------*/
 .features-section {
     padding: 50px 0;
@@ -147,6 +151,8 @@
     margin-top: auto;
 }
 
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------- */
 /*--------------------COMPATIBILITY-SECTION--------------------*/
 .compatibility-section {
     padding: 50px 0;
@@ -294,5 +300,145 @@
 }
 
 .iris:hover {
+    filter: drop-shadow(0 0 8px currentColor);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------- */
+/*--------------------POPULAR MODS SECTION--------------------*/
+.popular-mods-section {
+    padding: 50px 0;
+    /* text-align: center; */
+    margin-top: 300px;
+}
+
+/*--------------------SECTION TITLE--------------------*/
+.popular-mods-section h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    background: linear-gradient(to right,
+            #b3aaff,
+            #c4caff);
+
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.popular-mods-section p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.3rem;
+    color: #d1d9e6;
+
+    margin-top: 10px;
+}
+
+/*--------------------CARDS CONTAINER--------------------*/
+.pop-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 90px;
+    margin-top: 100px;
+}
+
+/*--------------------MOD CARD--------------------*/
+.pop-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 330px;
+    width: 300px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+    background-color: #0b1120;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    transition: all 0.3s ease;
+}
+
+.pop-card:hover {
+    border-color: #a855f7;
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.15);
+}
+
+/*--------------------CARD TEXT--------------------*/
+.pop-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #FAEBD7;
+}
+
+.pop-card p {
+    color: #d1d9e6;
+    font-size: 1.2rem;
+
+    margin-top: 30px;
+}
+
+/*--------------------MOD LOADER--------------------*/
+.mini-mod-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #4B53D3;
+    background-color: #2A224D;
+
+    border-radius: 20px;
+    padding: 12px 18px;
+}
+
+.mini-mod-loader h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    margin: 0;
+
+    letter-spacing: 1px;
+}
+
+/*--------------------MOD RATING--------------------*/
+.mod-rating {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+
+    color: #ffcc33;
+
+    margin-top: 20px;
+}
+
+/*--------------------ICONS--------------------*/
+.pop-icon {
+    width: 36px;
+    height: 36px;
+}
+
+/*--------------------ICON COLORS--------------------*/
+.create {
+    color: #ffb84d;
+}
+
+.jei {
+    color: #c084fc;
+}
+
+/*--------------------ICON HOVER--------------------*/
+.create:hover,
+.jei:hover {
     filter: drop-shadow(0 0 8px currentColor);
 }
