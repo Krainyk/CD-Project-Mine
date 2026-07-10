@@ -573,7 +573,7 @@
     -webkit-background-clip: text;
 }
 
-.soon-section > p {
+.soon-section>p {
     display: flex;
     justify-content: center;
     align-items: center;
