@@ -44,8 +44,110 @@
         <a class="desktop-btn" href="#"> Sign In</a>
     </nav>
 
-    <main>
-        <h1 style="padding-top: 750px; color: white;">Welcome to CD Project Mine</h1>
+    <main class="main-content">
+        <section class="disc-hero-section">
+            <h1>CDPM Mod Catalog</h1>
+            <h2 class="main-title">
+                <span class="text-light">Discover</span>
+                <span class="text-gradient">Minecraft Mods</span>
+            </h2>
+            <p>Explore optimization, magic, RPG, tech, and utility mods. Find the perfect additions for your world.</p>
+
+            <div class="input-container">
+                <svg class="search-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
+                    stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" class="mod-search" placeholder="Search mods, loaders or versions...">
+            </div>
+
+            <div class="devider-container"></div>
+        </section>
+
+        <section class="mods-section">
+            <aside class="mod-filter">
+                <div class="filter-header">
+                    <div class="filter-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="4 4 20 4 14 13 14 20 10 20 10 13"></polygon>
+                        </svg>
+                    </div>
+
+                    <div class="filter-text">
+                        <h2>Filters</h2>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h2>Loader</h2>
+                    <input type="checkbox" id="forge" value="forge">
+                    <label for="forge" class="forge-option"> Forge</label>
+                    <input type="checkbox" id="fabric" value="fabric">
+                    <label for="fabric" class="fabric-option"> Fabric</label>
+                    <input type="checkbox" id="neoforge" value="neoforge">
+                    <label for="neoforge" class="neoforge-option"> NeoForge</label>
+                </div>
+
+                <div class="filter-group">
+                    <h2>Version</h2>
+                    <input type="checkbox" id="version-1201" value="1.20.1">
+                    <label for="version-1201" class="version-1201-option"> 1.20.1</label>
+                    <input type="checkbox" id="version-121" value="1.21">
+                    <label for="version-121" class="version-121-option"> 1.21</label>
+                    <input type="checkbox" id="version-1192" value="1.19.2">
+                    <label for="version-1192" class="version-1192-option"> 1.19.2</label>
+                </div>
+
+                <div class="filter-group">
+                    <h2>Categories</h2>
+                    <input type="checkbox" id="optimization" value="optimization">
+                    <label for="optimization" class="optimization-option"> Optimization</label>
+                    <input type="checkbox" id="magic" value="magic">
+                    <label for="magic" class="magic-option"> Magic</label>
+                    <input type="checkbox" id="rpg" value="rpg">
+                    <label for="rpg" class="rpg-option"> RPG</label>
+                    <input type="checkbox" id="technology" value="technology">
+                    <label for="technology" class="technology-option"> Technology</label>
+                    <input type="checkbox" id="adventure" value="adventure">
+                    <label for="adventure" class="adventure-option"> Adventure</label>
+                    <input type="checkbox" id="utility" value="utility">
+                    <label for="utility" class="utility-option"> Utility</label>
+                </div>
+
+                <div class="filter-group">
+                    <h2>Sort by</h2>
+                    <input type="radio" id="most-popular" value="most-popular" name="sort">
+                    <label for="most-popular" class="most-popular-option"> Most Popular</label>
+                    <input type="radio" id="trending" value="trending" name="sort">
+                    <label for="trending" class="trending-option"> Trending</label>
+                    <input type="radio" id="newest" value="newest" name="sort">
+                    <label for="newest" class="newest-option"> Newest</label>
+                    <input type="radio" id="best-rated" value="best-rated" name="sort">
+                    <label for="best-rated" class="best-rated-option"> Best Rated</label>
+                </div>
+
+                <button class="clear-btn"> Clear filters</button>
+            </aside>
+
+            <!-- <section class="mods">
+                <div class="trend-mods">
+                    <div class="trend-icon">
+                        <svg class="icon-trending" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
+                            stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2 C 12 2, 7 8.5, 7 13 A 5 5 0 0 0 17 13 C 17 8.5, 12 2, 12 2 Z"></path>
+                            <path d="M12 10 C 11 12, 11 14, 12 15 C 13 14, 13 12, 12 10 Z"></path>
+                        </svg>
+                    </div>
+
+                    <div class="trend-text">
+                        <h1>TRENDING MODS</h1>
+                    </div>
+                </div>
+            </section> -->
+
+        </section>
     </main>
 
     <footer class="main-footer">
