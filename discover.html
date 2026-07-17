@@ -33,7 +33,7 @@
         </div>
 
         <ul class="nav-list" id="nav-list">
-            <li><a class="nav-link" href="discover.html">Discover</a></li>
+            <li><a class="nav-link nav-link-active" href="discover.html">Discover</a></li>
             <li><a class="nav-link" href="compatibility.html">Compatibility</a></li>
             <li><a class="nav-link" href="modpacks.html">Modpacks</a></li>
             <li><a class="nav-link" href="hosting.html">Hosting</a></li>
@@ -131,22 +131,168 @@
                 <button class="clear-btn"> Clear filters</button>
             </aside>
 
-            <!-- <section class="mods">
+            <section class="mods">
                 <div class="trend-mods">
-                    <div class="trend-icon">
-                        <svg class="icon-trending" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
-                            stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2 C 12 2, 7 8.5, 7 13 A 5 5 0 0 0 17 13 C 17 8.5, 12 2, 12 2 Z"></path>
-                            <path d="M12 10 C 11 12, 11 14, 12 15 C 13 14, 13 12, 12 10 Z"></path>
+                    <div class="trend-header">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 17 9 11 13 15 21 7"></polyline>
+                            <polyline points="14 7 21 7 21 14"></polyline>
                         </svg>
+                        <h2>Trending mods</h2>
+                        <div class="trend-line"></div>
                     </div>
 
-                    <div class="trend-text">
-                        <h1>TRENDING MODS</h1>
+                    <div class="trend-container">
+                        <div class="trend-card trend-sodi">
+                            <div class="trend-card-header">
+                                <div class="trend-card-icon">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
+                                        stroke-width="2" fill="none">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <line x1="12" y1="2" x2="12" y2="22"></line>
+                                        <path d="M20.7 7l-9 15.6M3.3 7l9 15.6M12 2l9.5 5.5v11L12 22 2.5 18.5V7.5L12 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+
+                                <div class="trend-card-text">
+                                    <h2>Sodium</h2>
+                                    <p>Optimization</p>
+                                </div>
+                            </div>
+
+                            <div class="trend-card-info">
+                                <div class="trend-card-desc">
+                                    Modern rendering engine and...
+                                    <!-- Modern rendering engine and optimization mod that dramatically improves frame
+                                    rates... -->
+                                </div>
+
+                                <div class="trend-card-rate">
+                                    <svg class="trend-rate" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                        </polygon>
+                                    </svg>
+                                    <h3>9.8</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-card trend-iris">
+                            <div class="trend-card-header">
+                                <div class="trend-card-icon">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
+                                        stroke-width="2" fill="none">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <line x1="14.31" y1="8" x2="20.5" y2="3.5"></line>
+                                        <line x1="16" y1="12" x2="22" y2="12"></line>
+                                        <line x1="14.31" y1="16" x2="20.5" y2="20.5"></line>
+                                        <line x1="9.69" y1="16" x2="3.5" y2="20.5"></line>
+                                        <line x1="8" y1="12" x2="2" y2="12"></line>
+                                        <line x1="9.69" y1="8" x2="3.5" y2="3.5"></line>
+                                    </svg>
+                                </div>
+
+                                <div class="trend-card-text">
+                                    <h2>Iris Shaders</h2>
+                                    <p>Optimization</p>
+                                </div>
+                            </div>
+
+                            <div class="trend-card-info">
+                                <div class="trend-card-desc">
+                                    Shader support for Fabric Mine...
+                                    <!-- Shader support for Fabric Minecraft with full OptiFine shader pack compatibility... -->
+                                </div>
+
+                                <div class="trend-card-rate">
+                                    <svg class="trend-rate" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                        </polygon>
+                                    </svg>
+                                    <h3>9.5</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-card trend-create">
+                            <div class="trend-card-header">
+                                <div class="trend-card-icon">
+                                    <svg class="" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
+                                        stroke-width="2" fill="none">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <line x1="12" y1="2" x2="12" y2="22"></line>
+                                        <path d="M20.7 7l-9 15.6M3.3 7l9 15.6M12 2l9.5 5.5v11L12 22 2.5 18.5V7.5L12 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+
+                                <div class="trend-card-text">
+                                    <h2>Create</h2>
+                                    <p>Technology</p>
+                                </div>
+                            </div>
+
+                            <div class="trend-card-info">
+                                <div class="trend-card-desc">
+                                    Adds mechanical contraptions...
+                                    <!-- Adds mechanical contraptions, automation, and kinetic machinery to your world... -->
+                                </div>
+
+                                <div class="trend-card-rate">
+                                    <svg class="trend-rate" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                        </polygon>
+                                    </svg>
+                                    <h3>9.9</h3>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section> -->
 
+                <div class="compatibility-checker-offer">
+                    <div class="offer-container">
+                        <div class="offer-wrapper">
+                            <div class="offer-icon-wrapper">
+                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 3 H19 V14 L12 21 L5 14 Z"></path>
+
+                                    <path d="M5 7 H19"></path>
+
+                                    <path d="M10 7 V19 M14 7 V19"></path>
+                                </svg>
+                            </div>
+                            <div class="offer-text">
+                                <h3>Not sure if your mods work together?</h3>
+                                <p>Instantly detect conflicts, find alternatives, and analyze crash logs.</p>
+                            </div>
+                        </div>
+
+                        <a class="offer-link" href="compatibility.html">
+                            <h3>Open Compatibility Checker</h3>
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
+                                stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+            </section>
         </section>
     </main>
 

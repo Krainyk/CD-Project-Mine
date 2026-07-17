@@ -142,7 +142,8 @@
 ========================================== */
 
 .mods-section {
-    /* border: 1px solid red; */
+    display: flex;
+    column-gap: 40px;
 }
 
 
@@ -249,7 +250,7 @@
    COMMON ACTIVE STATE
 ========================================== */
 
-input:checked + label {
+input:checked+label {
     border-radius: 12px;
     transform: translateY(-2px);
 }
@@ -259,36 +260,36 @@ input:checked + label {
    PURPLE VARIANTS
 ========================================== */
 
-input#forge:checked + .forge-option,
-input#version-1201:checked + .version-1201-option,
-input#version-121:checked + .version-121-option,
-input#version-1192:checked + .version-1192-option {
+input#forge:checked+.forge-option,
+input#version-1201:checked+.version-1201-option,
+input#version-121:checked+.version-121-option,
+input#version-1192:checked+.version-1192-option {
     color: #c441ff;
     border-color: #3d1a78;
     background-color: #171126;
     text-shadow: 0 0 8px rgba(196, 65, 255, 0.4);
 }
 
-input#magic:checked + .magic-option,
-input#adventure:checked + .adventure-option {
+input#magic:checked+.magic-option,
+input#adventure:checked+.adventure-option {
     color: #c441ff;
     border-color: #551a7a;
     background-color: #1c1129;
     text-shadow: 0 0 8px rgba(196, 65, 255, 0.4);
 }
 
-input#rpg:checked + .rpg-option,
-input#utility:checked + .utility-option {
+input#rpg:checked+.rpg-option,
+input#utility:checked+.utility-option {
     color: #c441ff;
     border-color: #3d1a78;
     background-color: #171126;
     text-shadow: 0 0 8px rgba(196, 65, 255, 0.4);
 }
 
-input#most-popular:checked + .most-popular-option,
-input#trending:checked + .trending-option,
-input#newest:checked + .newest-option,
-input#best-rated:checked + .best-rated-option {
+input#most-popular:checked+.most-popular-option,
+input#trending:checked+.trending-option,
+input#newest:checked+.newest-option,
+input#best-rated:checked+.best-rated-option {
     color: #c441ff;
     border-color: #3d1a78;
     background-color: #171126;
@@ -300,9 +301,9 @@ input#best-rated:checked + .best-rated-option {
    CYAN VARIANTS
 ========================================== */
 
-input#fabric:checked + .fabric-option,
-input#optimization:checked + .optimization-option,
-input#technology:checked + .technology-option {
+input#fabric:checked+.fabric-option,
+input#optimization:checked+.optimization-option,
+input#technology:checked+.technology-option {
     color: #00e5ff;
     border-color: #006675;
     background-color: #12262b;
@@ -314,7 +315,7 @@ input#technology:checked + .technology-option {
    VIOLET VARIANTS
 ========================================== */
 
-input#neoforge:checked + .neoforge-option {
+input#neoforge:checked+.neoforge-option {
     color: #8a4fff;
     border-color: #3d1a78;
     background-color: #171126;
@@ -326,28 +327,28 @@ input#neoforge:checked + .neoforge-option {
    STATUS DOTS
 ========================================== */
 
-input#fabric:checked + label::after,
-input#optimization:checked + label::after,
-input#technology:checked + label::after {
+input#fabric:checked+label::after,
+input#optimization:checked+label::after,
+input#technology:checked+label::after {
     background-color: #00e5ff;
 }
 
-input#forge:checked + label::after,
-input#magic:checked + label::after,
-input#adventure:checked + label::after {
+input#forge:checked+label::after,
+input#magic:checked+label::after,
+input#adventure:checked+label::after {
     background-color: #c441ff;
 }
 
-input#neoforge:checked + label::after,
-input#version-1201:checked + label::after,
-input#version-121:checked + label::after,
-input#version-1192:checked + label::after,
-input#rpg:checked + label::after,
-input#utility:checked + label::after,
-input#most-popular:checked + label::after,
-input#trending:checked + label::after,
-input#newest:checked + label::after,
-input#best-rated:checked + label::after {
+input#neoforge:checked+label::after,
+input#version-1201:checked+label::after,
+input#version-121:checked+label::after,
+input#version-1192:checked+label::after,
+input#rpg:checked+label::after,
+input#utility:checked+label::after,
+input#most-popular:checked+label::after,
+input#trending:checked+label::after,
+input#newest:checked+label::after,
+input#best-rated:checked+label::after {
     background-color: #8a4fff;
 }
 
@@ -392,4 +393,210 @@ input[type="radio"] {
     border: 1px solid #464356;
 
     transform: translateY(-1px);
+}
+
+
+
+
+
+
+
+.mods {
+    /* border: 1px solid blue; */
+}
+
+.trend-mods {
+    /* border: 1px solid blue; */
+    width: 1110px
+}
+
+.trend-header {
+    display: flex;
+}
+
+.trend-header svg {
+    margin: 20px 12px;
+    width: 30px;
+    height: 30px;
+    color: #a64dff;
+    filter: drop-shadow(0 0 4px rgba(166, 77, 255, 0.4));
+}
+
+.trend-header h2 {
+    color: #e8e4f2;
+}
+
+.trend-line {
+    flex: 1;
+    height: 1px;
+    margin: 32px 16px;
+    background: linear-gradient(to right, #4a2273, transparent);
+}
+
+.trend-container {
+    display: flex;
+    column-gap: 15px;
+}
+
+.trend-card {
+    width: 360px;
+    height: 170px;
+    border-radius: 16px;
+}
+
+.trend-card-header {
+    display: flex;
+    margin: 10px;
+}
+
+.trend-card-icon svg {
+    margin: 20px 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.trend-card-text h2 {
+    color: #e8e4f2;
+    margin-bottom: 2px;
+}
+
+.trend-card-text p {
+    color: #888888;
+    font-size: 0.8rem;
+}
+
+.trend-card-info {
+    display: flex;
+    align-items: center;
+}
+
+.trend-card-desc {
+    color: #888888;
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+.trend-card-rate {
+    display: flex;
+    margin-left: 25px;
+}
+
+.trend-rate {
+    color: yellow;
+    width: 20px;
+    height: 20px;
+    margin: 20px 10px;
+}
+
+.trend-sodi {
+    border: 1px solid rgba(0, 229, 255, 0.15);
+    background: radial-gradient(circle at top left, rgba(0, 229, 255, 0.12), transparent 65%), #14101b;
+}
+
+.trend-iris {
+    border: 1px solid rgba(196, 65, 255, 0.15);
+    background: radial-gradient(circle at top left, rgba(196, 65, 255, 0.12), transparent 65%), #14101b;
+}
+
+.trend-create {
+    border: 1px solid rgba(138, 79, 255, 0.15);
+    background: radial-gradient(circle at top left, rgba(138, 79, 255, 0.12), transparent 65%), #14101b;
+}
+
+.trend-sodi,
+.trend-iris,
+.trend-create {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.trend-sodi:hover {
+    background: radial-gradient(circle at top left, rgba(0, 229, 255, 0.2), transparent 70%), #14101b;
+    border-color: rgba(0, 229, 255, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 229, 255, 0.15);
+}
+
+.trend-iris:hover {
+    background: radial-gradient(circle at top left, rgba(196, 65, 255, 0.2), transparent 70%), #14101b;
+    border-color: rgba(196, 65, 255, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(196, 65, 255, 0.15);
+}
+
+.trend-create:hover {
+    background: radial-gradient(circle at top left, rgba(138, 79, 255, 0.2), transparent 70%), #14101b;
+    border-color: rgba(138, 79, 255, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(138, 79, 255, 0.15);
+}
+
+
+.compatibility-checker-offer {
+    margin-top: 35px;
+}
+
+.offer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1110px;
+    height: 110px;
+    background:
+        radial-gradient(circle at 5% 50%, rgba(138, 79, 255, 0.12), transparent 30%),
+        radial-gradient(circle at 95% 50%, rgba(196, 65, 255, 0.15), transparent 40%), #14101b;
+    border: 1px solid rgba(138, 79, 255, 0.15);
+    border-radius: 16px;
+}
+
+.offer-wrapper {
+    display: flex;
+}
+
+.offer-icon-wrapper svg {
+    width: 48px;
+    height: 48px;
+    margin: 30px 32px;
+    border-radius: 12px;
+    color: #00e5ff;
+    filter: drop-shadow(0 0 6px rgba(0, 229, 255, 0.5));
+    background-color: rgba(138, 79, 255, 0.08);
+    border: 1px solid rgba(138, 79, 255, 0.25);
+}
+
+.offer-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 230px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: 40px;
+    column-gap: 10px;
+    background-color: #a64dff;
+    color: #ffffff;
+    border: none;
+    border-radius: 16px;
+    /* box-shadow:
+        0 4px 15px rgba(166, 77, 255, 0.4),
+        0 0 30px rgba(166, 77, 255, 0.2); */
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.offer-link:hover {
+    transform: scale(1.02);
+    box-shadow:
+        0 4px 15px rgba(166, 77, 255, 0.4),
+        0 0 30px rgba(166, 77, 255, 0.2);
+}
+
+.offer-link h3 {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.offer-link svg {
+    font-weight: normal;
 }
