@@ -532,11 +532,11 @@ input[type="radio"] {
 }
 
 
-.compatibility-checker-offer {
+.compatibility-checker-banner {
     margin-top: 35px;
 }
 
-.offer-container {
+.banner-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -549,11 +549,11 @@ input[type="radio"] {
     border-radius: 16px;
 }
 
-.offer-wrapper {
+.banner-wrapper {
     display: flex;
 }
 
-.offer-icon-wrapper svg {
+.banner-icon-wrapper svg {
     width: 48px;
     height: 48px;
     margin: 30px 32px;
@@ -564,7 +564,7 @@ input[type="radio"] {
     border: 1px solid rgba(138, 79, 255, 0.25);
 }
 
-.offer-link {
+.banner-link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -585,18 +585,18 @@ input[type="radio"] {
         box-shadow 0.3s ease;
 }
 
-.offer-link:hover {
+.banner-link:hover {
     transform: scale(1.02);
     box-shadow:
         0 4px 15px rgba(166, 77, 255, 0.4),
         0 0 30px rgba(166, 77, 255, 0.2);
 }
 
-.offer-link h3 {
+.banner-link h3 {
     font-size: 1rem;
     font-weight: normal;
 }
 
-.offer-link svg {
+.banner-link svg {
     font-weight: normal;
 }
