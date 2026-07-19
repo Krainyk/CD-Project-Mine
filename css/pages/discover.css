@@ -401,12 +401,9 @@ input[type="radio"] {
 
 
 
-.mods {
-    /* border: 1px solid blue; */
-}
+.mods {}
 
 .trend-mods {
-    /* border: 1px solid blue; */
     width: 1110px
 }
 
@@ -612,39 +609,47 @@ input[type="radio"] {
 
 
 
-/* .all-mods {
+.all-mods {
     margin-top: 60px;
 }
 
 .mod-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
     width: 360px;
-    height: 170px;
+    height: 190px;
     border-radius: 16px;
     background-color: #0b1120;
     border: 1px solid rgba(255, 255, 255, 0.05);
-} */
+    cursor: pointer;
+    transition: border-color 0.3s ease,
+        transform 0.3s ease;
+}
 
-/* .mod-card-main {
-    /* display: flex;
-    justify-content: space-between;
-    align-items: flex-start; */
-} */
+.mod-card:hover {
+    border-color: #004d59;
+    transform: scale(1.02);
+}
 
-/* .mod-card-wrapper {
+.mod-card-main {}
+
+.mod-card-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 22px;
+    gap: 1rem;
 }
 
 .mod-card-icon {
-    /* width: 52px;
+    width: 52px;
     height: 52px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 12px;
-    margin-left: 10px;
+    margin-left: 20px;
     padding: 8px;
     background: #132636;
     border: 1px solid #0f6d8d;
@@ -656,6 +661,8 @@ input[type="radio"] {
     color: #00e5ff;
 }
 
+.mod-card-info {}
+
 .mod-title {
     font-size: 1.1rem;
     margin-top: 18px;
@@ -666,4 +673,96 @@ input[type="radio"] {
     color: #888888;
     font-size: 0.8rem;
     margin-top: 10px;
-} */
+    margin-bottom: 10px;
+}
+
+.mod-card-tags {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+    margin-left: 1.3rem;
+    font-size: 0.8rem;
+}
+
+.tag {
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.4rem;
+    border-radius: 10px;
+}
+
+.loader-tag {}
+
+.loader-fabric {
+    color: #00e5ff;
+    border-color: #006675;
+    background-color: #12262b;
+    text-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
+}
+
+.version-tag {
+    color: #c441ff;
+    border-color: #3d1a78;
+    background-color: #171126;
+    text-shadow: 0 0 8px rgba(196, 65, 255, 0.4);
+}
+
+.category-tag {
+    color: #8a4fff;
+    border-color: #3d1a78;
+    background-color: #171126;
+    text-shadow: 0 0 8px rgba(138, 79, 255, 0.4);
+}
+
+.mod-card-divider {
+    height: 1px;
+    width: 85%;
+    background-color: rgba(255, 255, 255, 0.05);
+    margin-top: 12px;
+    margin-left: 25px;
+}
+
+.mod-card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    gap: 12rem;
+}
+
+.mod-card-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.rate-card {
+    height: 1.3rem;
+    width: 1.3rem;
+    color: yellow;
+}
+
+.rating-value {
+    font-size: 0.85rem;
+}
+
+.mod-card-downloads {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.download-icon {
+    height: 1.3rem;
+    width: 1.3rem;
+    color: #8c8c96;
+}
+
+.download-count {
+    color: #8c8c96;
+    font-size: 0.8rem;
+}

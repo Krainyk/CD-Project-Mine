@@ -171,7 +171,7 @@
 
                                 <div class="trend-card-rate">
                                     <svg class="trend-rate" viewBox="0 0 24 24" width="24" height="24"
-                                        stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                                        stroke="currentColor" stroke-width="2" fill="currentColor" stroke-linecap="round"
                                         stroke-linejoin="round">
                                         <polygon
                                             points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
@@ -212,7 +212,7 @@
 
                                 <div class="trend-card-rate">
                                     <svg class="trend-rate" viewBox="0 0 24 24" width="24" height="24"
-                                        stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                                        stroke="currentColor" stroke-width="2" fill="currentColor" stroke-linecap="round"
                                         stroke-linejoin="round">
                                         <polygon
                                             points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
@@ -249,7 +249,7 @@
 
                                 <div class="trend-card-rate">
                                     <svg class="trend-rate" viewBox="0 0 24 24" width="24" height="24"
-                                        stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                                        stroke="currentColor" stroke-width="2" fill="currentColor" stroke-linecap="round"
                                         stroke-linejoin="round">
                                         <polygon
                                             points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
@@ -266,8 +266,9 @@
                     <div class="banner-container">
                         <div class="banner-wrapper">
                             <div class="banner-icon-wrapper">
-                                <svg class="banner-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
-                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <svg class="banner-icon" viewBox="0 0 24 24" width="24" height="24"
+                                    stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                                    stroke-linejoin="round">
                                     <path d="M5 3 H19 V14 L12 21 L5 14 Z"></path>
 
                                     <path d="M5 7 H19"></path>
@@ -295,12 +296,12 @@
 
                 <section class="all-mods">
                     <h2>All mods</h2>
-                    <div class="mod-card">
+                    <a href="mod.html" class="mod-card">
                         <div class="mod-card-main">
                             <div class="mod-card-wrapper">
                                 <div class="mod-card-icon">
-                                    <svg class="mod-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
-                                        stroke-width="2" fill="none">
+                                    <svg class="mod-icon" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="none">
                                         <circle cx="12" cy="12" r="3"></circle>
                                         <line x1="12" y1="2" x2="12" y2="22"></line>
                                         <path d="M20.7 7l-9 15.6M3.3 7l9 15.6M12 2l9.5 5.5v11L12 22 2.5 18.5V7.5L12 2z">
@@ -316,7 +317,7 @@
                             </div>
 
                             <div class="mod-card-tags">
-                                <span class="tag loader-tag">Fabric</span>
+                                <span class="tag loader-tag loader-fabric">Fabric</span>
                                 <span class="tag version-tag">1.20.1</span>
                                 <span class="tag category-tag">Optimization</span>
                             </div>
@@ -327,16 +328,27 @@
 
                         <div class="mod-card-footer">
                             <div class="mod-card-rating">
-                                <!-- SVG -->
+                                <svg class="rate-card" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
+                                    stroke-width="2" fill="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg> 
                                 <span class="rating-value">9.8</span>
                             </div>
 
                             <div class="mod-card-downloads">
-                                <!-- SVG -->
+                                <svg class="download-icon" viewBox="0 0 24 24" width="24" height="24"
+                                    stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg> 
                                 <span class="download-count">12.4M</span>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </section>
 
             </section>
