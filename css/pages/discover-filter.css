@@ -1,0 +1,247 @@
+/* ==========================================
+   FILTER PANEL
+========================================== */
+
+.mod-filter {
+    width: 280px;
+    height: 1120px;
+
+    background-color: #0b1120;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+
+    /* padding: 20px 50px; */
+}
+
+
+/* ==========================================
+   FILTER HEADER
+========================================== */
+
+.filter-header {
+    display: flex;
+    align-items: center;
+
+    column-gap: 15px;
+
+    margin-top: 10px;
+    margin-left: 15px;
+
+    /* justify-content: center; */
+}
+
+.filter-icon svg {
+    width: 25px;
+    height: 25px;
+
+    color: #8b5cf6;
+}
+
+.filter-text h2 {
+    font-size: 1.1rem;
+    color: #e8e4f2;
+}
+
+
+/* ==========================================
+   FILTER GROUP
+========================================== */
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group h2 {
+    margin-left: 15px;
+
+    font-size: 1rem;
+    color: #6a6775;
+}
+
+.filter-group label {
+    position: relative;
+
+    margin: 2px 30px;
+    padding: 12px 18px;
+
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #888888;
+
+    cursor: pointer;
+
+    border: 1px solid transparent;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease,
+        background-color 0.3s ease,
+        text-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.filter-group label::after {
+    content: "";
+
+    position: absolute;
+    top: 40%;
+    right: 10%;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    transition: background-color 0.3s ease;
+}
+
+
+/* ==========================================
+   COMMON ACTIVE STATE
+========================================== */
+
+input:checked+label {
+    border-radius: 12px;
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   PURPLE VARIANTS
+========================================== */
+
+input#forge:checked+.forge-option,
+input#version-1201:checked+.version-1201-option,
+input#version-121:checked+.version-121-option,
+input#version-1192:checked+.version-1192-option {
+    color: #c441ff;
+    border-color: #3d1a78;
+    background-color: #171126;
+    text-shadow: 0 0 8px rgba(196, 65, 255, 0.4);
+}
+
+input#magic:checked+.magic-option,
+input#adventure:checked+.adventure-option {
+    color: #c441ff;
+    border-color: #551a7a;
+    background-color: #1c1129;
+    text-shadow: 0 0 8px rgba(196, 65, 255, 0.4);
+}
+
+input#rpg:checked+.rpg-option,
+input#utility:checked+.utility-option {
+    color: #c441ff;
+    border-color: #3d1a78;
+    background-color: #171126;
+    text-shadow: 0 0 8px rgba(196, 65, 255, 0.4);
+}
+
+input#most-popular:checked+.most-popular-option,
+input#trending:checked+.trending-option,
+input#newest:checked+.newest-option,
+input#best-rated:checked+.best-rated-option {
+    color: #c441ff;
+    border-color: #3d1a78;
+    background-color: #171126;
+    text-shadow: 0 0 8px rgba(196, 65, 255, 0.4);
+}
+
+
+/* ==========================================
+   CYAN VARIANTS
+========================================== */
+
+input#fabric:checked+.fabric-option,
+input#optimization:checked+.optimization-option,
+input#technology:checked+.technology-option {
+    color: #00e5ff;
+    border-color: #006675;
+    background-color: #12262b;
+    text-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
+}
+
+
+/* ==========================================
+   VIOLET VARIANTS
+========================================== */
+
+input#neoforge:checked+.neoforge-option {
+    color: #8a4fff;
+    border-color: #3d1a78;
+    background-color: #171126;
+    text-shadow: 0 0 8px rgba(138, 79, 255, 0.4);
+}
+
+
+/* ==========================================
+   STATUS DOTS
+========================================== */
+
+input#fabric:checked+label::after,
+input#optimization:checked+label::after,
+input#technology:checked+label::after {
+    background-color: #00e5ff;
+}
+
+input#forge:checked+label::after,
+input#magic:checked+label::after,
+input#adventure:checked+label::after {
+    background-color: #c441ff;
+}
+
+input#neoforge:checked+label::after,
+input#version-1201:checked+label::after,
+input#version-121:checked+label::after,
+input#version-1192:checked+label::after,
+input#rpg:checked+label::after,
+input#utility:checked+label::after,
+input#most-popular:checked+label::after,
+input#trending:checked+label::after,
+input#newest:checked+label::after,
+input#best-rated:checked+label::after {
+    background-color: #8a4fff;
+}
+
+
+/* ==========================================
+   INPUT RESET
+========================================== */
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+
+/* ==========================================
+   CLEAR BUTTON
+========================================== */
+
+.clear-btn {
+    margin: 8px 44px;
+    padding: 8px 60px;
+
+    color: #888888;
+
+    background-color: #0b1120;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.clear-btn:hover {
+    color: #e2e2e5;
+
+    border: 1px solid #464356;
+
+    transform: translateY(-1px);
+}

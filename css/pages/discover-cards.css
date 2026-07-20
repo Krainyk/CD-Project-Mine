@@ -1,0 +1,418 @@
+/* =========================
+   Trending Mods
+   ========================= */
+
+.trend-mods {
+    width: 1110px;
+}
+
+
+/* =========================
+   Header
+   ========================= */
+
+.trend-header {
+    display: flex;
+}
+
+.trend-header svg {
+    width: 30px;
+    height: 30px;
+    margin: 20px 12px;
+
+    color: #a64dff;
+    filter: drop-shadow(0 0 4px rgba(166, 77, 255, 0.4));
+}
+
+.trend-header h2 {
+    color: #e8e4f2;
+}
+
+.trend-line {
+    flex: 1;
+    height: 1px;
+    margin: 32px 16px;
+
+    background: linear-gradient(to right, #4a2273, transparent);
+}
+
+
+/* =========================
+   Cards Layout
+   ========================= */
+
+.trend-container {
+    display: flex;
+    column-gap: 15px;
+}
+
+.trend-card {
+    width: 360px;
+    height: 170px;
+
+    border-radius: 16px;
+}
+
+.trend-card-header {
+    display: flex;
+    margin: 10px;
+}
+
+.trend-card-info {
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================
+   Card Content
+   ========================= */
+
+.trend-card-icon svg {
+    width: 30px;
+    height: 30px;
+    margin: 20px 30px;
+}
+
+.trend-card-text h2 {
+    margin-bottom: 2px;
+    color: #e8e4f2;
+}
+
+.trend-card-text p {
+    font-size: 0.8rem;
+    color: #888888;
+}
+
+.trend-card-desc {
+    margin-left: 10px;
+
+    font-size: 0.9rem;
+    color: #888888;
+}
+
+.trend-card-rate {
+    display: flex;
+    margin-left: 25px;
+}
+
+.trend-rate {
+    width: 20px;
+    height: 20px;
+    margin: 20px 10px;
+
+    color: yellow;
+}
+
+
+/* =========================
+   Card Variants
+   ========================= */
+
+.trend-sodi {
+    border: 1px solid rgba(0, 229, 255, 0.15);
+    background: radial-gradient(circle at top left,
+            rgba(0, 229, 255, 0.12),
+            transparent 65%),
+        #14101b;
+}
+
+.trend-iris {
+    border: 1px solid rgba(196, 65, 255, 0.15);
+    background: radial-gradient(circle at top left,
+            rgba(196, 65, 255, 0.12),
+            transparent 65%),
+        #14101b;
+}
+
+.trend-create {
+    border: 1px solid rgba(138, 79, 255, 0.15);
+    background: radial-gradient(circle at top left,
+            rgba(138, 79, 255, 0.12),
+            transparent 65%),
+        #14101b;
+}
+
+
+/* =========================
+   Card Hover
+   ========================= */
+
+.trend-sodi,
+.trend-iris,
+.trend-create {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.trend-sodi:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(0, 229, 255, 0.4);
+
+    background: radial-gradient(circle at top left,
+            rgba(0, 229, 255, 0.2),
+            transparent 70%),
+        #14101b;
+
+    box-shadow: 0 8px 24px rgba(0, 229, 255, 0.15);
+}
+
+.trend-iris:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(196, 65, 255, 0.4);
+
+    background: radial-gradient(circle at top left,
+            rgba(196, 65, 255, 0.2),
+            transparent 70%),
+        #14101b;
+
+    box-shadow: 0 8px 24px rgba(196, 65, 255, 0.15);
+}
+
+.trend-create:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(138, 79, 255, 0.4);
+
+    background: radial-gradient(circle at top left,
+            rgba(138, 79, 255, 0.2),
+            transparent 70%),
+        #14101b;
+
+    box-shadow: 0 8px 24px rgba(138, 79, 255, 0.15);
+}
+
+
+
+
+/* =========================
+   All Mods
+   ========================= */
+
+.all-mods {
+    margin-top: 60px;
+}
+
+
+/* =========================
+   Card
+   ========================= */
+
+.mod-card {
+    display: flex;
+    flex-direction: column;
+
+    width: 360px;
+    height: 190px;
+
+    color: inherit;
+    text-decoration: none;
+
+    background-color: #0b1120;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.mod-card:hover {
+    border-color: #004d59;
+    transform: scale(1.02);
+}
+
+
+/* =========================
+   Card Header
+   ========================= */
+
+.mod-card-main {}
+
+.mod-card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+/* =========================
+   Icon
+   ========================= */
+
+.mod-card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 52px;
+    height: 52px;
+    padding: 8px;
+    margin-left: 20px;
+
+    background: #132636;
+
+    border: 1px solid #0f6d8d;
+    border-radius: 12px;
+}
+
+.mod-icon {
+    width: 2.3rem;
+    height: 2.3rem;
+
+    color: #00e5ff;
+}
+
+
+/* =========================
+   Content
+   ========================= */
+
+.mod-card-info {}
+
+.mod-title {
+    margin-top: 18px;
+    margin-bottom: 0;
+
+    font-size: 1.1rem;
+}
+
+.mod-description {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    font-size: 0.8rem;
+    color: #888888;
+}
+
+
+/* =========================
+   Tags
+   ========================= */
+
+.mod-card-tags {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+
+    margin-left: 1.3rem;
+
+    font-size: 0.8rem;
+}
+
+.tag {
+    padding: 0.4rem;
+
+    background-color: transparent;
+
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+.loader-tag {}
+
+.loader-fabric {
+    color: #00e5ff;
+    background-color: #12262b;
+    border-color: #006675;
+    text-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
+}
+
+.version-tag {
+    color: #c441ff;
+    background-color: #171126;
+    border-color: #3d1a78;
+    text-shadow: 0 0 8px rgba(196, 65, 255, 0.4);
+}
+
+.category-tag {
+    color: #8a4fff;
+    background-color: #171126;
+    border-color: #3d1a78;
+    text-shadow: 0 0 8px rgba(138, 79, 255, 0.4);
+}
+
+
+/* =========================
+   Divider
+   ========================= */
+
+.mod-card-divider {
+    width: 85%;
+    height: 1px;
+
+    margin-top: 12px;
+    margin-left: 25px;
+
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================
+   Footer
+   ========================= */
+
+.mod-card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12rem;
+
+    margin-top: 12px;
+}
+
+
+/* =========================
+   Rating
+   ========================= */
+
+.mod-card-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    font-size: 1rem;
+}
+
+.rate-card {
+    width: 1.3rem;
+    height: 1.3rem;
+
+    color: yellow;
+}
+
+.rating-value {
+    font-size: 0.85rem;
+}
+
+
+/* =========================
+   Downloads
+   ========================= */
+
+.mod-card-downloads {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    font-size: 1rem;
+}
+
+.download-icon {
+    width: 1.3rem;
+    height: 1.3rem;
+
+    color: #8c8c96;
+}
+
+.download-count {
+    font-size: 0.8rem;
+    color: #8c8c96;
+}
