@@ -186,19 +186,51 @@
 
 
 
-
 /* =========================
    All Mods
    ========================= */
 
 .all-mods {
-    margin-top: 60px;
+    margin-top: 45px;
 }
 
+.all-mods-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.all-mods-title {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.all-mods-title h2 {
+    font-size: 2rem;
+}
+
+.mods-count {
+    color: #7b7b7b;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #8a4fff;
+    border: 1px solid #3d1a78;
+    background-color: #171126;
+    text-shadow: 0 0 8px rgba(138, 79, 255, 0.4);
+    padding: 4px 18px;
+    border-radius: 16px;
+}
 
 /* =========================
    Card
    ========================= */
+
+.mod-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
 
 .mod-card {
     display: flex;
@@ -221,11 +253,18 @@
         transform 0.3s ease;
 }
 
+/* =========================
+   Hover Glow effect
+   ========================= */
+
 .mod-card:hover {
     border-color: #004d59;
     transform: scale(1.02);
 }
 
+.mod-card:hover .mod-icon {
+    filter: drop-shadow(0 0 8px currentColor);
+}
 
 /* =========================
    Card Header
@@ -249,23 +288,72 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 52px;
     height: 52px;
     padding: 8px;
     margin-left: 20px;
-
-    background: #132636;
-
-    border: 1px solid #0f6d8d;
     border-radius: 12px;
 }
 
 .mod-icon {
     width: 2.3rem;
     height: 2.3rem;
+}
 
-    color: #00e5ff;
+.sodium-icon {
+    background: #132636;
+    border: 1px solid #0F6D8D;
+    color: #00E5FF;
+
+}
+
+.iris-icon {
+    background: #241634;
+    border: 1px solid #7D33FF;
+    color: #C441FF;
+
+}
+
+.create-icon {
+    background: #2D2314;
+    border: 1px solid #D58C00;
+    color: #FFB300;
+}
+
+.jei-icon {
+    color: #27D7FF;
+    background: #132A35;
+    border: 1px solid #158AB5;
+}
+
+.lithium-icon {
+    color: #66FF99;
+    background: #15291E;
+    border: 1px solid #2BAF67;
+}
+
+.ferrite-icon {
+    color: #FF6666;
+    background: #301919;
+    border: 1px solid #C84D4D;
+}
+
+.twilightforest-icon {
+    color: #6FFF7D;
+    background: #152619;
+    border: 1px solid #2F9E44;
+}
+
+.botania-icon {
+    color: #FF5DB1;
+    background: #301427;
+    border: 1px solid #D23B8E;
+}
+
+.apotheosis-icon {
+    color: #A874FF;
+    background: #22142F;
+    border: 1px solid #7E45E0;
 }
 
 
@@ -283,11 +371,11 @@
 }
 
 .mod-description {
+    color: #888888;
+    font-size: 0.8rem;
     margin-top: 10px;
     margin-bottom: 10px;
-
-    font-size: 0.8rem;
-    color: #888888;
+    min-height: 45px;
 }
 
 
@@ -323,10 +411,24 @@
     text-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
 }
 
-.version-tag {
+.loader-forge {
     color: #c441ff;
-    background-color: #171126;
     border-color: #3d1a78;
+    background-color: #171126;
+    text-shadow: 0 0 8px rgba(196, 65, 255, 0.4);
+}
+
+.loader-forgeorfabric {
+    color: #9f73b6;
+    border-color: #4a355a;
+    background-color: #211d29;
+    text-shadow: 0 0 8px rgba(196, 65, 255, 0.4);
+}
+
+.version-tag {
+    color: #8c8c96;
+    background-color: #1a1523;
+    border-color: #2a2435;
     text-shadow: 0 0 8px rgba(196, 65, 255, 0.4);
 }
 

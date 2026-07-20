@@ -229,11 +229,11 @@
                         <div class="trend-card trend-create">
                             <div class="trend-card-header">
                                 <div class="trend-card-icon">
-                                    <svg class="" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
                                         stroke-width="2" fill="none">
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                        <line x1="12" y1="2" x2="12" y2="22"></line>
-                                        <path d="M20.7 7l-9 15.6M3.3 7l9 15.6M12 2l9.5 5.5v11L12 22 2.5 18.5V7.5L12 2z">
+                                        <circle cx="12" cy="12" r="5"></circle>
+                                        <path
+                                            d="M12 2v3m0 14v3M2 12h3m14 0h3M4.93 4.93l2.12 2.12m9.9 9.9l2.12 2.12M4.93 19.07l2.12-2.12m9.9-9.9l2.12-2.12">
                                         </path>
                                     </svg>
                                 </div>
@@ -298,60 +298,600 @@
 
 
                 <section class="all-mods">
-                    <h2>All mods</h2>
-                    <a href="mod.html" class="mod-card">
-                        <div class="mod-card-main">
-                            <div class="mod-card-wrapper">
-                                <div class="mod-card-icon">
-                                    <svg class="mod-icon" viewBox="0 0 24 24" width="24" height="24"
-                                        stroke="currentColor" stroke-width="2" fill="none">
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                        <line x1="12" y1="2" x2="12" y2="22"></line>
-                                        <path d="M20.7 7l-9 15.6M3.3 7l9 15.6M12 2l9.5 5.5v11L12 22 2.5 18.5V7.5L12 2z">
-                                        </path>
+                    <div class="all-mods-header">
+                        <div class="all-mods-title">
+                            <h2>All mods</h2>
+                            <span class="mods-count">9</span>
+                        </div>
+                    </div>
+                    <div class="mod-grid">
+                        <a href="mod.html" class="mod-card">
+                            <div class="mod-card-main">
+                                <div class="mod-card-wrapper">
+                                    <div class="mod-card-icon sodium-icon">
+                                        <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                            <path d="M13 2
+             L5 13
+             H11
+             L9 22
+             L19 10
+             H13
+             Z" />
+
+                                        </svg>
+                                    </div>
+
+                                    <div class="mod-card-info">
+                                        <h3 class="mod-title">Sodium</h3>
+                                        <p class="mod-description">Modern rendering engine and optimization mod that
+                                            dramatically improves frame rates.</p>
+                                    </div>
+                                </div>
+
+                                <div class="mod-card-tags">
+                                    <span class="tag loader-tag loader-fabric">Fabric</span>
+                                    <span class="tag version-tag">1.20.1</span>
+                                    <span class="tag category-tag">Optimization</span>
+                                </div>
+                            </div>
+
+                            <div class="mod-card-divider">
+                            </div>
+
+                            <div class="mod-card-footer">
+                                <div class="mod-card-rating">
+                                    <svg class="rate-card" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                        </polygon>
                                     </svg>
+                                    <span class="rating-value">9.8</span>
                                 </div>
 
-                                <div class="mod-card-info">
-                                    <h3 class="mod-title">Sodium</h3>
-                                    <p class="mod-description">Modern rendering engine and optimization mod that
-                                        dramatically improves frame rates.</p>
+                                <div class="mod-card-downloads">
+                                    <svg class="download-icon" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="7 10 12 15 17 10"></polyline>
+                                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                                    </svg>
+                                    <span class="download-count">12.4M</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="mod.html" class="mod-card">
+                            <div class="mod-card-main">
+                                <div class="mod-card-wrapper">
+                                    <div class="mod-card-icon iris-icon">
+                                        <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                            <path d="M5 17
+             A7 7 0 0 1 19 17" />
+
+                                            <path d="M7 17
+             A5 5 0 0 1 17 17" />
+
+                                            <path d="M9 17
+             A3 3 0 0 1 15 17" />
+
+                                        </svg>
+                                    </div>
+
+                                    <div class="mod-card-info">
+                                        <h3 class="mod-title">Iris Shaders</h3>
+                                        <p class="mod-description">Shader support for Fabric Minecraft with full
+                                            OptiFine shader pack compatibility.</p>
+                                    </div>
+                                </div>
+
+                                <div class="mod-card-tags">
+                                    <span class="tag loader-tag loader-fabric">Fabric</span>
+                                    <span class="tag version-tag">1.20.1</span>
+                                    <span class="tag category-tag">Optimization</span>
                                 </div>
                             </div>
 
-                            <div class="mod-card-tags">
-                                <span class="tag loader-tag loader-fabric">Fabric</span>
-                                <span class="tag version-tag">1.20.1</span>
-                                <span class="tag category-tag">Optimization</span>
-                            </div>
-                        </div>
-
-                        <div class="mod-card-divider">
-                        </div>
-
-                        <div class="mod-card-footer">
-                            <div class="mod-card-rating">
-                                <svg class="rate-card" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
-                                    stroke-width="2" fill="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                                    <polygon
-                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                    </polygon>
-                                </svg>
-                                <span class="rating-value">9.8</span>
+                            <div class="mod-card-divider">
                             </div>
 
-                            <div class="mod-card-downloads">
-                                <svg class="download-icon" viewBox="0 0 24 24" width="24" height="24"
-                                    stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                    <polyline points="7 10 12 15 17 10"></polyline>
-                                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                                </svg>
-                                <span class="download-count">12.4M</span>
+                            <div class="mod-card-footer">
+                                <div class="mod-card-rating">
+                                    <svg class="rate-card" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                        </polygon>
+                                    </svg>
+                                    <span class="rating-value">9.5</span>
+                                </div>
+
+                                <div class="mod-card-downloads">
+                                    <svg class="download-icon" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="7 10 12 15 17 10"></polyline>
+                                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                                    </svg>
+                                    <span class="download-count">8.7M</span>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+
+                        <a href="mod.html" class="mod-card">
+                            <div class="mod-card-main">
+                                <div class="mod-card-wrapper">
+                                    <div class="mod-card-icon create-icon">
+                                        <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                            <circle cx="12" cy="12" r="3" />
+
+                                            <path d="
+M12 2
+V5
+
+M12 19
+V22
+
+M2 12
+H5
+
+M19 12
+H22
+
+M5.5 5.5
+L7.5 7.5
+
+M16.5 16.5
+L18.5 18.5
+
+M18.5 5.5
+L16.5 7.5
+
+M7.5 16.5
+L5.5 18.5" />
+
+                                        </svg>
+                                    </div>
+
+                                    <div class="mod-card-info">
+                                        <h3 class="mod-title">Create</h3>
+                                        <p class="mod-description">Adds mechanical contraptions, automation, and kinetic
+                                            machinery to your world.</p>
+                                    </div>
+                                </div>
+
+                                <div class="mod-card-tags">
+                                    <span class="tag loader-tag loader-forge">Forge</span>
+                                    <span class="tag version-tag">1.20.1</span>
+                                    <span class="tag category-tag">Technology</span>
+                                </div>
+                            </div>
+
+                            <div class="mod-card-divider">
+                            </div>
+
+                            <div class="mod-card-footer">
+                                <div class="mod-card-rating">
+                                    <svg class="rate-card" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                        </polygon>
+                                    </svg>
+                                    <span class="rating-value">9.8</span>
+                                </div>
+
+                                <div class="mod-card-downloads">
+                                    <svg class="download-icon" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="7 10 12 15 17 10"></polyline>
+                                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                                    </svg>
+                                    <span class="download-count">21.3M</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="mod.html" class="mod-card">
+                            <div class="mod-card-main">
+                                <div class="mod-card-wrapper">
+                                    <div class="mod-card-icon jei-icon">
+                                        <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                            <rect x="3" y="3" width="18" height="18" rx="2" />
+
+                                            <line x1="9" y1="3" x2="9" y2="21" />
+                                            <line x1="15" y1="3" x2="15" y2="21" />
+
+                                            <line x1="3" y1="9" x2="21" y2="9" />
+                                            <line x1="3" y1="15" x2="21" y2="15" />
+
+                                        </svg>
+                                    </div>
+
+                                    <div class="mod-card-info">
+                                        <h3 class="mod-title">JEI</h3>
+                                        <p class="mod-description">Just Enough Items — browse all item recipes and uses
+                                            with an elegant interface.</p>
+                                    </div>
+                                </div>
+
+                                <div class="mod-card-tags">
+                                    <span class="tag loader-tag loader-forgeorfabric">Forge/Fabric</span>
+                                    <span class="tag version-tag">1.20.1</span>
+                                    <span class="tag category-tag">Utility</span>
+                                </div>
+                            </div>
+
+                            <div class="mod-card-divider">
+                            </div>
+
+                            <div class="mod-card-footer">
+                                <div class="mod-card-rating">
+                                    <svg class="rate-card" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                        </polygon>
+                                    </svg>
+                                    <span class="rating-value">9.7</span>
+                                </div>
+
+                                <div class="mod-card-downloads">
+                                    <svg class="download-icon" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="7 10 12 15 17 10"></polyline>
+                                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                                    </svg>
+                                    <span class="download-count">35.1M</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="mod.html" class="mod-card">
+                            <div class="mod-card-main">
+                                <div class="mod-card-wrapper">
+                                    <div class="mod-card-icon lithium-icon">
+                                        <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                            <circle cx="12" cy="12" r="1.6" />
+
+                                            <ellipse cx="12" cy="12" rx="8" ry="3" />
+
+                                            <ellipse cx="12" cy="12" rx="8" ry="3" transform="rotate(60 12 12)" />
+
+                                            <ellipse cx="12" cy="12" rx="8" ry="3" transform="rotate(-60 12 12)" />
+
+                                        </svg>
+                                    </div>
+
+                                    <div class="mod-card-info">
+                                        <h3 class="mod-title">Lithium</h3>
+                                        <p class="mod-description">JGeneral-purpose optimization mod for Minecraft
+                                            servers and clients.</p>
+                                    </div>
+                                </div>
+
+                                <div class="mod-card-tags">
+                                    <span class="tag loader-tag loader-fabric">Fabric</span>
+                                    <span class="tag version-tag">1.21</span>
+                                    <span class="tag category-tag">Optimization</span>
+                                </div>
+                            </div>
+
+                            <div class="mod-card-divider">
+                            </div>
+
+                            <div class="mod-card-footer">
+                                <div class="mod-card-rating">
+                                    <svg class="rate-card" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                        </polygon>
+                                    </svg>
+                                    <span class="rating-value">9.4</span>
+                                </div>
+
+                                <div class="mod-card-downloads">
+                                    <svg class="download-icon" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="7 10 12 15 17 10"></polyline>
+                                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                                    </svg>
+                                    <span class="download-count">6.2M</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="mod.html" class="mod-card">
+                            <div class="mod-card-main">
+                                <div class="mod-card-wrapper">
+                                    <div class="mod-card-icon ferrite-icon">
+                                        <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                            <rect x="7" y="7" width="10" height="10" rx="2" />
+
+                                            <path d="M9 2V5M15 2V5" />
+
+                                            <path d="M9 19V22M15 19V22" />
+
+                                            <path d="M2 9H5M2 15H5" />
+
+                                            <path d="M19 9H22M19 15H22" />
+
+                                        </svg>
+                                    </div>
+
+                                    <div class="mod-card-info">
+                                        <h3 class="mod-title">FerriteCore</h3>
+                                        <p class="mod-description">Reduces memory usage of Minecraft through a series of
+                                            optimization patches.</p>
+                                    </div>
+                                </div>
+
+                                <div class="mod-card-tags">
+                                    <span class="tag loader-tag loader-fabric">Fabric</span>
+                                    <span class="tag version-tag">1.20.1</span>
+                                    <span class="tag category-tag">Optimization</span>
+                                </div>
+                            </div>
+
+                            <div class="mod-card-divider">
+                            </div>
+
+                            <div class="mod-card-footer">
+                                <div class="mod-card-rating">
+                                    <svg class="rate-card" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                        </polygon>
+                                    </svg>
+                                    <span class="rating-value">9.2</span>
+                                </div>
+
+                                <div class="mod-card-downloads">
+                                    <svg class="download-icon" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="7 10 12 15 17 10"></polyline>
+                                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                                    </svg>
+                                    <span class="download-count">4.8M</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="mod.html" class="mod-card">
+                            <div class="mod-card-main">
+                                <div class="mod-card-wrapper">
+                                    <div class="mod-card-icon twilightforest-icon">
+                                        <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                            <path d="
+M12 3
+L7 9
+H10
+L6 14
+H10
+L5 19
+H19
+L14 14
+H18
+L14 9
+H17
+Z" />
+
+                                            <line x1="12" y1="19" x2="12" y2="22" />
+
+                                        </svg>
+                                    </div>
+
+                                    <div class="mod-card-info">
+                                        <h3 class="mod-title">Twilight Forest</h3>
+                                        <p class="mod-description">A whole new magical dimension with progressive
+                                            dungeons and unique bosses.</p>
+                                    </div>
+                                </div>
+
+                                <div class="mod-card-tags">
+                                    <span class="tag loader-tag loader-forge">Forge</span>
+                                    <span class="tag version-tag">1.20.1</span>
+                                    <span class="tag category-tag">Adventure</span>
+                                </div>
+                            </div>
+
+                            <div class="mod-card-divider">
+                            </div>
+
+                            <div class="mod-card-footer">
+                                <div class="mod-card-rating">
+                                    <svg class="rate-card" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                        </polygon>
+                                    </svg>
+                                    <span class="rating-value">9.6</span>
+                                </div>
+
+                                <div class="mod-card-downloads">
+                                    <svg class="download-icon" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="7 10 12 15 17 10"></polyline>
+                                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                                    </svg>
+                                    <span class="download-count">18.2M</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="mod.html" class="mod-card">
+                            <div class="mod-card-main">
+                                <div class="mod-card-wrapper">
+                                    <div class="mod-card-icon botania-icon">
+                                        <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                            <circle cx="12" cy="12" r="2" />
+
+                                            <ellipse cx="12" cy="6" rx="2" ry="4" />
+
+                                            <ellipse cx="18" cy="12" rx="4" ry="2" />
+
+                                            <ellipse cx="12" cy="18" rx="2" ry="4" />
+
+                                            <ellipse cx="6" cy="12" rx="4" ry="2" />
+
+                                        </svg>
+                                    </div>
+
+                                    <div class="mod-card-info">
+                                        <h3 class="mod-title">Botania</h3>
+                                        <p class="mod-description">Tech mod wrapped in a magical aesthetic using flowers
+                                            and natural magic.</p>
+                                    </div>
+                                </div>
+
+                                <div class="mod-card-tags">
+                                    <span class="tag loader-tag loader-forgeorfabric">Forge/Fabric</span>
+                                    <span class="tag version-tag">1.20.1</span>
+                                    <span class="tag category-tag">Magic</span>
+                                </div>
+                            </div>
+
+                            <div class="mod-card-divider">
+                            </div>
+
+                            <div class="mod-card-footer">
+                                <div class="mod-card-rating">
+                                    <svg class="rate-card" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                        </polygon>
+                                    </svg>
+                                    <span class="rating-value">9.3</span>
+                                </div>
+
+                                <div class="mod-card-downloads">
+                                    <svg class="download-icon" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="7 10 12 15 17 10"></polyline>
+                                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                                    </svg>
+                                    <span class="download-count">9.5M</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="mod.html" class="mod-card">
+                            <div class="mod-card-main">
+                                <div class="mod-card-wrapper">
+                                    <div class="mod-card-icon apotheosis-icon">
+                                        <svg class="mod-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                            <path d="
+M12 2
+L18 8
+L12 22
+L6 8
+Z" />
+
+                                            <line x1="6" y1="8" x2="18" y2="8" />
+
+                                            <line x1="12" y1="2" x2="12" y2="22" />
+
+                                        </svg>
+                                    </div>
+
+                                    <div class="mod-card-info">
+                                        <h3 class="mod-title">Apotheosis</h3>
+                                        <p class="mod-description">TExtends vanilla systems like enchanting, spawners,
+                                            and boss mechanics deeply.</p>
+                                    </div>
+                                </div>
+
+                                <div class="mod-card-tags">
+                                    <span class="tag loader-tag loader-forge">Forge</span>
+                                    <span class="tag version-tag">1.20.1</span>
+                                    <span class="tag category-tag">RPG</span>
+                                </div>
+                            </div>
+
+                            <div class="mod-card-divider">
+                            </div>
+
+                            <div class="mod-card-footer">
+                                <div class="mod-card-rating">
+                                    <svg class="rate-card" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                        </polygon>
+                                    </svg>
+                                    <span class="rating-value">9.1</span>
+                                </div>
+
+                                <div class="mod-card-downloads">
+                                    <svg class="download-icon" viewBox="0 0 24 24" width="24" height="24"
+                                        stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="7 10 12 15 17 10"></polyline>
+                                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                                    </svg>
+                                    <span class="download-count">7.1M</span>
+                                </div>
+                            </div>
+                        </a>
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                    </div>
+
                 </section>
 
             </section>
@@ -410,7 +950,7 @@
         </div>
     </footer>
 
-    <script src="scripts/main.js"></script>
+    <script src="scripts/discover.js"></script>
 </body>
 
 </html>
