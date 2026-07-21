@@ -45,16 +45,26 @@
         </ul>
 
         <a class="desktop-btn" href="#"> Sign In</a>
+
+        <button class="burger-btn" id="burger-btn">
+            <svg class="burger-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" y1="6" x2="20" y2="6"></line>
+                <line x1="4" y1="12" x2="20" y2="12"></line>
+                <line x1="4" y1="18" x2="20" y2="18"></line>
+            </svg>
+        </button>
     </nav>
 
-    <main class="main-content-discover">
+    <main class="disc-page-container">
         <section class="disc-hero-section">
             <h1>CDPM Mod Catalog</h1>
             <h2 class="main-title">
                 <span class="text-light">Discover</span>
                 <span class="text-gradient">Minecraft Mods</span>
             </h2>
-            <p>Explore optimization, magic, RPG, tech, and utility mods. Find the perfect additions for your world.</p>
+            <p>Explore optimization, magic, RPG, tech, and utility mods. Find the perfect additions for your world.
+            </p>
 
             <div class="input-container">
                 <svg class="search-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
@@ -150,13 +160,18 @@
                         <div class="trend-card trend-sodi">
                             <div class="trend-card-header">
                                 <div class="trend-card-icon">
-                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
-                                        stroke-width="2" fill="none">
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                        <line x1="12" y1="2" x2="12" y2="22"></line>
-                                        <path d="M20.7 7l-9 15.6M3.3 7l9 15.6M12 2l9.5 5.5v11L12 22 2.5 18.5V7.5L12 2z">
-                                        </path>
-                                    </svg>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                            <path d="M13 2
+             L5 13
+             H11
+             L9 22
+             L19 10
+             H13
+             Z" />
+
+                                        </svg>
                                 </div>
 
                                 <div class="trend-card-text">
@@ -188,17 +203,19 @@
                         <div class="trend-card trend-iris">
                             <div class="trend-card-header">
                                 <div class="trend-card-icon">
-                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
-                                        stroke-width="2" fill="none">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <circle cx="12" cy="12" r="4"></circle>
-                                        <line x1="14.31" y1="8" x2="20.5" y2="3.5"></line>
-                                        <line x1="16" y1="12" x2="22" y2="12"></line>
-                                        <line x1="14.31" y1="16" x2="20.5" y2="20.5"></line>
-                                        <line x1="9.69" y1="16" x2="3.5" y2="20.5"></line>
-                                        <line x1="8" y1="12" x2="2" y2="12"></line>
-                                        <line x1="9.69" y1="8" x2="3.5" y2="3.5"></line>
-                                    </svg>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                            <path d="M5 17
+             A7 7 0 0 1 19 17" />
+
+                                            <path d="M7 17
+             A5 5 0 0 1 17 17" />
+
+                                            <path d="M9 17
+             A3 3 0 0 1 15 17" />
+
+                                        </svg>
                                 </div>
 
                                 <div class="trend-card-text">
@@ -229,12 +246,36 @@
                         <div class="trend-card trend-create">
                             <div class="trend-card-header">
                                 <div class="trend-card-icon">
-                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
-                                        stroke-width="2" fill="none">
-                                        <circle cx="12" cy="12" r="5"></circle>
-                                        <path
-                                            d="M12 2v3m0 14v3M2 12h3m14 0h3M4.93 4.93l2.12 2.12m9.9 9.9l2.12 2.12M4.93 19.07l2.12-2.12m9.9-9.9l2.12-2.12">
-                                        </path>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                            <circle cx="12" cy="12" r="3" />
+
+                                            <path d="
+        M12 2
+        V5
+
+        M12 19
+        V22
+
+        M2 12
+        H5
+
+        M19 12
+        H22
+
+        M5.5 5.5
+        L7.5 7.5
+
+        M16.5 16.5
+        L18.5 18.5
+
+        M18.5 5.5
+        L16.5 7.5
+
+        M7.5 16.5
+        L5.5 18.5" />
+
                                     </svg>
                                 </div>
 
@@ -436,36 +477,37 @@
                                             <circle cx="12" cy="12" r="3" />
 
                                             <path d="
-M12 2
-V5
+        M12 2
+        V5
 
-M12 19
-V22
+        M12 19
+        V22
 
-M2 12
-H5
+        M2 12
+        H5
 
-M19 12
-H22
+        M19 12
+        H22
 
-M5.5 5.5
-L7.5 7.5
+        M5.5 5.5
+        L7.5 7.5
 
-M16.5 16.5
-L18.5 18.5
+        M16.5 16.5
+        L18.5 18.5
 
-M18.5 5.5
-L16.5 7.5
+        M18.5 5.5
+        L16.5 7.5
 
-M7.5 16.5
-L5.5 18.5" />
+        M7.5 16.5
+        L5.5 18.5" />
 
                                         </svg>
                                     </div>
 
                                     <div class="mod-card-info">
                                         <h3 class="mod-title">Create</h3>
-                                        <p class="mod-description">Adds mechanical contraptions, automation, and kinetic
+                                        <p class="mod-description">Adds mechanical contraptions, automation, and
+                                            kinetic
                                             machinery to your world.</p>
                                     </div>
                                 </div>
@@ -525,7 +567,8 @@ L5.5 18.5" />
 
                                     <div class="mod-card-info">
                                         <h3 class="mod-title">JEI</h3>
-                                        <p class="mod-description">Just Enough Items — browse all item recipes and uses
+                                        <p class="mod-description">Just Enough Items — browse all item recipes and
+                                            uses
                                             with an elegant interface.</p>
                                     </div>
                                 </div>
@@ -647,7 +690,8 @@ L5.5 18.5" />
 
                                     <div class="mod-card-info">
                                         <h3 class="mod-title">FerriteCore</h3>
-                                        <p class="mod-description">Reduces memory usage of Minecraft through a series of
+                                        <p class="mod-description">Reduces memory usage of Minecraft through a
+                                            series of
                                             optimization patches.</p>
                                     </div>
                                 </div>
@@ -695,18 +739,18 @@ L5.5 18.5" />
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 
                                             <path d="
-M12 3
-L7 9
-H10
-L6 14
-H10
-L5 19
-H19
-L14 14
-H18
-L14 9
-H17
-Z" />
+                                                M12 3
+                                                L7 9
+                                                H10
+                                                L6 14
+                                                H10
+                                                L5 19
+                                                H19
+                                                L14 14
+                                                H18
+                                                L14 9
+                                                H17
+                                                Z" />
 
                                             <line x1="12" y1="19" x2="12" y2="22" />
 
@@ -777,7 +821,8 @@ Z" />
 
                                     <div class="mod-card-info">
                                         <h3 class="mod-title">Botania</h3>
-                                        <p class="mod-description">Tech mod wrapped in a magical aesthetic using flowers
+                                        <p class="mod-description">Tech mod wrapped in a magical aesthetic using
+                                            flowers
                                             and natural magic.</p>
                                     </div>
                                 </div>
@@ -825,11 +870,11 @@ Z" />
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 
                                             <path d="
-M12 2
-L18 8
-L12 22
-L6 8
-Z" />
+                                                M12 2
+                                                L18 8
+                                                L12 22
+                                                L6 8
+                                                Z" />
 
                                             <line x1="6" y1="8" x2="18" y2="8" />
 
@@ -840,7 +885,8 @@ Z" />
 
                                     <div class="mod-card-info">
                                         <h3 class="mod-title">Apotheosis</h3>
-                                        <p class="mod-description">TExtends vanilla systems like enchanting, spawners,
+                                        <p class="mod-description">TExtends vanilla systems like enchanting,
+                                            spawners,
                                             and boss mechanics deeply.</p>
                                     </div>
                                 </div>
@@ -879,23 +925,10 @@ Z" />
                                 </div>
                             </div>
                         </a>
-
-
-
-
-
-
-
-
-
-
                     </div>
                     </div>
-
                 </section>
-
             </section>
-        </section>
     </main>
 
     <footer class="main-footer">
@@ -951,6 +984,7 @@ Z" />
     </footer>
 
     <script src="scripts/discover.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>

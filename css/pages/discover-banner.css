@@ -16,8 +16,9 @@
     justify-content: space-between;
     align-items: center;
 
-    width: 1110px;
-    height: 110px;
+    /* width: 1110px; */
+    width: 100%;
+    height: 100px;
 
     background:
         radial-gradient(circle at 5% 50%, rgba(138, 79, 255, 0.12), transparent 30%),
@@ -40,8 +41,8 @@
    ========================= */
 
 .banner-icon-wrapper {
-    display: flex;
-    align-items: center;
+    /* display: flex; */
+    /* align-items: center; */
 
     width: 62px;
     height: 62px;
@@ -58,10 +59,20 @@
 }
 
 .banner-icon {
+    display: flex;
+    margin: 0 auto;
     width: 2.3rem;
     height: 2.3rem;
 }
 
+.banner-text h3 {
+    color: whitesmoke;
+    margin-bottom: 12px;
+}
+
+.banner-text p {
+    color: whitesmoke;
+}
 
 /* =========================
    Button

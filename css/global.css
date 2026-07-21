@@ -1,35 +1,33 @@
-/*--------------------GLOBAL-STYLES--------------------*/
+/*-------------------- RESET --------------------*/
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-html,
+html {
+    min-height: 100%;
+}
+
 body {
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     margin: 0;
-    padding: 0;
+    min-height: 100vh;
     overflow-x: hidden;
-    /* background-color: #07040f; */
-    /* background: #0b0714; */
-    background: linear-gradient(180deg,
-            #0b0714 0%,
-            #090511 50%,
-            #050308 100%);
+
+    font-family: 'Montserrat', sans-serif;
+
+    background: linear-gradient(
+        180deg,
+        #0b0714 0%,
+        #090511 50%,
+        #050308 100%
+    );
+
     scrollbar-width: thin;
     scrollbar-color: #888 #121212;
 }
 
-main {
-    width: 100%;
-    max-width: 1400px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
+/*-------------------- TYPOGRAPHY --------------------*/
 
 h1,
 h2,
@@ -37,6 +35,30 @@ h3,
 h4,
 h5,
 h6 {
+    margin: 0;
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 1px;
+}
+
+p {
+    margin: 0;
+}
+
+/*-------------------- ELEMENTS --------------------*/
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
 }
