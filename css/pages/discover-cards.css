@@ -15,27 +15,26 @@
 
 .trend-header {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 12px;
 }
 
 .trend-header svg {
     width: 30px;
     height: 30px;
-    margin: 20px 12px;
-
     color: #a64dff;
     filter: drop-shadow(0 0 4px rgba(166, 77, 255, 0.4));
 }
 
 .trend-header h2 {
-    margin: 18px auto;
     color: #e8e4f2;
 }
 
 .trend-line {
     flex: 1;
     height: 1px;
-    margin: 32px 16px;
-
     background: linear-gradient(to right, #4a2273, transparent);
 }
 
