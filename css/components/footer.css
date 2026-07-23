@@ -4,25 +4,32 @@
 /*--------------------FOOTER--------------------*/
 .main-footer {
     background-color: #10131a;
-    border-bottom: 1px solid #1a1a1a;
+    border-top: 1px solid #1a1a1a;
 }
 
 .footer-container {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     min-height: 4rem;
+    max-width: 1900px;
+    width: 100%;
     margin: 0 auto;
+    padding-inline: 60px;
 }
 
 /*--------------------COMPANY INFO--------------------*/
 .footer-name {
-    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* flex-wrap: wrap; */
 }
 
 .footer-name h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.9rem;
     color: #888888;
-    margin: 10px 0px;
 }
 
 .footer-name p {
@@ -33,8 +40,8 @@
 /*--------------------FOOTER LINKS--------------------*/
 .footer-links {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
-    margin-left: auto;
 }
 
 .footer-link {
@@ -54,33 +61,24 @@
 }
 
 /* ==========================
-   Mobile
+   Responsive footer
 ========================== */
-@media (max-width: 900px) {
-    .footer-name {
-        max-width: 250px;
-        width: 100%;
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding-inline: 20px;
+        padding-block: 30px;
+    }
 
-        margin-top: 30px;
-        margin-left: 20px;
+    .footer-name {
+        align-items: center;
+        text-align: center;
     }
 
     .footer-links {
-        display: flex;
         justify-content: center;
-        flex-wrap: wrap;
-
-        gap: 25px;
-
-        margin-top: 10px;
-        margin-left: 40px;
-    }
-
-    .footer-link {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        gap: 10px;
+        gap: 20px;
     }
 }
