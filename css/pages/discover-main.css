@@ -14,7 +14,11 @@
     column-gap: 40px;
 }
 
-.main-mods {}
+.main-mods {
+    flex: 1;
+    max-width: 1150px;
+    width: 100%;
+}
 
 /* =========================
    Hero Section

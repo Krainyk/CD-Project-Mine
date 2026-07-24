@@ -1,0 +1,192 @@
+/* ==========================================
+   1200px - Small Desktops & Large Tablets
+========================================== */
+@media (max-width: 1200px) {
+    .mods-section {
+        padding-inline: 20px;
+    }
+
+    .main-title {
+        font-size: 3.8rem;
+    }
+
+    .trend-container,
+    .mod-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        justify-content: center;
+    }
+}
+/* ==========================================
+   992px - Tablets
+========================================== */
+@media (max-width: 992px) {
+    .mod-filter {
+        display: none;
+    }
+
+    .mods-section {
+        display: block;
+    }
+
+    .main-mods {
+        width: 100%;
+    }
+
+    .main-title {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .disc-hero-section p {
+        font-size: 1rem;
+        text-align: center;
+        padding-inline: 15px;
+    }
+}
+
+/* ==========================================
+   768px - Mobile Devices
+========================================== */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .banner-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 25px;
+    }
+
+    .banner-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .banner-icon-wrapper {
+        margin-bottom: 10px;
+    }
+
+    .banner-link {
+        margin: 0 auto;
+    }
+
+    .all-mods-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .all-mods-title {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .trend-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .trend-line {
+        display: none;
+    }
+
+    .trend-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .trend-card-header {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .trend-card-icon svg {
+        margin: 20px 15px;
+    }
+
+    .trend-card-info {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .trend-card-rate {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .trend-rate {
+        margin: 20px 5px;
+    }
+}
+
+/* ==========================================
+   576px - Small Phones
+========================================== */
+@media (max-width: 576px) {
+    .main-title {
+        font-size: 2.2rem;
+    }
+
+    .disc-hero-section h1 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .input-container {
+        padding-inline: 8px;
+    }
+
+    .trend-container,
+    .mod-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trend-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .trend-card-header {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .trend-card-icon svg {
+        margin: 20px 15px;
+    }
+
+    .trend-card-info {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .trend-card-rate {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .trend-rate {
+        margin: 20px 5px;
+    }
+
+    .mod-card-tags {
+        gap: 10px;
+    }
+
+    .mod-card-footer {
+        padding-inline: 15px;
+    }
+}
