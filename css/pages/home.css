@@ -51,15 +51,12 @@
     gap: 20px;
 }
 
-.hero-form {
-    text-decoration: none;
-}
-
 .hero-btn {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    text-decoration: none;
     background-color: #a855f7;
     color: white;
     border: none;
