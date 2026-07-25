@@ -24,6 +24,10 @@
         display: none;
     }
 
+    .filter-dropdown {
+        display: flex;
+    }
+
     .mods-section {
         display: block;
     }

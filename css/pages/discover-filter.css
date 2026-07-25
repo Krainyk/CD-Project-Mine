@@ -249,3 +249,120 @@ input[type="radio"] {
 
     transform: translateY(-1px);
 }
+
+
+/* ==========================================
+   DROPDOWN FILTER
+========================================== */
+.filter-dropdown {
+    position: relative;
+    display: none;
+    padding-bottom: 24px;
+    /* width: 100%;  */
+}
+
+.filter-toggle-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 6px 20px;
+    gap: 12px;
+    background-color: #0b1120;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 12px;
+    color: white;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.icon-dropdown {
+    color: #8b5cf6;
+    transition: transform 0.3s ease;
+}
+
+.filter-dropdown.active .icon-dropdown {
+    transform: rotate(180deg);
+}
+
+.filter-menu {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    overflow-y: auto;
+    max-height: 350px;
+    z-index: 1000;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+
+    background-color: #0b1120;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+    scrollbar-width: thin;
+    scrollbar-color: #8b5cf6 #0b1120;
+}
+
+.filter-dropdown.active .filter-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.filter-menu-group {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.filter-menu-group:last-child {
+    border-bottom: none;
+}
+
+.filter-group-title {
+    font-size: 0.85rem;
+    color: #6a6775;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.filter-mobile-option {
+    position: relative;
+    padding: 10px 15px;
+    margin-bottom: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.filter-mobile-option:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.filter-mobile-option input[type="checkbox"] {
+    display: none;
+}
+
+.filter-mobile-option:has(input:checked) {
+    background-color: rgba(139, 92, 246, 0.1);
+}
+
+.filter-mobile-option input:checked + .option-text {
+    color: #c441ff;
+    text-shadow: 0 0 8px rgba(196, 65, 255, 0.4);
+    font-weight: bold;
+}
+
+.option-text {
+    font-size: 0.95rem;
+    color: #888888;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
