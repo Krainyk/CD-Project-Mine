@@ -7,19 +7,37 @@ filterBtn.addEventListener('click', () => {
 
 
 
+const checkboxes = document.querySelectorAll('.js-filter');
+const cards = document.querySelectorAll('.mod-card');
+// const sortRadios = document.querySelectorAll('input[name="sort"]');
 
-// const sortContainer = document.getElementById('sort-container');
-// const sortBtn = document.getElementById('sort-btn');
-// const selectedSort = document.getElementById('selected-sort');
-// const sortItems = document.querySelectorAll('.sort-item');
+function applyFilters() {
+    let activeFilters = []; //Порожній масив для зберігання фільтрів
 
-// sortBtn.addEventListener('click', () => {
-//     sortContainer.classList.toggle('open');
-// });
+    checkboxes.forEach(cb => {
+        if (cb.checked) {
+            activeFilters.push(cb.value);
+        }
+    });
 
-// sortItems.forEach((item) => {
-//     item.addEventListener('click', () => {
-//         selectedSort.textContent = item.textContent;
-//         sortContainer.classList.remove('open');
-//     });
+    cards.forEach(card => {
+        const cardGenre = card.getAttribute('data-genre').split(",");
+
+        if (activeFilters.length === 0 || activeFilters.every(filter => cardGenre.includes(filter))) {
+            card.classList.remove('hidden');
+        } else {
+            card.classList.add('hidden');
+        }
+    });
+}
+
+checkboxes.forEach(cb => {
+    cb.addEventListener('change', applyFilters);
+});
+
+// sortRadios.forEach(radio => {
+//     radio.addEventListener('change', applySorting);
 // }); 
+
+// function applySorting() {
+// }
