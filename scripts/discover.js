@@ -34,10 +34,3 @@ function applyFilters() {
 checkboxes.forEach(cb => {
     cb.addEventListener('change', applyFilters);
 });
-
-// sortRadios.forEach(radio => {
-//     radio.addEventListener('change', applySorting);
-// }); 
-
-// function applySorting() {
-// }
