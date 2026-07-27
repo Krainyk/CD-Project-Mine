@@ -7,7 +7,7 @@
     width: 100%;
     max-height: 1200px;
     /* width: 280px;
-    /* height: 1120px; */ 
+    /* height: 1120px; */
 
     background-color: #0b1120;
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -355,14 +355,36 @@ input[type="radio"] {
     background-color: rgba(139, 92, 246, 0.1);
 }
 
-.filter-mobile-option input:checked + .option-text {
+.filter-mobile-option input:checked+.option-text {
     color: #c441ff;
     text-shadow: 0 0 8px rgba(196, 65, 255, 0.4);
     font-weight: bold;
 }
 
 .option-text {
+    text-align: center;
     font-size: 0.95rem;
     color: #888888;
     transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.clear-mobile-btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 12px;
+    padding: 8px;
+
+    background-color: #0b1120;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 12px;
+    color: white;
+
+    cursor: pointer;
+    transition: color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.clear-mobile-btn:hover {
+    color: #e2e2e5;
+    transform: translateY(-1px);
 }
