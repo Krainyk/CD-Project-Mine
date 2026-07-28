@@ -9,6 +9,10 @@ const checkboxes = document.querySelectorAll('.js-filter');
 const sortRadios = document.querySelectorAll('input[name="sort"]');
 const cards = document.querySelectorAll('.mod-card');
 
+const modContainer = document.querySelector('.mod-grid');
+const modCardArray = Array.from(modContainer.querySelectorAll('.mod-card'));
+
+const selectedFilter = document.querySelector('.selected-text');
 
 /* ==========================================
    2. ЛОГІКА ВИПАДАЮЧОГО МЕНЮ (DROPDOWN)
@@ -30,9 +34,24 @@ document.body.addEventListener('click', (e) => {
 function applyFilters() {
     let activeFilters = []; // Порожній масив для зберігання фільтрів
 
+    let selectedOption = [];
+
     checkboxes.forEach(cb => {
         if (cb.checked) {
             activeFilters.push(cb.value);
+
+            selectedOption.push(cb);
+        }
+
+        if (selectedOption.length === 0) {
+            selectedFilter.textContent = "Select filter";
+        }
+        else if (selectedOption.length === 1) {
+            const selectedElement = selectedOption[0].nextElementSibling;
+            selectedFilter.textContent = selectedElement.textContent;
+        }
+        else {
+            selectedFilter.textContent = `Filter(${selectedOption.length})`;
         }
     });
 
@@ -84,7 +103,7 @@ function applySorting() {
             }
 
             valueA = parseFloat(cardA.getAttribute('data-downloads'));
-            valueB = parseFloat(cardA.getAttribute('data-downloads')); 
+            valueB = parseFloat(cardA.getAttribute('data-downloads'));
         }
 
         return valueB - valueA;
@@ -114,6 +133,24 @@ clearBtns.forEach(btn => {
             e.checked = false;
         });
 
+        modCardArray.forEach(card => {
+            modContainer.append(card);
+        });
+
         applyFilters();
+    });
+});
+
+
+const selectedInfo = document.querySelector('.selected-text');
+const mobileSortRadio = document.querySelectorAll('.filter-mobile-option input[type="radio"]');
+
+mobileSortRadio.forEach(radio => {
+    radio.addEventListener('change', (e) => {
+
+        const clickedInput = e.target;
+        const siblingSpan = clickedInput.nextElementSibling;
+
+        selectedInfo.textContent = siblingSpan.textContent;
     });
 });
