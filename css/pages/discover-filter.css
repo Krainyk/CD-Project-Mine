@@ -5,7 +5,8 @@
 .mod-filter {
     max-width: 280px;
     width: 100%;
-    max-height: 1200px;
+    height: 1070px;
+    /* max-height: 1200px; */
     /* width: 280px;
     /* height: 1120px; */
 
@@ -344,6 +345,10 @@ input[type="radio"] {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.2s ease;
+}
+
+.filter-mobile-option input[type="radio"] {
+    display: none;
 }
 
 .filter-mobile-option:hover {

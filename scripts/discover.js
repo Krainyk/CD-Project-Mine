@@ -30,6 +30,27 @@ document.body.addEventListener('click', (e) => {
 });
 
 
+const modCount = document.getElementById('mods-count');
+
+function updateModCount() {
+    const visibleCards = document.querySelectorAll('.mod-card:not(.hidden)');
+    const count = visibleCards.length;
+
+    if (count.toString() === modCount.textContent) {
+        return;
+    }
+
+    modCount.classList.add('count-fade');
+
+    setTimeout(() => {
+        modCount.textContent = count;
+
+        modCount.classList.remove('count-fade');
+    }, 150);
+}
+
+updateModCount();
+
 /* ==========================================
    3. ЛОГІКА ФІЛЬТРАЦІЇ (ЧЕКБОКСИ)
 ========================================== */
@@ -76,6 +97,10 @@ function applyFilters() {
             }, 300);
         }
     });
+
+    setTimeout(() => {
+        updateModCount();
+    }, 300);
 }
 
 checkboxes.forEach(cb => {
@@ -149,19 +174,29 @@ sortRadios.forEach(radio => {
 ========================================== */
 clearBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        checkboxes.forEach(e => {
-            e.checked = false;
+
+        const currentlyVisible = document.querySelectorAll('.mod-card:not(.hidden)');
+
+        currentlyVisible.forEach(card => {
+            card.classList.add('fade-out');
         });
 
-        sortRadios.forEach(e => {
-            e.checked = false;
-        });
+        checkboxes.forEach(e => { e.checked = false; });
+        sortRadios.forEach(e => { e.checked = false; });
 
-        modCardArray.forEach(card => {
-            modContainer.append(card);
-        });
+        setTimeout(() => {
+            modCardArray.forEach(card => {
+                modContainer.append(card);
+            });
 
-        applyFilters();
+            applyFilters();
+
+            setTimeout(() => {
+                modCardArray.forEach(card => {
+                    card.classList.remove('fade-out');
+                });
+            }, 10);
+        }, 300);
     });
 });
 
@@ -205,4 +240,8 @@ searchInput.addEventListener('input', () => {
             }, 300);
         }
     });
+
+    setTimeout(() => {
+        updateModCount();
+    }, 300);
 });

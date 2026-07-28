@@ -221,12 +221,14 @@
     gap: 40px;
     padding-bottom: 20px;
 }
+
 .all-mods-title h2 {
     color: whitesmoke;
     font-size: 2rem;
 }
 
-.mods-count {
+#mods-count {
+    display: inline-block;
     color: #7b7b7b;
     font-size: 0.8rem;
     font-weight: bold;
@@ -236,6 +238,12 @@
     text-shadow: 0 0 8px rgba(138, 79, 255, 0.4);
     padding: 4px 18px;
     border-radius: 16px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.count-fade {
+    opacity: 0;
+    transform: scale(0.5);
 }
 
 /* =========================
