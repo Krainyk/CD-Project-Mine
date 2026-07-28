@@ -14,6 +14,8 @@ const modCardArray = Array.from(modContainer.querySelectorAll('.mod-card'));
 
 const selectedFilter = document.querySelector('.selected-text');
 
+const searchInput = document.getElementById('mod-search');
+
 /* ==========================================
    2. ЛОГІКА ВИПАДАЮЧОГО МЕНЮ (DROPDOWN)
 ========================================== */
@@ -152,5 +154,25 @@ mobileSortRadio.forEach(radio => {
         const siblingSpan = clickedInput.nextElementSibling;
 
         selectedInfo.textContent = siblingSpan.textContent;
+    });
+});
+
+
+/* ==========================================
+   6. ЛОГІКА ПОШУКУ (ПОЛЕ INPUT)
+========================================== */
+searchInput.addEventListener('input', () => {
+    const searchText = searchInput.value.toLowerCase();
+
+    cards.forEach(card => {
+        const title = card.querySelector('.mod-title');
+        const text = title.textContent.toLowerCase();
+
+        if (text.includes(searchText)) {
+            card.classList.remove('hidden');
+        }
+        else {
+            card.classList.add('hidden');
+        }
     });
 });
