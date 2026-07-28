@@ -62,8 +62,18 @@ function applyFilters() {
 
         if (activeFilters.length === 0 || activeFilters.every(filter => cardGenre.includes(filter))) {
             card.classList.remove('hidden');
+
+            setTimeout(() => {
+                card.classList.remove('fade-out');
+            }, 10);
         } else {
-            card.classList.add('hidden');
+            card.classList.add('fade-out');
+
+            setTimeout(() => {
+                if (card.classList.contains('fade-out')) {
+                    card.classList.add('hidden');
+                }
+            }, 300);
         }
     });
 }
@@ -83,37 +93,49 @@ function applySorting() {
 
     // console.log(sortValue);
 
-    visibleCards.sort((cardA, cardB) => {
-        let valueA, valueB;
+    visibleCards.forEach(card => {
+        card.classList.add('fade-out');
+    });
 
-        if (sortValue === 'most-popular') {
-            valueA = parseFloat(cardA.getAttribute('data-downloads'));
-            valueB = parseFloat(cardB.getAttribute('data-downloads'));
-        }
-        else if (sortValue === 'newest') {
-            valueA = parseFloat(cardA.getAttribute('data-date'));
-            valueB = parseFloat(cardB.getAttribute('data-date'));
-        }
-        else if (sortValue === 'best-rated') {
-            valueA = parseFloat(cardA.getAttribute('data-rating'));
-            valueB = parseFloat(cardB.getAttribute('data-rating'));
+    setTimeout(() => {
+        visibleCards.sort((cardA, cardB) => {
+            let valueA, valueB;
 
-            const ratingDiffrence = valueB - valueA;
+            if (sortValue === 'most-popular') {
+                valueA = parseFloat(cardA.getAttribute('data-downloads'));
+                valueB = parseFloat(cardB.getAttribute('data-downloads'));
+            }
+            else if (sortValue === 'newest') {
+                valueA = parseFloat(cardA.getAttribute('data-date'));
+                valueB = parseFloat(cardB.getAttribute('data-date'));
+            }
+            else if (sortValue === 'best-rated') {
+                valueA = parseFloat(cardA.getAttribute('data-rating'));
+                valueB = parseFloat(cardB.getAttribute('data-rating'));
 
-            if (ratingDiffrence !== 0) {
-                return ratingDiffrence;
+                const ratingDiffrence = valueB - valueA;
+
+                if (ratingDiffrence !== 0) {
+                    return ratingDiffrence;
+                }
+
+                valueA = parseFloat(cardA.getAttribute('data-downloads'));
+                valueB = parseFloat(cardB.getAttribute('data-downloads'));
             }
 
-            valueA = parseFloat(cardA.getAttribute('data-downloads'));
-            valueB = parseFloat(cardA.getAttribute('data-downloads'));
-        }
+            return valueB - valueA;
+        });
 
-        return valueB - valueA;
-    });
+        visibleCards.forEach(card => {
+            modContainer.append(card);
+        });
 
-    visibleCards.forEach(card => {
-        modContainer.append(card);
-    });
+        setTimeout(() => {
+            visibleCards.forEach(card => {
+                card.classList.remove('fade-out');
+            });
+        }, 10);
+    }, 300);
 }
 
 sortRadios.forEach(radio => {
@@ -143,7 +165,6 @@ clearBtns.forEach(btn => {
     });
 });
 
-
 const selectedInfo = document.querySelector('.selected-text');
 const mobileSortRadio = document.querySelectorAll('.filter-mobile-option input[type="radio"]');
 
@@ -170,9 +191,18 @@ searchInput.addEventListener('input', () => {
 
         if (text.includes(searchText)) {
             card.classList.remove('hidden');
-        }
-        else {
-            card.classList.add('hidden');
+
+            setTimeout(() => {
+                card.classList.remove('fade-out');
+            }, 10);
+        } else {
+            card.classList.add('fade-out');
+
+            setTimeout(() => {
+                if (card.classList.contains('fade-out')) {
+                    card.classList.add('hidden');
+                }
+            }, 300);
         }
     });
 });

@@ -269,24 +269,35 @@
 
     cursor: pointer;
 
+    opacity: 1;
+    transform: scale(1);
     transition:
         border-color 0.3s ease,
-        transform 0.3s ease;
+        transform 0.3s ease,
+        opacity 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 
 .mod-card.hidden {
-    display: none;
+    display: none !important;
 }
-
 
 /* =========================
    Hover Glow effect
    ========================= */
 
 .mod-card:hover {
-    border-color: #004d59;
+    /* border-color: #004d59; */
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
     transform: scale(1.02);
+}
+
+.mod-card.fade-out {
+    opacity: 0;
+    transform: scale(0.9);
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+    pointer-events: none;
 }
 
 .mod-card:hover .mod-icon {
