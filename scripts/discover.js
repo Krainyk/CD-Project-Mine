@@ -46,7 +46,7 @@ function updateModCount() {
         modCount.textContent = count;
 
         modCount.classList.remove('count-fade');
-    }, 150);
+    }, 200);
 }
 
 updateModCount();
