@@ -320,9 +320,8 @@
 
 .mod-card-wrapper {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 16px;
 }
 
 
@@ -334,74 +333,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 52px;
-    height: 52px;
-    padding: 8px;
     margin-left: 20px;
     border-radius: 12px;
 }
 
 .mod-icon {
-    width: 2.3rem;
-    height: 2.3rem;
+    width: 4rem;
+    height: 4rem;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 12px;
 }
-
-.sodium-icon {
-    background: #132636;
-    border: 1px solid #0F6D8D;
-    color: #00E5FF;
-
-}
-
-.iris-icon {
-    background: #241634;
-    border: 1px solid #7D33FF;
-    color: #C441FF;
-
-}
-
-.create-icon {
-    background: #2D2314;
-    border: 1px solid #D58C00;
-    color: #FFB300;
-}
-
-.jei-icon {
-    color: #27D7FF;
-    background: #132A35;
-    border: 1px solid #158AB5;
-}
-
-.lithium-icon {
-    color: #66FF99;
-    background: #15291E;
-    border: 1px solid #2BAF67;
-}
-
-.ferrite-icon {
-    color: #FF6666;
-    background: #301919;
-    border: 1px solid #C84D4D;
-}
-
-.twilightforest-icon {
-    color: #6FFF7D;
-    background: #152619;
-    border: 1px solid #2F9E44;
-}
-
-.botania-icon {
-    color: #FF5DB1;
-    background: #301427;
-    border: 1px solid #D23B8E;
-}
-
-.apotheosis-icon {
-    color: #A874FF;
-    background: #22142F;
-    border: 1px solid #7E45E0;
-}
-
 
 /* =========================
    Content
