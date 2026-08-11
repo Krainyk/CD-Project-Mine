@@ -18,13 +18,18 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <nav class="main-nav">
         <div class="logo-container">
             <a href="index.html" class="logo-link">
-                <div class="logo-icon">⛏</div>
+                <div class="logo-icon">
+                    <img src="assets/icons/logo-icon.png" alt="logo-icon" class="logo-icon-img">
+                </div>
                 <span class="logo-text">
                     <span class="logo-accent">CD </span> Project Mine
                 </span>
@@ -222,6 +227,120 @@
                 </div>
             </div>
         </section>
+
+        <section class="mod-main-section">
+            <div class="mod-main-container">
+                <div class="mod-main-btns">
+                    <button class="overview-btn active scroll-btn" data-target="overview-target-section"> Overview</button>
+                    <button class="sceenshot-btn scroll-btn" data-target="screenshot-target-section"> Screenshots</button>
+                    <button class="compatibility-btn scroll-btn" data-target="compatibility-target-section"> Compatibility</button>
+                    <button class="changelog-btn scroll-btn" data-target="changelog-target-section"> Changelog</button>
+                    <!-- <button class="version-btn" class="scroll-btn" data-target="version-target-section"> Versions</button> -->
+
+                    <div class="sliding-line"></div>
+                </div>
+
+                <div class="mod-main-devider"></div>
+
+                <section class="screenshots-section" id="screenshot-target-section">
+                    <div class="mod-screenshots-container">
+                        <div class="mod-screenshots-header">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 3L14.5 9.5L21 12L14.5 14.5L12 21L9.5 14.5L3 12L9.5 9.5L12 3Z"></path>
+                                <path d="M5 5L6 7.5L8.5 8.5L6 9.5L5 12L4 9.5L1.5 8.5L4 7.5L5 5Z"></path>
+                            </svg>
+                            <h3>Screenshots</h3>
+                            <div class="mod-line"></div>
+                        </div>
+
+                        <div class="mod-images">
+                            <div class="primary-image">
+                                <button class="image-mod-btn-next" id="mod-btn-next">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
+                                        stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </button>
+                                <img src="./assets/images/sodium-images00.png" class="main-mod-image"
+                                    alt="Primary Image">
+                                <button class="image-mod-btn-prev" id="mod-btn-prev">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
+                                        stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="15 18 9 12 15 6"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="secondary-images">
+                                <img src="./assets/images/sodium-images00.png" class="secondary-mod-image"
+                                    alt="Secondary Image">
+                                <img src="./assets/images/sodium-icon01.jpg" class="secondary-mod-image"
+                                    alt="Secondary Image">
+                                <img src="./assets/images/sodium-icon02.jpg" class="secondary-mod-image"
+                                    alt="Secondary Image">
+                                <img src="./assets/images/sodium-icon03.webp" class="secondary-mod-image"
+                                    alt="Secondary Image">
+                                <img src="./assets/images/sodium-icon04.jpg" class="secondary-mod-image"
+                                    alt="Secondary Image">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="overview-section" id="overview-target-section">
+                    
+                </section>
+
+                <section class="compatibility-section" id="compatibility-target-section">
+                    
+                </section>
+
+                <section class="changelog-section" id="changelog-target-section">
+                    
+                </section>
+
+                <!-- <section class="overview-section" id="overview-target-section">
+                    
+                </section> -->
+            </div>
+            
+            <div class="mod-more-details">
+                <div class="more-details-container">
+                    <h4>Details</h4>
+
+                    <div class="downlaod-info">
+                        <!-- SVG -->
+                        <span>Total downloads</span>
+                        <span>12,463,821</span>
+                    </div>
+
+                    <div class="created-info">
+                        <!-- SVG -->
+                        <span>Created</span>
+                        <span>March 12,2021</span>
+                    </div>
+
+                    <div class="updated-info">
+                        <!-- svg -->
+                        <span>Last updated</span>
+                        <span>2 days ago</span>
+                    </div>
+
+                    <div class="license-info">
+                        <!-- svg -->
+                        <span>License</span>
+                        <span>lgpl-3.0</span>
+                    </div>
+
+                    <div class="java-version-info">
+                        <!-- svg -->
+                        <span>Java versions</span>
+                        <span>Java 17, Java 21</span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="main-footer">
@@ -275,6 +394,7 @@
     </footer>
 
     <script src="scripts/main.js"></script>
+    <script src="scripts/mod.js"></script>
 </body>
 
 </html>

@@ -83,11 +83,16 @@
     align-items: center;
     width: 36px;
     height: 36px;
-    color: white;
+    /* color: white; */
     background-color: #a855f7;
     border-radius: 10px;
     font-size: 20px;
     box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+}
+
+.logo-icon-img {
+    height: 30px;
+    width: 30px;
 }
 
 .logo-text {
