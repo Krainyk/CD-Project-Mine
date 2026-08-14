@@ -252,13 +252,14 @@
 
                     <section class="screenshots-section" id="screenshot-target-section">
                         <div class="mod-screenshots-container">
-                            <div class="mod-screenshots-header">
-                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
-                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <div class="mod-section-header">
+                                <svg class="mod-header-icon" viewBox="0 0 24 24" width="24" height="24"
+                                    stroke="var(--accent-cyan)" stroke-width="2" fill="none" stroke-linecap="round"
+                                    stroke-linejoin="round">
                                     <path d="M12 3L14.5 9.5L21 12L14.5 14.5L12 21L9.5 14.5L3 12L9.5 9.5L12 3Z"></path>
                                     <path d="M5 5L6 7.5L8.5 8.5L6 9.5L5 12L4 9.5L1.5 8.5L4 7.5L5 5Z"></path>
                                 </svg>
-                                <h3>Screenshots</h3>
+                                <h3 class="mod-header-title">Screenshots</h3>
                                 <div class="mod-line"></div>
                             </div>
 
@@ -298,8 +299,8 @@
 
                     <section class="overview-section" id="overview-target-section">
                         <div class="mod-overview-container">
-                            <div class="mod-overview-header">
-                                <svg class="mod-overview-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            <div class="mod-section-header">
+                                <svg class="mod-header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     width="24" height="24" fill="none" stroke="var(--accent-purple, #a64dff)"
                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path
@@ -308,7 +309,7 @@
                                     <line x1="12" y1="22.08" x2="12" y2="12" />
                                     <line x1="7.5" y1="4.21" x2="16.5" y2="9.4" />
                                 </svg>
-                                <h3>About</h3>
+                                <h3 class="mod-header-title">About</h3>
                                 <div class="mod-line"></div>
                             </div>
 
@@ -390,7 +391,7 @@
                                         </li>
 
                                         <li class="key-features-list">
-                                           <div class="key-feature-icon-wrapper">
+                                            <div class="key-feature-icon-wrapper">
                                                 <svg class="key-feature-icon" xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24" width="14" height="14" fill="none"
                                                     stroke="var(--accent-cyan, #00ffff)" stroke-width="2"
@@ -455,8 +456,226 @@
                     </section>
 
                     <section class="compatibility-section" id="compatibility-target-section">
+                        <div class="mod-compatibility-container">
+                            <div class="mod-section-header">
+                                <svg class="mod-header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    width="24" height="24" fill="none" stroke="var(--accent-purple, #a64dff)"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                                <h3 class="mod-header-title">Compatibility</h3>
+                                <div class="mod-line"></div>
+                            </div>
 
+                            <div class="compatibility-mods-container">
+                                <div class="compatible-mods-container">
+                                    <div class="compatible-mods-header">
+                                        <svg class="compatible-icon-header" viewBox="0 0 24 24" width="24" height="24"
+                                            stroke="currentColor" stroke-width="2" fill="none">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <path d="M9 12l2 2 4-4"></path>
+                                        </svg> <span>Compatible Mods</span>
+                                    </div>
+
+                                    <ul class="compatible-mod-lists">
+                                        <li class="compatible-mod-list">
+                                            <div class="compatible-mod-main-info">
+                                                <img src="assets/icons/iris-shader-icon.png" alt="sodium">
+                                                <div class="compatible-mod-list-title">
+                                                    <span>Iris Shader</span>
+                                                    <span>Purpose-built to work with Sodium</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="compatible-mod-state">
+                                                <svg class="compatible-state-icon" viewBox="0 0 24 24" width="24"
+                                                    height="24" stroke="currentColor" stroke-width="2" fill="none">
+                                                    <circle cx="12" cy="12" r="10"></circle>
+                                                    <path d="M9 12l2 2 4-4"></path>
+                                                </svg>
+                                            </div>
+                                        </li>
+
+                                        <li class="compatible-mod-list">
+                                            <div class="compatible-mod-main-info">
+                                                <img src="assets/icons/fabricAPI-icon.png" alt="sodium">
+                                                <div class="compatible-mod-list-title">
+                                                    <span>Fabric API</span>
+                                                    <span>Required dependency — fully supported</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="compatible-mod-state">
+                                                <svg class="compatible-state-icon" viewBox="0 0 24 24" width="24"
+                                                    height="24" stroke="currentColor" stroke-width="2" fill="none">
+                                                    <circle cx="12" cy="12" r="10"></circle>
+                                                    <path d="M9 12l2 2 4-4"></path>
+                                                </svg>
+                                            </div>
+                                        </li>
+
+                                        <li class="compatible-mod-list">
+                                            <div class="compatible-mod-main-info">
+                                                <img src="assets/icons/lithium-icon.png" alt="sodium">
+                                                <div class="compatible-mod-list-title">
+                                                    <span>Lithium</span>
+                                                    <span>Complementary optimization, no conflicts</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="compatible-mod-state">
+                                                <svg class="compatible-state-icon" viewBox="0 0 24 24" width="24"
+                                                    height="24" stroke="currentColor" stroke-width="2" fill="none">
+                                                    <circle cx="12" cy="12" r="10"></circle>
+                                                    <path d="M9 12l2 2 4-4"></path>
+                                                </svg>
+                                            </div>
+                                        </li>
+
+                                        <li class="compatible-mod-list">
+                                            <div class="compatible-mod-main-info">
+                                                <img src="assets/icons/ferritecore-icon.jpeg" alt="sodium">
+                                                <div class="compatible-mod-list-title">
+                                                    <span>FerriteCore</span>
+                                                    <span>Works on different memory systems</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="compatible-mod-state">
+                                                <svg class="compatible-state-icon" viewBox="0 0 24 24" width="24"
+                                                    height="24" stroke="currentColor" stroke-width="2" fill="none">
+                                                    <circle cx="12" cy="12" r="10"></circle>
+                                                    <path d="M9 12l2 2 4-4"></path>
+                                                </svg>
+                                            </div>
+                                        </li>
+
+                                        <li class="compatible-mod-list">
+                                            <div class="compatible-mod-main-info">
+                                                <img src="assets/icons/indium-icon.png" alt="sodium">
+                                                <div class="compatible-mod-list-title">
+                                                    <span>Indium</span>
+                                                    <span>Bridge layer for FRAPI compatibility</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="compatible-mod-state">
+                                                <svg class="compatible-state-icon" viewBox="0 0 24 24" width="24"
+                                                    height="24" stroke="currentColor" stroke-width="2" fill="none">
+                                                    <circle cx="12" cy="12" r="10"></circle>
+                                                    <path d="M9 12l2 2 4-4"></path>
+                                                </svg>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="incompatible-mods-container">
+                                    <div class="incompatible-mods-header">
+                                        <svg class="incompatible-icon-header" viewBox="0 0 24 24" width="24" height="24"
+                                            stroke="currentColor" stroke-width="2" fill="none">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="15" y1="9" x2="9" y2="15"></line>
+                                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                                        </svg> <span>Known Conflicts</span>
+                                    </div>
+
+                                    <ul class="incompatible-mod-lists">
+                                        <li class="incompatible-mod-list">
+                                            <div class="incompatible-mod-info">
+                                                <div class="incompatible-mod-title">
+                                                    <img src="assets/icons/optifine-icon.webp"
+                                                        alt="incompatible-mod-icon">
+                                                    <span>OptiFine</span>
+                                                </div>
+
+                                                <div class="incompatible-mod-state">
+                                                    <svg class="incompatible-icon-state" viewBox="0 0 24 24" width="24"
+                                                        height="24" stroke="currentColor" stroke-width="2" fill="none">
+                                                        <circle cx="12" cy="12" r="10"></circle>
+                                                        <line x1="15" y1="9" x2="9" y2="15"></line>
+                                                        <line x1="9" y1="9" x2="15" y2="15"></line>
+                                                    </svg>
+                                                </div>
+                                            </div>
+
+                                            <div class="incompatible-mod-conflict">
+                                                <p class="conflict-info-row">
+                                                    <span class="conflict-label-error">Reason: </span>
+                                                    Both deeply modify the Minecraft rendering pipeline
+                                                </p>
+
+                                                <p class="conflict-info-row">
+                                                    <svg class="alternative-sparkle-icon"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        width="14" height="14" fill="var(--accent-cyan, #00ffff)">
+                                                        <path
+                                                            d="M12 2C12 7.5 16.5 12 22 12C16.5 12 12 16.5 12 22C12 16.5 7.5 12 2 12C7.5 12 12 7.5 12 2Z" />
+                                                    </svg>
+                                                    <span class="conflict-label-alternative-title">Alternative: </span>
+                                                    <span class="conflict-label-alternative-mods">Use Iris Shaders
+                                                        instead</span>
+                                                </p>
+                                            </div>
+                                        </li>
+
+                                        <li class="incompatible-mod-list">
+                                            <div class="incompatible-mod-info">
+                                                <div class="incompatible-mod-title">
+                                                    <img src="assets/icons/optifabric-icon.png"
+                                                        alt="incompatible-mod-icon">
+                                                    <span>Optifabric</span>
+                                                </div>
+
+                                                <div class="incompatible-mod-state">
+                                                    <svg class="incompatible-icon-state" viewBox="0 0 24 24" width="24"
+                                                        height="24" stroke="currentColor" stroke-width="2" fill="none">
+                                                        <circle cx="12" cy="12" r="10"></circle>
+                                                        <line x1="15" y1="9" x2="9" y2="15"></line>
+                                                        <line x1="9" y1="9" x2="15" y2="15"></line>
+                                                    </svg>
+                                                </div>
+                                            </div>
+
+                                            <div class="incompatible-mod-conflict">
+                                                <p class="conflict-info-row">
+                                                    <span class="conflict-label-error">Reason: </span>
+                                                    Wrapper for OptiFine, inherits all conflicts
+                                                </p>
+
+                                                <p class="conflict-info-row">
+                                                    <svg class="alternative-sparkle-icon"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        width="14" height="14" fill="var(--accent-cyan, #00ffff)">
+                                                        <path
+                                                            d="M12 2C12 7.5 16.5 12 22 12C16.5 12 12 16.5 12 22C12 16.5 7.5 12 2 12C7.5 12 12 7.5 12 2Z" />
+                                                    </svg>
+                                                    <span class="conflict-label-alternative-title">Alternative: </span>
+                                                    <span class="conflict-label-alternative-mods">Use Iris + Sodium
+                                                        natively</span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </section>
+
+                    <button class="compatibility-mod-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none"
+                            stroke="var(--accent-purple, #a64dff)" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+
+                        <span>Check Full Compatibility Report</span>
+                        <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
 
                     <section class="changelog-section" id="changelog-target-section">
 
