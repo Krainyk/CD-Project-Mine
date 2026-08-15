@@ -678,7 +678,87 @@
                     </button>
 
                     <section class="changelog-section" id="changelog-target-section">
+                        <div class="changelog-container">
+                            <div class="mod-section-header">
+                                <svg class="mod-header-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple, #a64dff)" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="icon-clock">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <h3 class="mod-header-title">Changelog</h3>
+                                <div class="mod-line"></div>
+                            </div>
 
+                            <div class="changelog-timeline-container">
+                                <div class="changelog-card active">
+                                    <div class="timeline-dot"></div>
+
+                                    <div class="changelog-card-header">
+                                        <span>v0.5.8</span>
+                                        <span class="badge-latest">Latest</span>
+                                        <span>Jun 30, 2025</span>
+                                    </div>
+
+                                    <ul class="version-features-lists">
+                                        <li class="version-features-list">
+                                            <span>Fixed rendering artifacts on AMD GPU drivers 24.x+</span>
+                                        </li>
+
+                                        <li class="version-features-list">
+                                            <span>Improved chunk boundary handling in mountainous terrain</span>
+                                        </li>
+
+                                        <li class="version-features-list">
+                                            <span>Reduced memory pressure during fast movement</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="changelog-card">
+                                    <div class="timeline-dot timeline-dot-muted"></div>
+
+                                    <div class="changelog-card-header">
+                                        <span>v0.5.7</span>
+                                        <span class="badge-stable">Stable</span>
+                                        <span>May 14, 2025</span>
+                                    </div>
+
+                                    <ul class="version-features-lists">
+                                        <li class="version-features-list">
+                                            <span>Added support for Minecraft 1.21</span>
+                                        </li>
+
+                                        <li class="version-features-list">
+                                            <span>Refactored vertex buffer pooling system</span>
+                                        </li>
+
+                                        <li class="version-features-list">
+                                            <span>Fixed translucent sorting edge cases</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="changelog-card">
+                                    <div class="timeline-dot timeline-dot-muted"></div>
+
+                                    <div class="changelog-card-header">
+                                        <span>v0.5.7</span>
+                                        <span>Mar 02, 2025</span>
+                                    </div>
+
+                                    <ul class="version-features-lists">
+                                        <li class="version-features-list">
+                                            <span>Emergency fix for chunk corruption on 1.20.4</span>
+                                        </li>
+
+                                        <li class="version-features-list">
+                                            <span>Improved compatibility with external render mods</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </section>
 
                     <!-- <section class="overview-section" id="overview-target-section">
