@@ -3,12 +3,7 @@
 ========================== */
 /*--------------------NAVBAR--------------------*/
 .main-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-inline: 40px;
-    padding-block: 8px;
-    /* padding: 8px 40px; */
+    width: 100%;
     top: 0;
     right: 0;
     left: 0;
@@ -17,6 +12,19 @@
     background-color: #10131a;
     border-bottom: 1px solid #1a1a1a;
 }
+
+.navbar-container {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* max-width: 1480px;
+    width: 100%; */
+    /* padding-inline: max(40px, calc((100vw - 1400px) / 2)); */
+    margin-inline: auto;
+    padding-inline: 40px;
+    padding-block: 14px;
+}
+
 
 .nav-list {
     list-style-type: none;
@@ -67,7 +75,7 @@
     align-items: center;
     color: white;
     font-family: 'Bebas Neue', sans-serif;
-    padding: 10px 10px 10px 40px;
+    /* padding: 10px; */
 }
 
 .logo-link {

@@ -1,0 +1,62 @@
+@media (max-width: 1400px) {
+    .mod-hero-section .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mod-hero-quick-install {
+        max-width: 880px;
+        width: 100%;
+    }
+
+    .quick-install-box {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 1200px) {
+    .mod-main-container {
+        width: 100%;
+    }
+
+    .mod-more-details {
+        display: none;
+    }
+
+    .related-mods-container {
+        padding-inline: 5%;
+    }
+}
+
+@media (max-width: 976px) {
+    .hero-mod-btns {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 690px) {
+    .related-mod-container {
+        flex-direction: column;
+    }
+
+    .related-mod-card {
+        flex-direction: column;
+        align-items: center;
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .related-mod-card-header {
+        display: flex;
+        align-items: center;
+    }
+
+    .related-mod-text {
+        align-items: center;
+    }
+
+    .related-mod-card-footer {
+        gap: 20px;
+    }
+}
