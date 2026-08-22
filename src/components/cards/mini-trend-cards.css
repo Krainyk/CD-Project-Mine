@@ -1,0 +1,163 @@
+/* ==========================================================================
+   01. ГОЛОВНИЙ КОНТЕЙНЕР КАРТКИ
+   ========================================================================== */
+.mini-trend-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 370px;
+    width: 100%;
+    min-height: 190px;
+    margin: 0 auto;
+    color: white; 
+    text-decoration: none;
+    background-color: var(--bg-card-default); 
+    border: 1px solid var(--border-default);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mini-trend-card:hover {
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
+    transform: scale(1.02);
+    border-color: var(--border-hover);
+}
+
+/* ==========================================================================
+   02. ОСНОВНИЙ БЛОК ТА ОБГОРТКА (ЛЕЙАУТ)
+   ========================================================================== */
+.mini-trend-card-main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 20px 0 20px; 
+}
+
+.mini-trend-card-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* ==========================================================================
+   03. ІКОНКА МОДА
+   ========================================================================== */
+.mini-trend-card-icon {
+    width: 5rem;
+    height: 5rem;
+    min-width: 4rem;
+    min-height: 4rem;
+    flex-shrink: 0;
+}
+
+.mini-trend-card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* ==========================================================================
+   04. ТЕКСТОВА ІНФОРМАЦІЯ ТА ТЕГ
+   ========================================================================== */
+.mini-trend-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mini-trend-card-info-header {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.mini-trend-title {
+    color: whitesmoke;
+    font-size: 1.5rem;
+    margin: 0; 
+}
+
+.mini-trend-category-tag {
+    color: var(--accent-purple);
+    background-color: rgba(166, 77, 255, 0.15);
+    border: 1px solid rgba(166, 77, 255, 0.3);
+    padding: 4px 8px;
+    border-radius: 16px;
+    font-weight: var(--font-weight-semi);
+    font-size: 0.75rem;
+}
+
+/* ==========================================================================
+   05. БЛОК АВТОРА
+   ========================================================================== */
+.mini-trend-author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.mini-trend-author-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.mini-trend-mod-author {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent-purple);
+}
+
+/* ==========================================================================
+   06. РОЗДІЛЮВАЧ ТА ФУТЕР
+   ========================================================================== */
+.mini-trend-card-divider {
+    width: calc(100% - 40px); 
+    height: 1px;
+    margin: 16px auto 0;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.mini-trend-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px 16px 20px; 
+}
+
+/* ==========================================================================
+   07. СТАТИСТИКА (РЕЙТИНГ ТА ЗАВАНТАЖЕННЯ)
+   ========================================================================== */
+.mini-trend-card-rating,
+.mini-trend-mod-card-downloads {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mini-trend-rate-card {
+    width: 1.3rem;
+    height: 1.3rem;
+    color: var(--accent-yellow);
+}
+
+.mini-trend-rating-value {
+    color: white;
+    font-size: 0.85rem;
+    font-weight: var(--font-weight-semi);
+}
+
+.mini-trend-download-icon {
+    width: 1.3rem;
+    height: 1.3rem;
+    color: var(--text-secondary);
+}
+
+.mini-trend-download-count {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: var(--font-weight-semi);
+}

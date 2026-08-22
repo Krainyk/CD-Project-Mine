@@ -1,0 +1,37 @@
+:root {
+    /* === 1. ГЛОБАЛЬНІ ФОНИ === */
+    --bg-gradient-main: linear-gradient(180deg, #0b0714 0%, #090511 50%, #050308 100%);
+    --bg-card-default: #120d22;
+
+    /* === 2. ТЕКСТ === */
+    --text-primary: #FFFFFF;
+    --text-secondary: #99A1AF;
+
+    /* === 3. АКЦЕНТНІ КОЛЬОРИ (Для кнопок, іконок тощо) === */
+    --accent-purple: #9D60FF;
+    --accent-yellow: #FFC800;
+    --accent-green: #07DF72;
+    --accent-red: #FF6467;
+
+    /* === 4. БОРДЕРИ (Рамки) === */
+    --border-default: rgba(255, 255, 255, 0.05);
+    --border-hover: #a855f7;
+
+    /* === 5. СТАТУСИ (Для чекера сумісності) === */
+    --status-bg-success: #032B1D;
+    --status-border-success: #006B45;
+
+    --status-bg-error: #2D121B;
+    --status-border-error: #6D1A23;
+
+    /* === 6. БРЕНДИНГ МОДІВ === */
+    --brand-optifine: #882829;
+    --brand-sodium: #70C35B;
+    --brand-iris: #28abc8;
+    --brand-create: #5297D1;
+    --brand-jei: #D6F9D7;
+
+    /* === 7. ТИПОГРАФІКА (Вага шрифту) === */
+    --font-weight-semi: 600;
+    --font-weight-black: 900;
+}

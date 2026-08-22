@@ -1,0 +1,483 @@
+/* ==========================================================================
+   01. БАЗОВИЙ ЛЕЙАУТ ТА УНІВЕРСАЛЬНІ КЛАСИ
+   ========================================================================== */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 75px;
+}
+
+.text-gradient {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.interactive-card {
+    transition: border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease; /* Виправлено bax-shadow на box-shadow */
+}
+
+.interactive-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.15);
+}
+
+/* ==========================================================================
+   02. ТИПОГРАФІКА ТА ЗАГОЛОВКИ СЕКЦІЙ
+   ========================================================================== */
+.home-header-section {
+    margin-top: 200px;
+    padding-bottom: 60px;
+}
+
+.home-header-section h2 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.home-header-section p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.home-header-section.features h2 {
+    background-image: linear-gradient(to right, #e0e0e0, #cc88ee, #9966ff, #00bfff);
+}
+
+.home-header-section.compatibility h2 {
+    background-image: linear-gradient(to right, #e0e0e0, #a8e6ff, #5ad1ff, #00bfff);
+}
+
+.home-header-section.popular h2 {
+    background-image: linear-gradient(to right, #b3aaff, #c4caff);
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.home-header-section.popular p {
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.home-header-section.why h2 {
+    background-image: linear-gradient(to right, #00d4ff, #a269ff, #ff577f);
+}
+
+.home-header-section.soon h2 {
+    background-image: linear-gradient(to right, #c4f9ff, #85e8ff);
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.home-header-section.soon p {
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 10);
+}
+
+/* ==========================================================================
+   03. UI ЕЛЕМЕНТИ (Кнопки)
+   ========================================================================== */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 28px;
+    margin-top: 60px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease,
+        filter 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.hero-buttons a:first-child {
+    background-color: #863AFA;
+}
+
+.hero-buttons a:last-child {
+    color: var(--text-secondary);
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hero-buttons a:first-child:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+    filter: brightness(1.05);
+    background-color: #9333ea;
+}
+
+.hero-buttons a:last-child:hover {
+    transform: translateY(-2px);
+    color: var(--text-primary);
+    border-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================================================================
+   04. СЕКЦІЯ: HERO
+   ========================================================================== */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 95vh;
+    width: 100%;
+    background:
+        linear-gradient(to bottom,
+            rgba(11, 7, 20, 0.4) 0%,
+            rgba(11, 7, 20, 0.7) 60%,
+            #0b0714 100%),
+        url("/src/assets/images/home-hero-gb.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 800px;
+    margin-top: 170px;
+}
+
+.hero-title {
+    text-align: center;
+    font-size: 6rem;
+    line-height: 1.1;
+    letter-spacing: 4px;
+    background: linear-gradient(to right, #e0e0e0, #cc88ee, #9966ff, #00bfff);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.hero-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.hero-icon {
+    width: 36px;
+    height: 36px;
+}
+
+/* ==========================================================================
+   05. СЕКЦІЯ: FEATURES
+   ========================================================================== */
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 50px;
+    margin-bottom: 120px;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    background-color: var(--bg-card-default);
+    min-height: 250px;
+    max-width: 300px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid var(--border-default);
+    transition: all 0.3s ease;
+}
+
+.feature-icon {
+    display: flex;
+    margin: 0 auto;
+    color: var(--accent-purple);
+    width: 42px;
+    height: 42px;
+    filter: drop-shadow(0 0 1px #8b5cf6);
+}
+
+.feature-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.feature-text h3 {
+    color: var(--text-primary);
+    font-size: 1.3rem;
+}
+
+.feature-text p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-semi);
+}
+
+/* ==========================================================================
+   06. СЕКЦІЯ: COMPATIBILITY
+   ========================================================================== */
+.compatibility-section {
+    margin-bottom: 200px;
+}
+
+.compatibility-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px;
+    background-color: var(--bg-card-default);
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    border-radius: 24px;
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.15);
+}
+
+.compatibility-container h3 {
+    display: flex;
+    gap: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--accent-red);
+}
+
+.compatibility-container .recommended-title {
+    margin-top: 30px;
+    color: var(--accent-green);
+}
+
+.compatibility-icon-header {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 8px;
+}
+
+.compatibility-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 24px 40px;
+    border-radius: 20px;
+    gap: 90px;
+}
+
+.incompatible-card {
+    background-color: var(--status-bg-error);
+    border: 1px solid var(--status-border-error);
+}
+
+.recommended-card {
+    background-color: var(--status-bg-success);
+    border: 1px solid var(--status-border-success);
+}
+
+.mod-info {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.mod-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+    min-width: 0;
+}
+
+.mod-info h4 {
+    color: var(--text-primary);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mod-info p {
+    color: var(--text-secondary);
+    font-weight: var(--font-weight-semi);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.compatibility-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.optf { color: var(--brand-optifine); }
+.sodi { color: var(--brand-sodium); }
+.iris { color: var(--brand-iris); }
+
+.optf:hover { filter: drop-shadow(0 0 14px currentColor); }
+.sodi:hover { filter: drop-shadow(0 0 8px currentColor); }
+.iris:hover { filter: drop-shadow(0 0 8px currentColor); }
+
+/* ==========================================================================
+   07. СЕКЦІЯ: POPULAR MODS (MINI TREND CARDS)
+   ========================================================================== */
+.mini-trend-cards-section {
+    width: 100%;
+    min-height: 980px;
+    background:
+        linear-gradient(to bottom,
+            #0b0714 0%,
+            rgba(11, 7, 20, 0.3) 20%,
+            rgba(11, 7, 20, 0.3) 80%,
+            #0b0714 100%),
+        url("/src/assets/images/home-popmods-bg.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 90px;
+}
+
+.mini-trend-cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    max-width: 1600px;
+    margin-inline: auto;
+}
+
+/* ==========================================================================
+   08. СЕКЦІЯ: WHY CDPM
+   ========================================================================== */
+.why-container {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 340px;
+}
+
+.why-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--bg-card-default);
+    border: 1px solid var(--border-default);
+    border-radius: 20px;
+    max-width: 400px;
+    width: 100%;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.why-icon svg {
+    height: 36px;
+    width: 36px;
+    color: var(--accent-purple);
+}
+
+.why-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.why-info h4 {
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    font-weight: var(--font-weight-black);
+}
+
+.why-info p {
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: var(--font-weight-semi);
+}
+
+/* ==========================================================================
+   09. СЕКЦІЯ: COMING SOON
+   ========================================================================== */
+.soon-section {
+    width: 100%;
+    min-height: 850px;
+    background:
+        linear-gradient(to bottom,
+            #0b0714 0%,
+            rgba(11, 7, 20, 0.3) 20%,
+            rgba(11, 7, 20, 0.3) 80%,
+            #0b0714 100%),
+        url("/src/assets/images/home-soon-bg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.soon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.soon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--bg-card-default);
+    border: 1px solid var(--border-default);
+    padding: 20px;
+    min-height: 200px;
+    max-width: 350px;
+    width: 100%;
+    border-radius: 20px;
+    transition: border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.soon-icon svg {
+    height: 42px;
+    width: 42px;
+    color: #00e5ff;
+}
+
+.soon-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.soon-info h3 {
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    font-weight: var(--font-weight-semi);
+}
+
+.soon-info p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-secondary);
+    font-weight: var(--font-weight-semi);
+}

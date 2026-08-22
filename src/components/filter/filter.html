@@ -1,0 +1,64 @@
+<aside class="mod-filter">
+    <div class="filter-header">
+        <div class="filter-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="4 4 20 4 14 13 14 20 10 20 10 13"></polygon>
+            </svg>
+        </div>
+
+        <div class="filter-text">
+            <h2>Filters</h2>
+        </div>
+    </div>
+
+    <div class="filter-group">
+        <h2>Loader</h2>
+        <input type="checkbox" id="forge" value="forge" class="js-filter">
+        <label for="forge" class="forge-option"> Forge</label>
+        <input type="checkbox" id="fabric" value="fabric" class="js-filter">
+        <label for="fabric" class="fabric-option"> Fabric</label>
+        <input type="checkbox" id="neoforge" value="neoforge" class="js-filter">
+        <label for="neoforge" class="neoforge-option"> NeoForge</label>
+    </div>
+
+    <div class="filter-group">
+        <h2>Version</h2>
+        <input type="checkbox" id="version-1201" value="1.20.1" class="js-filter">
+        <label for="version-1201" class="version-1201-option"> 1.20.1</label>
+        <input type="checkbox" id="version-121" value="1.21" class="js-filter">
+        <label for="version-121" class="version-121-option"> 1.21</label>
+        <input type="checkbox" id="version-1192" value="1.19.2" class="js-filter">
+        <label for="version-1192" class="version-1192-option"> 1.19.2</label>
+    </div>
+
+    <div class="filter-group">
+        <h2>Categories</h2>
+        <input type="checkbox" id="optimization" value="optimization" class="js-filter">
+        <label for="optimization" class="optimization-option"> Optimization</label>
+        <input type="checkbox" id="magic" value="magic" class="js-filter">
+        <label for="magic" class="magic-option"> Magic</label>
+        <input type="checkbox" id="rpg" value="rpg" class="js-filter">
+        <label for="rpg" class="rpg-option"> RPG</label>
+        <input type="checkbox" id="technology" value="technology" class="js-filter">
+        <label for="technology" class="technology-option"> Technology</label>
+        <input type="checkbox" id="adventure" value="adventure" class="js-filter">
+        <label for="adventure" class="adventure-option"> Adventure</label>
+        <input type="checkbox" id="utility" value="utility" class="js-filter">
+        <label for="utility" class="utility-option"> Utility</label>
+    </div>
+
+    <div class="filter-group">
+        <h2>Sort by</h2>
+        <input type="radio" id="most-popular" value="most-popular" name="sort">
+        <label for="most-popular" class="most-popular-option"> Most Popular</label>
+        <input type="radio" id="trending" value="trending" name="sort">
+        <label for="trending" class="trending-option"> Trending</label>
+        <input type="radio" id="newest" value="newest" name="sort">
+        <label for="newest" class="newest-option"> Newest</label>
+        <input type="radio" id="best-rated" value="best-rated" name="sort">
+        <label for="best-rated" class="best-rated-option"> Best Rated</label>
+    </div>
+
+    <button class="clear-btn"> Clear filters</button>
+</aside>

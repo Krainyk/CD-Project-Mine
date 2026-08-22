@@ -7,140 +7,127 @@
 
     <title>CD Project Mine</title>
 
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/components/navbar.css">
-    <link rel="stylesheet" href="./css/components/footer.css">
-    <link rel="stylesheet" href="./css/pages/home.css">
-    <link rel="stylesheet" href="./css/media/index.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="src/css/global.css">
+    <link rel="stylesheet" href="src/components/cards/mini-trend-cards.css">
+    <link rel="stylesheet" href="src/css/pages/home.css">
+    <link rel="stylesheet" href="src/css/media/index.css">
 </head>
 
 <body>
-    <nav class="main-nav">
-        <div class="logo-container">
-            <a href="index.html" class="logo-link">
-                <div class="logo-icon">
-                    <img src="assets/icons/logo-icon.png" alt="logo-icon" class="logo-icon-img">
-                </div>
-                <span class="logo-text">
-                    <span class="logo-accent">CD </span> Project Mine
-                </span>
-            </a>
-        </div>
-
-        <!-- <div class="logo-icon">⛏</div> -->
-
-        <ul class="nav-list" id="nav-list">
-            <li><a class="nav-link" href="discover.html">Discover</a></li>
-            <li><a class="nav-link" href="compatibility.html">Compatibility</a></li>
-            <li><a class="nav-link" href="modpacks.html">Modpacks</a></li>
-            <li><a class="nav-link" href="hosting.html">Hosting</a></li>
-
-            <a class="mobile-btn" href="#"> Sign In</a>
-        </ul>
-
-        <a class="desktop-btn" href="#"> Sign In</a>
-
-        <button class="burger-btn" id="burger-btn">
-            <svg class="burger-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
-                fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="4" y1="6" x2="20" y2="6"></line>
-                <line x1="4" y1="12" x2="20" y2="12"></line>
-                <line x1="4" y1="18" x2="20" y2="18"></line>
-            </svg>
-        </button>
-
-    </nav>
+    <div id="navbar-placeholder"></div>
 
     <main class="main-content">
         <section class="hero-section">
-            <h1>Build Stable</h1>
-            <h1>Minecraft Modpacks</h1>
-            <p class="paragraph-upper">Check mod compatibility instantly, discover alternatives, and create optimized
-            </p>
-            <p class="paragraph-lower">Minecraft experiences.</p>
+            <div class="hero-header">
+                <h1 class="hero-title">Build Stable <br> Minecraft Modpacks</h1>
+                <p class="hero-subtitle">Check mod compatibility instantly, discover alternatives, and create optimized
+                    Minecraft experiences.</p>
+            </div>
 
             <div class="hero-buttons">
                 <a class="hero-btn" href="discover.html">
-                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                    <svg class="hero-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-search-code-icon lucide-search-code">
+                        <path d="m13 13.5 2-2.5-2-2.5" />
+                        <path d="m21 21-4.3-4.3" />
+                        <path d="M9 8.5 7 11l2 2.5" />
+                        <circle cx="11" cy="11" r="8" />
                     </svg>
                     Explore Mods
                 </a>
 
                 <a class="hero-btn" href="compatibility.html">
-                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="3"></circle>
-                        <path
-                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
-                        </path>
+                    <svg class="hero-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-globe-check-icon lucide-globe-check">
+                        <path d="m15 6 2 2 4-4" />
+                        <path d="M2 12h20A10 10 0 1 1 12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 4-10" />
                     </svg>
                     Compatibility Checker
                 </a>
+            </div>
         </section>
 
         <section class="features-section">
-            <h2>Powerful Features</h2>
-            <p>Everything you need to build perfect modpacks</p>
+            <div class="home-header-section features">
+                <h2 class="text-gradient">Powerful Features</h2>
+                <p>Everything you need to build perfect modpacks</p>
+            </div>
 
             <div class="features-container">
-                <div class="feature-card">
-                    <svg class="feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                        <path d="M12 8v4" />
-                        <path d="M12 16h.01" />
-                    </svg>
-                    <h3>Compatibility Checker</h3>
-                    <p>Detect incompatible mods instantly</p>
-                </div>
-                <div class="feature-card">
-                    <svg class="feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M15 14.2c1.5 1 2.5 2.8 2.5 4.8 0 2.8-2.2 5-5 5s-5-2.2-5-5c0-2 1-3.8 2.5-4.8" />
-                        <path d="M12 2v3" />
-                        <path d="M18.4 5.6l-2.1 2.1" />
-                        <path d="M5.6 5.6l2.1 2.1" />
-                    </svg>
-                    <h3>Smart Alternatives</h3>
-                    <p>Find compatible replacements automatically</p>
-                </div>
-                <div class="feature-card">
-                    <svg class="feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <div class="feature-card interactive-card">
+                    <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-file-check-corner-icon lucide-file-check-corner">
                         <path
-                            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-                        <line x1="12" y1="9" x2="12" y2="13" />
-                        <line x1="12" y1="17" x2="12.01" y2="17" />
+                            d="M10.5 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v6" />
+                        <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+                        <path d="m14 20 2 2 4-4" />
                     </svg>
-                    <h3>Crash Analyzer</h3>
-                    <p>Analyze Minecraft crash logs</p>
+                    <div class="feature-text">
+                        <h3>Compatibility Checker</h3>
+                        <p>Detect incompatible mods instantly</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <svg class="feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path
-                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                        <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-                        <line x1="12" y1="22.08" x2="12" y2="12" />
+                <div class="feature-card interactive-card">
+                    <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-brain-icon lucide-brain">
+                        <path d="M12 18V5" />
+                        <path d="M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4" />
+                        <path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5" />
+                        <path d="M17.997 5.125a4 4 0 0 1 2.526 5.77" />
+                        <path d="M18 18a4 4 0 0 0 2-7.464" />
+                        <path d="M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517" />
+                        <path d="M6 18a4 4 0 0 1-2-7.464" />
+                        <path d="M6.003 5.125a4 4 0 0 0-2.526 5.77" />
                     </svg>
-                    <h3>Modpack Builder</h3>
-                    <p>Create stable and optimized modpacks</p>
+                    <div class="feature-text">
+                        <h3>Smart Alternatives</h3>
+                        <p>Find compatible replacements automatically</p>
+                    </div>
+                </div>
+                <div class="feature-card interactive-card">
+                    <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-database-zap-icon lucide-database-zap">
+                        <ellipse cx="12" cy="5" rx="9" ry="3" />
+                        <path d="M3 5V19A9 3 0 0 0 15 21.84" />
+                        <path d="M21 5V8" />
+                        <path d="M21 12L18 17H22L19 22" />
+                        <path d="M3 12A9 3 0 0 0 14.59 14.87" />
+                    </svg>
+                    <div class="feature-text">
+                        <h3>Crash Analyzer</h3>
+                        <p>Analyze Minecraft crash logs</p>
+                    </div>
+                </div>
+                <div class="feature-card interactive-card">
+                    <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-pickaxe-icon lucide-pickaxe">
+                        <path d="m14 13-8.381 8.38a1 1 0 0 1-3.001-3L11 9.999" />
+                        <path
+                            d="M15.973 4.027A13 13 0 0 0 5.902 2.373c-1.398.342-1.092 2.158.277 2.601a19.9 19.9 0 0 1 5.822 3.024" />
+                        <path
+                            d="M16.001 11.999a19.9 19.9 0 0 1 3.024 5.824c.444 1.369 2.26 1.676 2.603.278A13 13 0 0 0 20 8.069" />
+                        <path
+                            d="M18.352 3.352a1.205 1.205 0 0 0-1.704 0l-5.296 5.296a1.205 1.205 0 0 0 0 1.704l2.296 2.296a1.205 1.205 0 0 0 1.704 0l5.296-5.296a1.205 1.205 0 0 0 0-1.704z" />
+                    </svg>
+                    <div class="feature-text">
+                        <h3>Modpack Builder</h3>
+                        <p>Create stable and optimized modpacks</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="compatibility-section">
-            <h2>Compatibility Checker</h2>
-            <p>See conflicts before they break your game</p>
+            <div class="home-header-section compatibility">
+                <h2 class="text-gradient">Compatibility Checker</h2>
+                <p>See conflicts before they break your game</p>
+            </div>
 
             <div class="compatibility-container">
                 <div class="compatibility-group">
@@ -155,7 +142,7 @@
 
                     <div class="compatibility-card incompatible-card">
                         <div class="mod-info">
-                            <img src="./assets/icons/optifine-icon.webp" alt="OptiFine Icon"
+                            <img src="src/assets/icons/optifine-icon.webp" alt="OptiFine Icon"
                                 class="compatibility-icon optf">
 
                             <div class="mod-text">
@@ -165,7 +152,8 @@
                         </div>
 
                         <div class="mod-info">
-                            <img src="./assets/icons/sodium-icon.png" alt="Sodium Icon" class="compatibility-icon sodi">
+                            <img src="src/assets/icons/sodium-icon.png" alt="Sodium Icon"
+                                class="compatibility-icon sodi">
 
                             <div class="mod-text">
                                 <h4>Sodium</h4>
@@ -186,7 +174,8 @@
                     </h3>
                     <div class="compatibility-card recommended-card">
                         <div class="mod-info">
-                            <img src="./assets/icons/sodium-icon.png" alt="Sodium Icon" class="compatibility-icon sodi">
+                            <img src="src/assets/icons/sodium-icon.png" alt="Sodium Icon"
+                                class="compatibility-icon sodi">
 
                             <div class="mod-text">
                                 <h4>Sodium</h4>
@@ -195,7 +184,7 @@
                         </div>
 
                         <div class="mod-info">
-                            <img src="./assets/icons/iris-shader-icon.png" alt="Iris Icon"
+                            <img src="src/assets/icons/iris-shader-icon.png" alt="Iris Icon"
                                 class="compatibility-icon iris">
 
                             <div class="mod-text">
@@ -207,85 +196,39 @@
                 </div>
         </section>
 
-        <section class="popular-mods-section">
-            <h2>Popular Mods</h2>
-            <p>The most loved mods by the community</p>
-
-            <div class="pop-container">
-                <div class="pop-card">
-                    <img src="./assets/icons/sodium-icon.png" alt="Sodium Icon" class="pop-icon sodi">
-                    <h3>Sodium</h3>
-                    <div class="mini-mod-loader">
-                        <h4>Fabric</h4>
-                    </div>
-                    <p>1.20.1</p>
-                    <div class="mod-rating">
-                        <span>Rate</span>
-                        <span>4.9</span>
-                    </div>
-                </div>
-
-                <div class="pop-card">
-                    <img src="./assets/icons/iris-shader-icon.png" alt="Iris Icon" class="pop-icon iris">
-                    <h3>Iris</h3>
-                    <div class="mini-mod-loader">
-                        <h4>Fabric</h4>
-                    </div>
-                    <p>1.20.1</p>
-                    <div class="mod-rating">
-                        <span>Rate</span>
-                        <span>4.8</span>
-                    </div>
-                </div>
-
-                <div class="pop-card">
-                    <img src="./assets/icons/create-icon.png" alt="Create Icon" class="pop-icon create">
-                    <h3>Create</h3>
-                    <div class="mini-mod-loader">
-                        <h4>Forge</h4>
-                    </div>
-                    <p>1.20.1</p>
-                    <div class="mod-rating">
-                        <span>Rate</span>
-                        <span>4.9</span>
-                    </div>
-                </div>
-
-                <div class="pop-card">
-                    <img src="./assets/icons/jei-icon.jpeg" alt="JEI Icon" class="pop-icon jei">
-
-                    <h3>JEI</h3>
-                    <div class="mini-mod-loader">
-                        <h4>Forge/Fabric</h4>
-                    </div>
-                    <p>1.20.1</p>
-                    <div class="mod-rating">
-                        <span>Rate</span>
-                        <span>4.7</span>
-                    </div>
-                </div>
+        <section class="mini-trend-cards-section">
+            <div class="home-header-section popular">
+                <h2 class="text-gradient">Popular Mods</h2>
+                <p>The most loved mods by the community</p>
             </div>
+
+            <div class="mini-trend-cards-container" id="mini-trend-cards-placeholder"></div>
         </section>
 
         <section class="why-section">
-            <h3>Why CD Project Mine?</h3>
-            <p>The platform built for modern modders</p>
+            <div class="home-header-section why">
+                <h2 class="text-gradient">Why CD Project Mine?</h2>
+                <p>The platform built for modern modders</p>
+            </div>
 
             <div class="why-container">
-                <div class="why-card">
+                <div class="why-card interactive-card">
                     <div class="why-icon">
-                        <svg class="icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
-                            stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
-                            <rect x="9" y="9" width="6" height="6"></rect>
-                            <line x1="9" y1="1" x2="9" y2="4"></line>
-                            <line x1="15" y1="1" x2="15" y2="4"></line>
-                            <line x1="9" y1="20" x2="9" y2="23"></line>
-                            <line x1="15" y1="20" x2="15" y2="23"></line>
-                            <line x1="20" y1="9" x2="23" y2="9"></line>
-                            <line x1="20" y1="14" x2="23" y2="14"></line>
-                            <line x1="1" y1="9" x2="4" y2="9"></line>
-                            <line x1="1" y1="14" x2="4" y2="14"></line>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-monitor-cog-icon lucide-monitor-cog">
+                            <path d="M12 17v4" />
+                            <path d="m14.305 7.53.923-.382" />
+                            <path d="m15.228 4.852-.923-.383" />
+                            <path d="m16.852 3.228-.383-.924" />
+                            <path d="m16.852 8.772-.383.923" />
+                            <path d="m19.148 3.228.383-.924" />
+                            <path d="m19.53 9.696-.382-.924" />
+                            <path d="m20.772 4.852.924-.383" />
+                            <path d="m20.772 7.148.924.383" />
+                            <path d="M22 13v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7" />
+                            <path d="M8 21h8" />
+                            <circle cx="18" cy="6" r="3" />
                         </svg>
                     </div>
                     <div class="why-info">
@@ -294,7 +237,7 @@
                     </div>
                 </div>
 
-                <div class="why-card">
+                <div class="why-card interactive-card">
                     <div class="why-icon">
                         <svg class="icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
                             stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -306,17 +249,21 @@
                     </div>
                     <div class="why-info">
                         <h4>Modern Minecraft UI</h4>
-                        <p>Beautiful and intuitive interface</p>
+                        <p>Beautiful and intuitive user interface</p>
                     </div>
                 </div>
 
-                <div class="why-card">
+                <div class="why-card interactive-card">
                     <div class="why-icon">
-                        <svg class="icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
-                            stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                            <polyline points="2 12 12 17 22 12"></polyline>
-                            <polyline points="2 17 12 22 22 17"></polyline>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-layers-plus-icon lucide-layers-plus">
+                            <path
+                                d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 .83.18 2 2 0 0 0 .83-.18l8.58-3.9a1 1 0 0 0 0-1.831z" />
+                            <path d="M16 17h6" />
+                            <path d="M19 14v6" />
+                            <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 .825.178" />
+                            <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l2.116-.962" />
                         </svg>
                     </div>
                     <div class="why-info">
@@ -325,12 +272,13 @@
                     </div>
                 </div>
 
-                <div class="why-card">
+                <div class="why-card interactive-card">
                     <div class="why-icon">
-                        <svg class="icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
-                            stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="3 3 3 21 21 21"></polyline>
-                            <polyline points="3 14 8 9 13 14 21 6"></polyline>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chart-spline-icon lucide-chart-spline">
+                            <path d="M3 3v16a2 2 0 0 0 2 2h16" />
+                            <path d="M7 16c.5-2 1.5-7 4-7 2 0 2 3 4 3 2.5 0 4.5-5 5-7" />
                         </svg>
                     </div>
                     <div class="why-info">
@@ -342,15 +290,30 @@
         </section>
 
         <section class="soon-section">
-            <h2>Coming Soon</h2>
-            <p>Exciting features on the roadmap</p>
+            <div class="home-header-section soon">
+                <h2 class="text-gradient">Coming Soon</h2>
+                <p>Exciting features on the roadmap</p>
+            </div>
             <div class="soon-container">
-                <div class="soon-card">
+                <div class="soon-card interactive-card">
                     <div class="soon-icon">
-                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
-                            fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 3L14.5 9.5L21 12L14.5 14.5L12 21L9.5 14.5L3 12L9.5 9.5L12 3Z"></path>
-                            <path d="M5 5L6 7.5L8.5 8.5L6 9.5L5 12L4 9.5L1.5 8.5L4 7.5L5 5Z"></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-brain-circuit-icon lucide-brain-circuit">
+                            <path
+                                d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+                            <path d="M9 13a4.5 4.5 0 0 0 3-4" />
+                            <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" />
+                            <path d="M3.477 10.896a4 4 0 0 1 .585-.396" />
+                            <path d="M6 18a4 4 0 0 1-1.967-.516" />
+                            <path d="M12 13h4" />
+                            <path d="M12 18h6a2 2 0 0 1 2 2v1" />
+                            <path d="M12 8h8" />
+                            <path d="M16 8V5a2 2 0 0 1 2-2" />
+                            <circle cx="16" cy="13" r=".5" />
+                            <circle cx="18" cy="3" r=".5" />
+                            <circle cx="20" cy="21" r=".5" />
+                            <circle cx="20" cy="8" r=".5" />
                         </svg>
                     </div>
 
@@ -360,15 +323,16 @@
                     </div>
                 </div>
 
-                <div class="soon-card">
+                <div class="soon-card interactive-card">
                     <div class="soon-icon">
-                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2"
-                            fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="6" width="18" height="5" rx="1.5"></rect>
-                            <circle cx="6.5" cy="8.5" r="1" fill="currentColor" stroke="none"></circle>
-
-                            <rect x="3" y="13" width="18" height="5" rx="1.5"></rect>
-                            <circle cx="6.5" cy="15.5" r="1" fill="currentColor" stroke="none"></circle>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-hard-drive-icon lucide-hard-drive">
+                            <path d="M10 16h.01" />
+                            <path
+                                d="M2.212 11.577a2 2 0 0 0-.212.896V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5.527a2 2 0 0 0-.212-.896L18.55 5.11A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" />
+                            <path d="M21.946 12.013H2.054" />
+                            <path d="M6 16h.01" />
                         </svg>
                     </div>
 
@@ -378,14 +342,14 @@
                     </div>
                 </div>
 
-                <div class="soon-card">
+                <div class="soon-card interactive-card">
                     <div class="soon-icon">
-                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
-                            fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 16a5 5 0 0 1-.5-9.98 7 7 0 0 1 13 0 5 5 0 0 1-.5 9.98"></path>
-                            <polygon points="12 14 8 16 12 18 16 16"></polygon>
-                            <polyline points="8 16 8 20 12 22 16 20 16 16"></polyline>
-                            <line x1="12" y1="18" x2="12" y2="22"></line>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-cloud-upload-icon lucide-cloud-upload">
+                            <path d="M12 13v8" />
+                            <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" />
+                            <path d="m8 17 4-4 4 4" />
                         </svg>
                     </div>
 
@@ -395,13 +359,16 @@
                     </div>
                 </div>
 
-                <div class="soon-card">
+                <div class="soon-card interactive-card">
                     <div class="soon-icon">
-                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
-                            fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="10.5" cy="10.5" r="7.5"></circle>
-                            <line x1="16" y1="16" x2="22" y2="22"></line>
-                            <path d="M11 6l-3 5h3l-1 5 4-6h-3l2-4z"></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-file-search-corner-icon lucide-file-search-corner">
+                            <path
+                                d="M11.1 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.589 3.588A2.4 2.4 0 0 1 20 8v3.25" />
+                            <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+                            <path d="m21 22-2.88-2.88" />
+                            <circle cx="16" cy="17" r="3" />
                         </svg>
                     </div>
 
@@ -414,59 +381,11 @@
         </section>
     </main>
 
-    <footer class="main-footer">
-        <div class="footer-container">
-            <div class="footer-name">
-                <h2>CD Project Mine</h2>
-                <p>&copy 2026 All rights reserved</p>
-            </div>
+    <div id="footer-placeholder"></div>
 
-            <div class="footer-links">
-                <a href="#" class="footer-link">
-                    <svg class="footer-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
-                        stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path
-                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                        </path>
-                    </svg>
-                    <span> GitHub</span>
-                </a>
-
-                <a href="#" class="footer-link">
-                    <svg class="footer-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
-                        stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path
-                            d="M21 8.3a15.3 15.3 0 0 0-3.8-1.2c-.2-.4-.4-.9-.6-1.3a11.7 11.7 0 0 0-9.2 0c-.2.4-.4.9-.6 1.3A15.3 15.3 0 0 0 3 8.3C1.2 13 1.8 17.6 3.6 21.3a15.5 15.5 0 0 0 4.8-2.4l1-1.6c-1.3-.5-2.5-1-3.6-1.8.3-.2.6-.5.9-.7 3.2 1.5 6.6 1.5 9.8 0 .3.2.6.5.9.7-1.1.8-2.3 1.3-3.6 1.8l1 1.6a15.5 15.5 0 0 0 4.8 2.4c1.8-3.7 2.4-8.3.6-13z">
-                        </path>
-                        <circle cx="8.5" cy="12.5" r="1.5" fill="currentColor" stroke="none"></circle>
-                        <circle cx="15.5" cy="12.5" r="1.5" fill="currentColor" stroke="none"></circle>
-                    </svg>
-                    <span> Discord</span>
-                </a>
-
-                <a href="#" class="footer-link">
-                    <svg class="footer-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
-                        stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                        <path d="M2 6l10 7 10-7"></path>
-                    </svg>
-                    <span> Contact</span>
-                </a>
-
-                <a href="#" class="footer-link">
-                    <svg class="footer-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
-                        stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="3 6 9 3 15 6 21 3 21 17 15 20 9 17 3 20"></polygon>
-                        <line x1="9" y1="3" x2="9" y2="17"></line>
-                        <line x1="15" y1="6" x2="15" y2="20"></line>
-                    </svg>
-                    <span> Roadmap</span>
-                </a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="scripts/main.js"></script>
+    <script src="src/components/navbar/navbar.js" defer></script>
+    <script src="src/components/footer/footer.js" defer></script>
+    <script src="src/components/cards/mini-trend-cards.js" defer></script>
 </body>
 
 </html>
