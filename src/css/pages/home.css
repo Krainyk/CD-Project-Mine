@@ -26,6 +26,17 @@
     box-shadow: 0 0 25px rgba(168, 85, 247, 0.15);
 }
 
+.aos-grid-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.aos-flex-wrapper {
+    display: flex;
+}
+
 /* ==========================================================================
    02. ТИПОГРАФІКА ТА ЗАГОЛОВКИ СЕКЦІЙ
    ========================================================================== */
@@ -106,24 +117,25 @@
         border-color 0.3s ease;
 }
 
-.hero-buttons a:first-child {
+
+.hero-buttons .aos-flex-wrapper:first-child .hero-btn {
     background-color: #863AFA;
 }
 
-.hero-buttons a:last-child {
+.hero-buttons .aos-flex-wrapper:last-child .hero-btn {
     color: var(--text-secondary);
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.hero-buttons a:first-child:hover {
+.hero-buttons .aos-flex-wrapper:first-child:hover .hero-btn{
     transform: translateY(-2px);
     box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
     filter: brightness(1.05);
     background-color: #9333ea;
 }
 
-.hero-buttons a:last-child:hover {
+.hero-buttons .aos-flex-wrapper:last-child:hover .hero-btn {
     transform: translateY(-2px);
     color: var(--text-primary);
     border-color: rgba(255, 255, 255, 0.4);
@@ -365,21 +377,25 @@
    08. СЕКЦІЯ: WHY CDPM
    ========================================================================== */
 .why-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    /* display: flex; */
     gap: 30px;
     margin-bottom: 340px;
 }
 
 .why-card {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
     background-color: var(--bg-card-default);
     border: 1px solid var(--border-default);
     border-radius: 20px;
-    max-width: 400px;
+    max-width: 600px;
+    min-height: 140px;
     width: 100%;
     padding: 30px;
     transition: all 0.3s ease;
@@ -395,7 +411,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .why-info h4 {
@@ -435,6 +451,8 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .soon-card {

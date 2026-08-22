@@ -1,27 +1,32 @@
 /* ==========================================================================
    01. ГОЛОВНИЙ КОНТЕЙНЕР КАРТКИ
    ========================================================================== */
+.mini-trend-card-wrapper {
+    display: flex;
+    max-width: 370px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .mini-trend-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 370px;
     width: 100%;
     min-height: 190px;
-    margin: 0 auto;
-    color: white; 
+    color: white;
     text-decoration: none;
-    background-color: var(--bg-card-default); 
+    background-color: var(--bg-card-default);
     border: 1px solid var(--border-default);
     border-radius: 16px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .mini-trend-card:hover {
     box-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
-    transform: scale(1.02);
     border-color: var(--border-hover);
+    transform: scale(1.02);
 }
 
 /* ==========================================================================
@@ -31,7 +36,7 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 20px 20px 0 20px; 
+    padding: 20px 20px 0 20px;
 }
 
 .mini-trend-card-wrapper {
@@ -76,7 +81,7 @@
 .mini-trend-title {
     color: whitesmoke;
     font-size: 1.5rem;
-    margin: 0; 
+    margin: 0;
 }
 
 .mini-trend-category-tag {
@@ -114,7 +119,7 @@
    06. РОЗДІЛЮВАЧ ТА ФУТЕР
    ========================================================================== */
 .mini-trend-card-divider {
-    width: calc(100% - 40px); 
+    width: calc(100% - 40px);
     height: 1px;
     margin: 16px auto 0;
     background-color: rgba(255, 255, 255, 0.05);
@@ -124,7 +129,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 20px 16px 20px; 
+    padding: 12px 20px 16px 20px;
 }
 
 /* ==========================================================================
