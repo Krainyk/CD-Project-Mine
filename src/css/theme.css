@@ -20,6 +20,7 @@
     /* === 4. БОРДЕРИ (Рамки) === */
     --border-default: rgba(255, 255, 255, 0.05);
     --border-hover: #a855f7;
+    --border-cyan: #006675;
 
     /* === 5. СТАТУСИ (Для чекера сумісності) === */
     --status-bg-success: #032B1D;
@@ -49,7 +50,7 @@
     --filter-purple-glow: rgba(196, 65, 255, 0.4);
     --filter-purple-border: #3d1a78;
     --filter-purple-bg: #171126;
-    
+
     /* Purple Alt (Для Magic та Adventure) */
     --filter-purple-alt-border: #551a7a;
     --filter-purple-alt-bg: #1c1129;
@@ -59,6 +60,37 @@
     --filter-violet-glow: rgba(138, 79, 255, 0.4);
 
     /* Cyan (Специфічні для фільтрів) */
-    --filter-cyan-dot: #00e5ff; 
+    --filter-cyan-dot: #00e5ff;
     --filter-cyan-glow: rgba(0, 229, 255, 0.4);
+
+    /* === 9. ТЕГИ === */
+    --tag-loader-fabric-color: #00e5ff;
+    --tag-loader-fabric-border: #006675;
+    --tag-loader-fabric-bg: #12262b;
+    --tag-loader-fabric-glow: 0 0 8px rgba(0, 229, 255, 0.4);
+
+    --tag-loader-forge-color: #c441ff;
+    --tag-loader-forge-border: #3d1a78;
+    --tag-loader-forge-bg: #171126;
+    --tag-loader-forge-glow: 0 0 8px rgba(196, 65, 255, 0.4);
+
+    --tag-loader-neoforge-color: #8a4fff;
+    --tag-loader-neoforge-border: #3d1a78;
+    --tag-loader-neoforge-bg: #171126;
+    --tag-loader-neoforge-glow: 0 0 8px rgba(138, 79, 255, 0.4);
+
+    --tag-loader-forgeorfabric-color: #9f73b6;
+    --tag-loader-forgeorfabric-border: #4a355a;
+    --tag-loader-forgeorfabric-bg: #211d29;
+    --tag-loader-forgeorfabric-glow: 0 0 8px rgba(159, 115, 182, 0.4);
+
+    --tag-category-color: #8a4fff;
+    --tag-category-border: #3d1a78;
+    --tag-category-bg: #171126;
+    --tag-category-glow: 0 0 8px rgba(138, 79, 255, 0.4);
+
+    --tag-version-color: #8c8c96;
+    --tag-version-border: #2a2435;
+    --tag-version-bg: #1a1523;
+    --tag-version-glow: 0 0 8px rgba(196, 65, 255, 0.4);
 }

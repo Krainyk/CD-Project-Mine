@@ -9,12 +9,10 @@
 
     <link rel="stylesheet" href="src/css/global.css">
     <link rel="stylesheet" href="src/css/pages/discover-main.css">
+    <link rel="stylesheet" href="src/css/media/discover.css">
     <link rel="stylesheet" href="src/components/filter/filter.css">
     <link rel="stylesheet" href="src/components/cards/trend-cards.css">
     <link rel="stylesheet" href="src/components/cards/mod-cards.css">
-    <link rel="stylesheet" href="src/css/pages/trend-catalog.css">
-    <link rel="stylesheet" href="src/css/pages/discover-banner.css">
-    <link rel="stylesheet" href="src/css/media/discover.css">
     <link rel="stylesheet" href="src/components/catalog/catalog-hero.css">
     <link rel="stylesheet" href="src/components/catalog/trend-catalog.css">
     <link rel="stylesheet" href="src/components/search/search.css">
@@ -44,8 +42,8 @@
             <section class="main-mods">
                 <div class="trend-catalog">
                     <div class="trend-catalog-header">
-                        <svg class="trend-catalog-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
-                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="trend-catalog-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
+                            stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="3 17 9 11 13 15 21 7"></polyline>
                             <polyline points="14 7 21 7 21 14"></polyline>
                         </svg>
@@ -60,29 +58,27 @@
                     <div class="banner-container">
                         <div class="banner-wrapper">
                             <div class="banner-icon-wrapper">
-                                <svg class="banner-icon" viewBox="0 0 24 24" width="24" height="24"
-                                    stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M5 3 H19 V14 L12 21 L5 14 Z"></path>
-
-                                    <path d="M5 7 H19"></path>
-
-                                    <path d="M10 7 V19 M14 7 V19"></path>
+                                <svg class="banner-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check">
+                                    <path
+                                        d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                                    <path d="m9 12 2 2 4-4" />
                                 </svg>
                             </div>
                             <div class="banner-text">
                                 <h3>Not sure if your mods work together?</h3>
-                                <p>Instantly detect conflicts, find alternatives, and analyze crash logs.</p>
+                                <p>Instantly detect conflicts, find alternatives, and analyze crash logs</p>
                             </div>
                         </div>
 
                         <a class="banner-link" href="compatibility.html">
-                            <h3>Open Compatibility Checker</h3>
-                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+                            <span>Open Compatibility Checker</span>
+                            <!-- <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
                                 fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                                 <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg>
+                            </svg> -->
                         </a>
                     </div>
                 </div>
@@ -221,7 +217,6 @@
     <script type="module" src="src/scripts/discover.js"></script>
     <script src="src/components/navbar/navbar.js" defer></script>
     <script src="src/components/footer/footer.js" defer></script>
-    <script type="module" src="src/components/cards/cards.js" defer></script>
 </body>
 
 </html>

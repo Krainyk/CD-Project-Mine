@@ -103,22 +103,20 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 40px !important;
     }
 
     .trend-card-header {
         justify-content: center;
+        max-width: 184px;
         width: 100%;
-    }
-
-    .trend-card-icon svg {
-        margin: 20px 15px;
+        margin: 20px 0 0 0 !important;
     }
 
     .trend-card-info {
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        padding-bottom: 20px;
     }
 
     .trend-card-rate {
@@ -164,10 +162,6 @@
     .trend-card-header {
         justify-content: center;
         width: 100%;
-    }
-
-    .trend-card-icon svg {
-        margin: 20px 15px;
     }
 
     .trend-card-info {

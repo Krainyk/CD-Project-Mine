@@ -34,3 +34,106 @@
     background-position: center;
     background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg"><path d="M 0 0 V 32 H 16 V 48 H 48 V 32 H 80 V 48 H 112 V 64 H 144 V 80 H 160 V 64 H 192 V 48 H 224 V 64 H 256 V 48 H 288 V 32 H 320 V 0 Z" fill="%23110a1a" /><path d="M 0 0 V 16 H 16 V 32 H 32 V 16 H 48 V 48 H 64 V 32 H 96 V 16 H 112 V 48 H 128 V 64 H 144 V 48 H 160 V 32 H 176 V 48 H 192 V 16 H 208 V 32 H 224 V 48 H 240 V 16 H 272 V 32 H 288 V 16 H 320 V 0 Z" fill="%231b132b" /><g opacity="0.8"><rect x="16" y="16" width="16" height="16" fill="%23a64dff" /><rect x="128" y="32" width="16" height="16" fill="%23a64dff" /><rect x="272" y="0" width="16" height="16" fill="%23a64dff" /><rect x="80" y="16" width="16" height="16" fill="%2300e5ff" /><rect x="224" y="32" width="16" height="16" fill="%2300e5ff" /></g></svg>');
 }
+
+/* =========================
+   Compatibility Banner
+   ========================= */
+
+.compatibility-checker-banner {
+    margin-top: 35px;
+}
+
+
+/* =========================
+   Layout
+   ========================= */
+
+.banner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 100px;
+    padding: 16px 24px;
+    background:
+        radial-gradient(circle at 5% 50%, rgba(138, 79, 255, 0.12), transparent 30%),
+        radial-gradient(circle at 95% 50%, rgba(196, 65, 255, 0.15), transparent 40%),
+        #14101b;
+    border: 1px solid rgba(138, 79, 255, 0.15);
+    border-radius: 16px;
+}
+
+.banner-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* =========================
+   Icon
+   ========================= */
+
+.banner-icon-wrapper {
+    padding: 14px;
+    color: var(--accent-cyan);
+    background-color: rgba(138, 79, 255, 0.08);
+    border: 1px solid rgba(138, 79, 255, 0.25);
+    border-radius: 12px;
+    filter: drop-shadow(0 0 6px rgba(0, 229, 255, 0.5));
+}
+
+.banner-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.3rem;
+    height: 2.3rem;
+}
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.banner-text h3,
+.banner-text p {
+    color: var(--text-primary);
+    font-weight: var(--font-weight-medium);
+}
+
+/* =========================
+   Button
+   ========================= */
+
+.banner-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 250px;
+    min-height: 45px;
+    margin-left: auto;
+    margin-right: 20px;
+    text-decoration: none;
+    color: var(--text-primary);
+    background-color: var(--accent-purple);
+    border: none;
+    border-radius: 16px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.banner-link:hover {
+    transform: scale(1.02);
+    box-shadow:
+        0 4px 15px rgba(166, 77, 255, 0.4),
+        0 0 30px rgba(166, 77, 255, 0.2);
+}
+
+.banner-link span {
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+}
