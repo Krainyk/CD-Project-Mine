@@ -2,16 +2,20 @@
     /* === 1. ГЛОБАЛЬНІ ФОНИ === */
     --bg-gradient-main: linear-gradient(180deg, #0b0714 0%, #090511 50%, #050308 100%);
     --bg-card-default: #120d22;
+    --bg-filter-default: #0b1120;
 
     /* === 2. ТЕКСТ === */
     --text-primary: #FFFFFF;
     --text-secondary: #99A1AF;
+    --text-muted: #888888;
 
     /* === 3. АКЦЕНТНІ КОЛЬОРИ (Для кнопок, іконок тощо) === */
     --accent-purple: #9D60FF;
     --accent-yellow: #FFC800;
     --accent-green: #07DF72;
     --accent-red: #FF6467;
+    --accent-cyan: #00D8D8;
+    --accent-cyan-muted: #0B272C;
 
     /* === 4. БОРДЕРИ (Рамки) === */
     --border-default: rgba(255, 255, 255, 0.05);
@@ -32,6 +36,29 @@
     --brand-jei: #D6F9D7;
 
     /* === 7. ТИПОГРАФІКА (Вага шрифту) === */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
     --font-weight-semi: 600;
+    --font-weight-bold: 700;
+    --font-weight-extra-bold: 800;
     --font-weight-black: 900;
+
+    /* === 8. СТАЙЛІНГ ФІЛЬТРІВ === */
+    /* Purple */
+    --filter-purple-main: #c441ff;
+    --filter-purple-glow: rgba(196, 65, 255, 0.4);
+    --filter-purple-border: #3d1a78;
+    --filter-purple-bg: #171126;
+    
+    /* Purple Alt (Для Magic та Adventure) */
+    --filter-purple-alt-border: #551a7a;
+    --filter-purple-alt-bg: #1c1129;
+
+    /* Violet */
+    --filter-violet-main: #8a4fff;
+    --filter-violet-glow: rgba(138, 79, 255, 0.4);
+
+    /* Cyan (Специфічні для фільтрів) */
+    --filter-cyan-dot: #00e5ff; 
+    --filter-cyan-glow: rgba(0, 229, 255, 0.4);
 }

@@ -1,0 +1,59 @@
+/* =========================
+   Search
+========================= */
+
+.input-container {
+    position: relative;
+
+    max-width: 500px;
+    width: 100%;
+    margin-top: 30px;
+
+    margin-bottom: 50px;
+}
+
+.mod-search {
+    width: 100%;
+    padding: 16px 50px;
+
+    color: white;
+    font-size: 1rem;
+
+    background-color: var(--bg-card-default);
+    border: 1px solid var(--border-default);
+    border-radius: 12px;
+
+    transition: all 0.3s ease;
+}
+
+.mod-search::placeholder {
+    color: var(--text-secondary);
+    font-weight: var(--font-weight-medium);
+}
+
+.search-icon {
+    position: absolute;
+
+    top: 29%;
+    left: 15px;
+
+    width: 20px;
+    height: 20px;
+
+    color: #8b95a5;
+}
+
+/* =========================
+   Search States
+========================= */
+
+.input-container:focus-within .search-icon {
+    color: #8b5cf6;
+    filter: drop-shadow(0 0 6px #8b5cf6);
+}
+
+.input-container:focus-within .mod-search {
+    outline: none;
+    border-color: #8b5cf6;
+    box-shadow: 0 0 20px rgba(168, 85, 247, .2);
+}

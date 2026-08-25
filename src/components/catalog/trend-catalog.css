@@ -1,0 +1,43 @@
+/* =========================
+   Trending Mods
+   ========================= */
+
+.trend-catalog {
+    width: 100%;
+}
+
+/* =========================
+   Header
+   ========================= */
+
+.trend-catalog-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 12px;
+}
+
+.trend-catalog-icon {
+    width: 30px;
+    height: 30px;
+    color: #a64dff;
+    filter: drop-shadow(0 0 4px rgba(166, 77, 255, 0.4));
+}
+
+.trend-catalog-header h2 {
+    color: #e8e4f2;
+}
+
+.trend-catalog-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, #4a2273, transparent);
+}
+
+.trend-catalog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-template-columns: repeat(3, 1fr); */
+    gap: 15px;
+}

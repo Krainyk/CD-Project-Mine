@@ -186,15 +186,5 @@ export function initFilterLogic() {
     }
     initFilters();
     initSort();
+    updateModCount();
 }
-
-const filterPlaceHolder = document.getElementById('filter-placeholder');
-
-fetch('src/components/filter/filter.html')
-    .then(response => response.text())
-    .then(data => {
-        filterPlaceHolder.outerHTML = data;
-
-        initFilterLogic();
-    })
-    .catch(error => console.log('Помилка в завантаженні фільтра:', error));

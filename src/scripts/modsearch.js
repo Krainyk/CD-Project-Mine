@@ -6,7 +6,7 @@ import { updateModCount } from "./counter.js";
 /* ==========================================
    2. ЛОГІКА ПОШУКУ (ПОЛЕ INPUT)
 ========================================== */
-export function modSearch() {
+export function initmodSearchLogic() {
     const searchInput = document.getElementById('mod-search');
     const cards = document.querySelectorAll('.mod-card');
 

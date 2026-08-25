@@ -12,31 +12,28 @@
     <link rel="stylesheet" href="src/components/filter/filter.css">
     <link rel="stylesheet" href="src/components/cards/trend-cards.css">
     <link rel="stylesheet" href="src/components/cards/mod-cards.css">
+    <link rel="stylesheet" href="src/css/pages/trend-catalog.css">
     <link rel="stylesheet" href="src/css/pages/discover-banner.css">
     <link rel="stylesheet" href="src/css/media/discover.css">
+    <link rel="stylesheet" href="src/components/catalog/catalog-hero.css">
+    <link rel="stylesheet" href="src/components/catalog/trend-catalog.css">
+    <link rel="stylesheet" href="src/components/search/search.css">
 </head>
 
 <body>
     <div id="navbar-placeholder"></div>
 
     <main class="disc-page-container">
-        <section class="disc-hero-section">
+        <section class="catalog-hero-section discover-page">
             <h1>CDPM Mod Catalog</h1>
             <h2 class="main-title">
                 <span class="text-light">Discover</span>
-                <span class="text-gradient">Minecraft Mods</span>
+                <span class="text-gradient gradient-discover">Minecraft Mods</span>
             </h2>
             <p>Explore optimization, magic, RPG, tech, and utility mods. Find the perfect additions for your world.
             </p>
 
-            <div class="input-container">
-                <svg class="search-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
-                    stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-                <input type="text" class="mod-search" id="mod-search" placeholder="Search mods, loaders or versions...">
-            </div>
+            <div class="input-container" id="input-search-placeholder"></div>
 
             <div class="devider-container"></div>
         </section>
@@ -45,18 +42,18 @@
             <div id="filter-placeholder"></div>
 
             <section class="main-mods">
-                <div class="trend-mods">
-                    <div class="trend-header">
-                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+                <div class="trend-catalog">
+                    <div class="trend-catalog-header">
+                        <svg class="trend-catalog-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
                             fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="3 17 9 11 13 15 21 7"></polyline>
                             <polyline points="14 7 21 7 21 14"></polyline>
                         </svg>
                         <h2>Trending mods</h2>
-                        <div class="trend-line"></div>
+                        <div class="trend-catalog-line"></div>
                     </div>
 
-                    <div class="trend-container" id="trending-placeholder"></div>
+                    <div class="trend-catalog-container" id="trending-placeholder"></div>
                 </div>
 
                 <div class="compatibility-checker-banner">
@@ -216,12 +213,12 @@
                     </div>
                 </section>
             </section>
+        </section>
     </main>
 
     <div id="footer-placeholder"></div>
 
     <script type="module" src="src/scripts/discover.js"></script>
-    <script type="module" src="src/components/filter/filter.js"></script>
     <script src="src/components/navbar/navbar.js" defer></script>
     <script src="src/components/footer/footer.js" defer></script>
     <script type="module" src="src/components/cards/cards.js" defer></script>

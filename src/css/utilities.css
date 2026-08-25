@@ -1,0 +1,36 @@
+.text-light {
+    color: #e8e4f2;
+}
+
+.text-gradient {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.gradient-discover {
+    background-image: linear-gradient(to right,
+            #a633ff,
+            #5a75ff,
+            #00d4ff);
+}
+
+.gradient-features {
+    background-image: linear-gradient(to right, #e0e0e0, #cc88ee, #9966ff, #00bfff);
+}
+
+.gradient-compatibility {
+    background-image: linear-gradient(to right, #e0e0e0, #a8e6ff, #5ad1ff, #00bfff);
+}
+
+.gradient-popular {
+    background-image: linear-gradient(to right, #b3aaff, #c4caff);
+}
+
+.gradient-why {
+    background-image: linear-gradient(to right, #00d4ff, #a269ff, #ff577f);
+}
+
+.gradient-soon {
+    background-image: linear-gradient(to right, #c4f9ff, #85e8ff);
+}

@@ -1,0 +1,56 @@
+/* =========================
+   Hero Section
+========================= */
+
+.catalog-hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* min-height: 50dvh; */
+    /* margin-top: 75px; */
+    background-size: cover;
+    background-position: 50% 90%;
+    /* background-position: center; */
+    /* background-position: bottom; */
+}
+
+.discover-page {
+    background-image:
+        linear-gradient(rgba(11, 7, 20, 0.7),
+            rgba(11, 7, 20, 0.7)),
+        url("/src/assets/images/discover-hero-bg.jpeg");
+}
+
+/* .modpack-page {} */
+
+.catalog-hero-section h1 {
+    padding: 8px 20px;
+
+    color: var(--accent-purple);
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 2px;
+
+    background-color: #1D1238;
+    border: 1px solid #3a2560;
+    border-radius: 20px;
+    margin-top: 40px;
+
+
+}
+
+.catalog-hero-section p {
+    text-align: center;
+    color: var(--text-secondary);
+    max-width: 600px;
+    font-size: 1rem;
+    font-weight: var(--font-weight-semi);
+}
+
+.main-title {
+    margin-top: 12px;
+    margin-bottom: 10px;
+    font-size: clamp(2.5rem, 5vw, 4.7rem);
+    /* font-size: 4.7rem; */
+    font-weight: bold;
+}
