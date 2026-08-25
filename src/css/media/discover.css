@@ -26,7 +26,7 @@
     }
 
     .filter-dropdown {
-        display: flex;
+        display: flex !important;
     }
 
     .mods-section {
@@ -187,5 +187,6 @@
 
     .mod-card-footer {
         padding-inline: 15px;
+        padding-bottom: 10px;
     }
 }
