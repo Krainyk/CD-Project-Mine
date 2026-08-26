@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="src/components/catalog/catalog-hero.css">
     <link rel="stylesheet" href="src/components/catalog/trend-catalog.css">
     <link rel="stylesheet" href="src/components/search/search.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -23,13 +24,16 @@
 
     <main class="disc-page-container">
         <section class="catalog-hero-section discover-page">
-            <h1>CDPM Mod Catalog</h1>
-            <h2 class="main-title">
-                <span class="text-light">Discover</span>
-                <span class="text-gradient gradient-discover">Minecraft Mods</span>
-            </h2>
-            <p>Explore optimization, magic, RPG, tech, and utility mods. Find the perfect additions for your world.
-            </p>
+            <div class="aos-grid-wrapper" data-aos="fade-down">
+                <h1>CDPM Mod Catalog</h1>
+                <h2 class="main-title">
+                    <span class="text-light">Discover</span>
+                    <span class="text-gradient gradient-discover">Minecraft Mods</span>
+                </h2>
+                <p>Explore optimization, magic, RPG, tech, and utility mods. Find the perfect additions for your world.
+                </p>
+
+            </div>
 
             <div class="input-container" id="input-search-placeholder"></div>
 
@@ -58,9 +62,10 @@
                     <div class="banner-container">
                         <div class="banner-wrapper">
                             <div class="banner-icon-wrapper">
-                                <svg class="banner-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check">
+                                <svg class="banner-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="lucide lucide-shield-check-icon lucide-shield-check">
                                     <path
                                         d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
                                     <path d="m9 12 2 2 4-4" />
@@ -216,6 +221,10 @@
     <script type="module" src="src/scripts/discover.js"></script>
     <script src="src/components/navbar/navbar.js" defer></script>
     <script src="src/components/footer/footer.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
