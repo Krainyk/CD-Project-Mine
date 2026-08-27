@@ -16,7 +16,7 @@
 }
 
 @media (max-width: 1200px) {
-    .mod-main-container {
+    .action-btns-group {
         width: 100%;
     }
 
@@ -30,7 +30,7 @@
 }
 
 @media (max-width: 976px) {
-    .hero-mod-btns {
+    .action-btns-group {
         flex-wrap: wrap;
     }
 }
@@ -58,5 +58,14 @@
 
     .related-mod-card-footer {
         gap: 20px;
+    }
+}
+
+@media (max-width: 515px) {
+    .mod-main-btns {
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+        scrollbar-width: none;
     }
 }

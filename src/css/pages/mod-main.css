@@ -1,15 +1,12 @@
-/* /* =========================================
-   1. ЗМІННІ (КОЛЬОРИ ТА ТЕМА)
-   ========================================= */
-:root {
+/* :root {
     --bg-panel: #15121E;
 
-    /* Text */
+    /* Text *
     --text-primary: #FFFFFF;
     --text-secondary: #888888;
     /* --text-secondary: #8B8B9E; */
 
-    /* Accents */
+/* Accents *
     --accent-purple: #9D60FF;
     --bg-purple-muted: #23173B;
 
@@ -18,11 +15,16 @@
 
     --accent-cyan: #00D8D8;
     --bg-cyan-muted: #0B272C;
-}
+} */
+
 
 /* =========================================
-   2. ГОЛОВНІ КОНТЕЙНЕРИ ТА ЛЕЙАУТ
+   1. БАЗОВИЙ ЛЕЙАУТ СТОРІНКИ
    ========================================= */
+.mod-page-container {
+    padding-top: 75px;
+}
+
 .container {
     max-width: 1600px;
     width: 100%;
@@ -30,8 +32,12 @@
     padding-inline: 5%;
 }
 
+
+/* =========================================
+   2. HERO-СЕКЦІЯ — ЗАГАЛЬНА СТРУКТУРА
+   ========================================= */
 .mod-hero-section {
-    margin-top: 100px;
+    margin-top: 30px;
     padding-bottom: 40px;
 }
 
@@ -41,32 +47,41 @@
     align-items: flex-start;
 }
 
-/* =========================================
-   3. ШАПКА МОДА (ЛОГО, ЗАГОЛОВОК, АВТОР)
-   ========================================= */
 .mod-hero-header {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
 }
 
 .mod-logo {
-    height: 120px;
-    width: 120px;
+    height: 8rem;
+    width: 8rem;
     flex-shrink: 0;
     object-fit: cover;
     border-radius: 20px;
 }
 
+.mod-main-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+}
+
+
+/* =========================================
+   3. HERO-СЕКЦІЯ — НАЗВА, ВЕРСІЯ, АВТОР
+   ========================================= */
 .mod-hero-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 12px;
+    gap: 4px;
 }
 
 .mod-hero-text p {
     color: var(--text-secondary);
+    font-weight: var(--font-weight-semi);
 }
 
 .mod-title-row {
@@ -75,23 +90,22 @@
     gap: 20px;
 }
 
-.mod-title-row h2 {
-    font-size: 2.3rem;
-    /* font-family: 'JetBrains Mono', monospace; */
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
+.mod-name {
     color: var(--text-primary);
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: var(--font-weight-black);
 }
 
 .mod-version-badge {
     color: var(--accent-cyan);
-    background-color: var(--bg-cyan-muted);
-    border: 1px solid var(--accent-cyan);
+    background-color: var(--accent-cyan-muted);
+    border: 2px solid var(--border-cyan);
     border-radius: 12px;
     padding-inline: 8px;
     padding-block: 2px;
     font-size: 0.9rem;
-    font-weight: bold;
+    font-weight: var(--font-weight-semi);
 }
 
 .mod-author {
@@ -101,47 +115,90 @@
 }
 
 .author-icon {
-    height: 30px;
-    width: 30px;
-    border-radius: 20px;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
 }
 
-.mod-author span {
-    font-family: 'JetBrains Mono', monospace;
-    color: var(--accent-purple);
+.mod-author-link {
+    transition: transform 0.3s ease;
 }
+
+.mod-author-link:hover {
+    transform: scale(1.1);
+}
+
+.mod-author-link-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mod-author-link-text span:first-child {
+    color: var(--text-secondary);
+    font-weight: var(--font-weight-medium);
+    cursor: default;
+}
+
+.mod-author-link-text span:last-child {
+    color: var(--accent-purple);
+    font-family: 'JetBrains Mono', monospace;
+    transition: filter 0.3s ease,
+        transform 0.3s ease;
+}
+
+.mod-author-link-text span:last-child:hover {
+    filter: brightness(1.2);
+    transform: translateY(-1px);
+}
+
 
 /* =========================================
    4. ДОДАТКОВА ІНФОРМАЦІЯ (РЕЙТИНГ, ЗАВАНТАЖЕННЯ)
    ========================================= */
+.additional-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 20px;
+}
+
 .additional-info {
     display: flex;
     gap: 16px;
-    margin-top: 20px;
-    color: var(--text-primary);
-}
-
-.additional-rate-wrapper {
-    padding-inline: 10px;
-    padding-block: 2px;
-    border-radius: 20px;
-    color: var(--accent-yellow);
-    background-color: var(--bg-yellow-muted);
-    border: 1px solid rgba(255, 200, 0, 0.25);
 }
 
 .additional-rate {
+    padding-inline: 10px;
+    padding-block: 4px;
+    border-radius: 20px;
+    color: var(--accent-yellow);
+    background-color: var(--bg-yellow-muted);
+    border: 2px solid rgba(255, 200, 0, 0.25);
+}
+
+.additional-rate-wrapper {
     display: flex;
+    justify-content: center;
     align-items: center;
+    gap: 8px;
 }
 
-.additional-rate p {
-    color: #9e7f24;
-    margin-left: 6px;
+.additional-rate-info {
+    display: flex;
+    gap: 4px;
 }
 
-.additional-rate svg {
-    margin-right: 6px;
+.additional-rate-info span:first-child {
+    color: var(--accent-yellow);
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+}
+
+.additional-rate-info span:last-child {
+    color: var(--accent-yellow-muted);
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-medium);
 }
 
 .additional-downloads {
@@ -150,13 +207,20 @@
     gap: 6px;
 }
 
-.additional-downloads svg,
-.additional-downloads p {
+.additional-downloads-icon {
     color: var(--text-secondary);
 }
 
-.additional-downloads span {
+.additional-downloads-info span:first-child {
     color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+}
+
+.additional-downloads-info span:last-child {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
 }
 
 .additional-update {
@@ -166,6 +230,11 @@
     color: var(--text-secondary);
 }
 
+.additional-update-info {
+    font-weight: var(--font-weight-medium);
+}
+
+
 /* =========================================
    5. ПЛАШКИ ХАРАКТЕРИСТИК (LOADER, MC ВЕРСІЇ)
    ========================================= */
@@ -173,136 +242,126 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-top: 20px;
 }
 
 .loader-info>span {
-    font-size: 1.2rem;
     color: var(--text-secondary);
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-medium);
 }
 
 .loader-info-wrapper {
     display: flex;
     align-items: center;
-    padding-inline: 8px;
-    padding-block: 2px;
+    padding: 2px 8px;
     border-radius: 18px;
-    color: var(--accent-cyan);
-    background-color: var(--bg-cyan-muted);
-    border: 1px solid var(--accent-cyan);
+    color: var(--tag-loader-fabric-color);
+    background-color: var(--tag-loader-fabric-bg);
+    border: 2px solid var(--tag-loader-fabric-border);
+    text-shadow: var(--tag-loader-fabric-glow);
+}
+
+.loader-info-wrapper span {
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-medium);
 }
 
 .mc-versions {
     display: flex;
     align-items: center;
-    margin-top: 20px;
     gap: 10px;
-    margin-bottom: 100px;
 }
 
 .mc-versions>span {
     color: var(--text-secondary);
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-medium);
     text-transform: uppercase;
 }
 
 .mc-versions-wrapper {
     display: flex;
     align-items: center;
-    padding: 4px 8px;
+    padding: 2px 8px;
     border-radius: 18px;
-    color: var(--accent-purple);
-    background-color: var(--bg-purple-muted);
-    border: 1px solid var(--accent-purple);
+    color: var(--tag-version-color);
+    background-color: var(--tag-version-bg);
+    border: 2px solid var(--tag-version-border);
+    text-shadow: var(--tag-version-glow);
 }
+
+.mc-versions-wrapper span {
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-medium);
+}
+
 
 /* =========================================
    6. КНОПКИ ДІЙ (DOWNLOAD, GITHUB І Т.Д.)
    ========================================= */
-.hero-mod-btns {
+.action-btns-group {
     display: flex;
     gap: 12px;
+    margin-top: 100px;
 }
 
-.mod-download-btn {
-    display: flex;
+.action-btn {
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    max-width: 230px;
+    gap: 12px;
     padding: 14px 20px;
-    gap: 20px;
-    color: var(--text-primary);
-    background-color: var(--accent-purple);
-    border: none;
-    border-radius: 12px;
-    font-family: 'Bebas Neue', sans-serif;
+    border-radius: 14px;
+    white-space: nowrap;
     cursor: pointer;
-    transition: transform 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.mod-download-btn:hover {
+.action-btn svg {
+    height: 1.3rem;
+    width: 1.3rem;
+}
+
+.btn-primary {
+    color: var(--text-primary);
+    background-color: var(--accent-purple);
+    border: 1px solid var(--accent-purple);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+}
+
+.btn-primary svg {
+    height: 1.6rem;
+    width: 1.6rem;
+}
+
+.btn-primary:hover {
     transform: scale(1.02);
     box-shadow:
         0 4px 15px rgba(166, 77, 255, 0.4),
         0 0 30px rgba(166, 77, 255, 0.2);
 }
 
-.mod-download-btn svg {
-    height: 1.3rem;
-    width: 1.3rem;
-}
-
-.mod-download-btn span {
-    font-size: 1.3rem;
-}
-
-.mod-github-btn,
-.mod-compatibility-btn,
-.mod-web-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-    gap: 12px;
-    padding: 14px 20px;
-    font-family: 'JetBrains Mono', monospace;
+.btn-secondary {
     color: var(--text-secondary);
     background-color: transparent;
     border: 1px solid #2A263D;
-    border-radius: 14px;
-    cursor: pointer;
-    transition: color 0.3s ease,
-        border-color 0.3s ease,
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
 }
 
-.mod-github-btn svg,
-.mod-compatibility-btn svg,
-.mod-web-btn svg {
-    height: 1.3rem;
-    width: 1.3rem;
-}
-
-.mod-github-btn span,
-.mod-compatibility-btn span,
-.mod-web-btn span {
-    font-size: 1.1rem;
-}
-
-.mod-github-btn:hover,
-.mod-web-btn:hover {
+.btn-secondary:hover {
     color: var(--accent-purple);
     border-color: var(--accent-purple);
     transform: scale(1.02);
 }
 
-.mod-compatibility-btn:hover {
+.btn-secondary.hover-cyan:hover {
     color: var(--accent-cyan);
     border-color: var(--accent-cyan);
-    transform: scale(1.02);
 }
+
 
 /* =========================================
    7. ПРАВА ПАНЕЛЬ (QUICK INSTALL)
@@ -310,47 +369,44 @@
 .mod-hero-quick-install {
     display: flex;
     flex-direction: column;
+    gap: 20px;
     width: 100%;
     max-width: 380px;
-    margin-top: 50px;
-    /* margin-right: 60px; */
-    background-color: #0b1120;
+    margin-top: 60px;
+    background-color: var(--bg-widget);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     padding: 24px;
 }
 
-.mod-hero-quick-install-devider {
-    margin-top: 20px;
-    height: 1px;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.05);
+.quick-install-header {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
 .mod-hero-quick-install h3 {
+    color: var(--text-secondary);
     font-size: 1.3rem;
     font-family: 'Bebas Neue', sans-serif;
-    font-weight: 100;
-    color: var(--text-secondary);
-    margin-bottom: 12px;
+    font-weight: var(--font-weight-medium);
 }
 
 .quick-install-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
     padding: 2px 16px;
-    background-color: var(--secondary);
+    background-color: transparent;
     border: 1px solid rgba(122, 60, 255, 0.18);
     border-radius: 12px;
-    margin-bottom: 12px;
 }
 
-.quick-install-box span {
+.file-name {
     color: var(--text-secondary);
     font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
+    font-weight: var(--font-weight-medium);
 }
 
 .copy-btn {
@@ -361,37 +417,70 @@
     padding-block: 6px;
 }
 
-/* Рядки характеристик файлу */
-.file-size,
-.unique-hash,
-.game-version,
-.game-loader,
-.release-info {
+.quick-install-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.info-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: var(--text-secondary);
     font-size: 0.9rem;
-    margin-top: 12px;
+    font-weight: var(--font-weight-semi);
 }
 
-.file-size span,
-.unique-hash span,
-.game-version span,
-.game-loader span,
-.release-info span {
+.info-row p {
+    color: var(--text-secondary);
+}
+
+.info-row span {
     color: var(--text-primary);
+}
+
+.quick-install-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.quick-install-devider {
+    height: 1px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.release-info p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: var(--font-weight-medium);
+    text-align: center;
 }
 
 .release-info a {
     color: var(--accent-purple);
     text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease-in-out;
+}
+
+.release-info a:hover {
+    background-size: 100% 1px;
 }
 
 
-
+/* =========================================
+   8. ОСНОВНА СЕКЦІЯ СТОРІНКИ (ФОН + ЛЕЙАУТ)
+   ========================================= */
 .mod-main-section {
-    padding-block: 30px;
+    padding-top: 20px;
+    padding-bottom: 80px;
     background: linear-gradient(180deg,
             #08040d 0%,
             #06030a 50%,
@@ -410,26 +499,25 @@
     min-width: 0;
 }
 
+
+/* =========================================
+   9. ТАБИ (OVERVIEW / SCREENSHOTS / COMPATIB.)
+   ========================================= */
 .mod-main-btns {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
     position: relative;
-    padding-bottom: 20px;
+    padding-bottom: 16px;
 }
 
-.screenshot-btn,
-.overview-btn,
-.compatibility-btn,
-.changelog-btn,
-.version-btn {
+.mod-main-btn {
     background-color: transparent;
     color: var(--text-secondary);
     border: none;
     cursor: pointer;
     font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-weight: var(--font-weight-semi);
     transition: color 0.3s ease;
 }
 
@@ -466,9 +554,11 @@
 }
 
 
-
-.screenshots-section {
-    margin-top: 70px;
+/* =========================================
+   10. СКРІНШОТИ / ГАЛЕРЕЯ
+   ========================================= */
+.mod-section-top {
+    margin-top: 105px;
 }
 
 .mod-screenshots-container {
@@ -516,7 +606,6 @@
     position: relative;
     width: 100%;
     max-width: 100%;
-    /* max-width: 860px; */
     aspect-ratio: 16/9;
     overflow: hidden;
     border-radius: 20px;
@@ -562,8 +651,7 @@
     border-radius: 50%;
     border: none;
     color: #FFFFFF;
-    background-color: #0b1120;
-    /* background-color: #1a1625; */
+    background-color: var(--bg-widget);
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -601,38 +689,43 @@
 }
 
 
-
-
-
-.overview-section {
-    margin-top: 105px;
-}
-
+/* =========================================
+   11. OVERVIEW — ОПИС МОДА
+   ========================================= */
 .mod-overview-container {
     display: flex;
     flex-direction: column;
+}
+
+.overview-wrapper-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .overview-info-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: #0b1120;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: var(--bg-widget-secondary);
+    border: 1px solid var(--border-widget-secondary);
+    backdrop-filter: blur(8px);
     border-radius: 16px;
     padding: 24px;
 }
 
-.overview-info-container span {
-    color: #b0b3b8;
+.overview-info-container p:first-child {
+    color: var(--text-brighter);
     line-height: 1.6;
     font-size: 0.9rem;
+    font-weight: var(--font-weight-medium);
 }
 
-.overview-info-container p {
-    color: var(--text-secondary);
+.overview-info-container p:last-child {
+    color: var(--text-muted);
     line-height: 1.6;
     font-size: 0.85rem;
+    font-weight: var(--font-weight-medium);
 }
 
 .overview-text-link {
@@ -646,15 +739,14 @@
     text-decoration: underline;
 }
 
+
+/* =========================================
+   12. OVERVIEW — КЛЮЧОВІ ОСОБЛИВОСТІ
+   ========================================= */
 .overview-keyfeatures-container {
-    margin-top: 20px;
-    /* background-color: #100B18; */
-    /* background-color: #0E0A18; OP color */
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    box-shadow:
-        0 4px 6px -1px rgba(0, 0, 0, 0.2),
-        0 10px 30px -5px rgba(0, 0, 0, 0.5);
-    background-color: #0b1120;
+    background-color: var(--bg-widget-secondary);
+    border: 1px solid var(--border-widget-secondary);
+    backdrop-filter: blur(8px);
     border-radius: 16px;
     padding: 24px 24px 12px 24px;
 }
@@ -662,8 +754,8 @@
 .overview-headings {
     color: var(--text-primary);
     font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 2px;
+    font-weight: var(--font-weight-semi);
+    letter-spacing: 1.1px;
     font-family: 'Bebas Neue', sans-serif;
 }
 
@@ -691,27 +783,28 @@
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-
     width: 22px;
     height: 22px;
     border-radius: 50%;
-
     color: var(--accent-cyan);
     background-color: var(--bg-cyan-muted);
-    border: 1px solid var(--accent-cyan);
+    border: 2px solid var(--border-cyan);
 }
-
 
 .key-feature-text {
-    font-size: 0.9rem;
     color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-medium);
 }
 
 
+/* =========================================
+   13. OVERVIEW — ІНСТАЛЯЦІЯ
+   ========================================= */
 .overview-installation-container {
-    margin-top: 20px;
-    background-color: #0b1120;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: var(--bg-widget-secondary);
+    border: 1px solid var(--border-widget-secondary);
+    backdrop-filter: blur(8px);
     border-radius: 16px;
     padding: 24px 24px 12px 24px;
 }
@@ -735,37 +828,40 @@
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-
     width: 22px;
     height: 22px;
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: var(--font-weight-semi);
     border-radius: 50%;
     color: var(--accent-purple);
     background-color: var(--bg-purple-muted);
-    border: 1px solid var(--accent-purple);
+    border: 2px solid var(--accent-purple-muted);
 }
 
 .installation-step-text {
-    font-size: 0.9rem;
     color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-medium);
 }
 
 
-.compatibility-section {
-    margin-top: 105px;
-}
-
+/* =========================================
+   14. СУМІСНІСТЬ МОДІВ — СПІЛЬНИЙ КОНТЕЙНЕР
+   ========================================= */
 .compatibility-mods-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
     margin-top: 20px;
 }
 
+
+/* --- 14.1 Сумісні моди --- */
 .compatible-mods-container {
-    /* background-color: var(); */
-    background-color: #0b1120;
+    background-color: var(--status-panel-bg-success);
+    border: 1px solid var(--status-panel-border-success);
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 20px 30px 10px 30px;
+    padding: 20px 30px 12px 30px;
 }
 
 .compatible-mods-header {
@@ -776,10 +872,10 @@
 
 .compatible-mods-header span {
     color: var(--accent-cyan);
-    font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 1px;
-    font-weight: 600;
     font-size: 1.05rem;
+    font-weight: var(--font-weight-semi);
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 .compatible-icon-header {
@@ -801,7 +897,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 12px 18px;
-    background-color: #141d26;
+    background-color: var(--status-item-bg-success);
+    border: 1px solid var(--status-item-border-success);
     border-radius: 16px;
 }
 
@@ -827,50 +924,49 @@
 }
 
 .compatible-mod-list-title span:first-child {
-    color: #f8fafc;
+    color: var(--text-primary);
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: var(--font-weight-semi);
 }
 
 .compatible-mod-list-title span:last-child {
     color: var(--text-secondary);
     font-size: 0.8rem;
-    font-weight: 500;
+    font-weight: var(--font-weight-semi);
 }
 
 .compatible-state-icon {
+    color: var(--accent-cyan);
     width: 1.3rem;
     height: 1.3rem;
-    color: var(--accent-cyan);
 }
 
 
+/* --- 14.2 Несумісні моди --- */
 .incompatible-mods-container {
-    margin-top: 30px;
-    background-color: #161117;
-    border: 1px solid #3A1A24;
+    background-color: var(--status-panel-bg-error);
+    border: 1px solid var(--status-panel-border-error);
     border-radius: 16px;
-    padding: 20px 30px 10px 30px;
+    padding: 20px 30px 12px 30px;
 }
 
 .incompatible-mods-header {
     display: flex;
     align-items: center;
     gap: 10px;
+    color: var(--accent-red);
 }
 
 .incompatible-mods-header span {
-    color: #FF4D5E;
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 1px;
-    font-weight: 600;
+    font-weight: var(--font-weight-semi);
     font-size: 1.05rem;
 }
 
 .incompatible-icon-header {
     width: 1.3rem;
     height: 1.3rem;
-    color: #FF4D5E;
 }
 
 .incompatible-mod-lists {
@@ -885,14 +981,15 @@
     display: flex;
     flex-direction: column;
     border-radius: 16px;
-    border: 1px solid #3A1A24;
+    border: 1px solid var(--status-item-border-error);
 }
 
 .incompatible-mod-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #25141C;
+    background-color: var(--status-item-bg-error);
+    border-bottom: 1px solid var(--status-item-border-error);
     border-radius: 16px 16px 0 0;
     padding: 10px 16px;
 }
@@ -914,7 +1011,7 @@
 .incompatible-icon-state {
     width: 1.3rem;
     height: 1.3rem;
-    color: #FF4D5E;
+    color: var(--accent-red);
 }
 
 .incompatible-mod-conflict {
@@ -925,37 +1022,36 @@
 }
 
 .conflict-info-row {
-    font-size: 0.9rem;
     color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-medium);
 }
 
 .conflict-label-error {
-    color: #ff4d4d;
-    font-weight: 500;
+    color: var(--accent-red);
+    font-weight: var(--font-weight-medium);
 }
 
 .conflict-label-alternative-title {
-    /* color: var(--bg-cyan-muted); */
     color: #01a6a6;
+    font-weight: var(--font-weight-medium);
 }
 
 .conflict-label-alternative-mods {
     color: var(--accent-cyan);
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
 }
 
 
-
+/* --- 14.3 Кнопка "перевірити сумісність" --- */
 .compatibility-mod-btn {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 14px;
     width: 100%;
-    margin-top: 30px;
     padding: 16px;
     border-radius: 16px;
-    /* background-color: #271342; OP color */
     background-color: #25163D;
     border: 1px solid #4A2A75;
     box-shadow: 0 0 12px rgba(74, 42, 117, 0.7);
@@ -976,15 +1072,14 @@
 }
 
 .compatibility-mod-btn span {
-    color: #F8FAFC;
-    font-weight: 600;
+    color: var(--text-primary);
+    font-weight: var(--font-weight-semi);
 }
 
 
-.changelog-section {
-    margin-top: 105px;
-}
-
+/* =========================================
+   15. ЧЕЙНДЖЛОГ / ІСТОРІЯ ВЕРСІЙ
+   ========================================= */
 .changelog-container {
     margin-top: 20px;
 }
@@ -1004,13 +1099,16 @@
     display: flex;
     flex-direction: column;
     border-radius: 16px;
-    background-color: #0b1120;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: var(--bg-widget-secondary);
+    border: 1px solid var(--border-widget-secondary);
+    backdrop-filter: blur(8px);
     padding: 14px 20px 10px 20px;
 }
 
 .changelog-card.active {
-    box-shadow: 0 0 12px rgba(166, 77, 255, 0.4);
+    border-color: #3F1F62;
+    box-shadow: 0 0 16px rgba(63, 31, 98, 0.5),
+            0 0 4px rgba(63, 31, 98, 0.6);
 }
 
 .timeline-dot {
@@ -1042,6 +1140,7 @@
 .changelog-card-header span:last-child {
     color: var(--text-secondary);
     font-size: 0.8rem;
+    font-weight: var(--font-weight-semi);
     font-family: 'JetBrains Mono', monospace;
     margin-left: auto;
 }
@@ -1056,22 +1155,23 @@
 
 .version-features-list::before {
     content: '•';
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-right: 8px;
     color: var(--text-secondary);
 }
 
 .version-features-list span {
-    font-size: 0.9rem;
     color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-medium);
 }
 
 .badge-latest {
     padding: 2px 10px;
     border-radius: 100px;
     font-size: 0.75rem;
-    font-weight: 500;
-    color: var(--accent-purple, #a64dff);
+    font-weight: var(--font-weight-semi);
+    color: var(--accent-purple);
     background-color: rgba(166, 77, 255, 0.15);
     border: 1px solid rgba(166, 77, 255, 0.3);
 }
@@ -1080,18 +1180,17 @@
     padding: 2px 10px;
     border-radius: 100px;
     font-size: 0.75rem;
-    font-weight: 500;
+    font-weight: var(--font-weight-semi);
     color: var(--accent-cyan);
-    background-color: var(--bg-cyan-muted);
-    border: 1px solid var(--accent-cyan);
+    background-color: var(--accent-cyan-muted);
+    border: 1px solid var(--border-cyan);
+    text-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
 }
 
 
-
-.related-mods-section {
-    margin-top: 105px;
-}
-
+/* =========================================
+   16. ПОВ'ЯЗАНІ МОДИ (RELATED MODS)
+   ========================================= */
 .related-mods-container {
     display: flex;
     flex-direction: column;
@@ -1099,7 +1198,6 @@
     width: 100%;
     margin-inline: auto;
     padding-inline: 16px;
-    padding-bottom: 50px;
 }
 
 .related-mod-container {
@@ -1116,8 +1214,8 @@
     width: 100%;
     padding: 20px;
     border-radius: 16px;
-    background-color: #0b1120;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: var(--bg-card-default);
+    border: 1px solid var(--border-default);
     transition: transform 0.3s ease;
     cursor: pointer;
 }
@@ -1133,28 +1231,27 @@
 }
 
 .related-mod-card-header img {
-    width: 36px;
-    height: 36px;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 16px;
 }
 
 .related-mod-text {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 }
 
 .related-mod-text span:first-child {
     color: var(--text-primary);
     font-size: 1.1rem;
-    font-weight: 600;
-    /* font-family: 'JetBrains Mono', monospace; */
+    font-weight: var(--font-weight-semi);
 }
 
 .related-mod-text span:last-child {
     color: var(--text-secondary);
     font-size: 0.8rem;
-    font-weight: 500;
+    font-weight: var(--font-weight-semi);
 }
 
 .related-mod-card-footer {
@@ -1163,7 +1260,7 @@
     align-items: center;
     color: var(--text-secondary);
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
 }
 
 .related-mod-card-rate {
@@ -1173,36 +1270,47 @@
 }
 
 
-
+/* =========================================
+   17. БІЧНА ПАНЕЛЬ "ДЕТАЛІ" (СПІЛЬНА ОБГОРТКА)
+   ========================================= */
 .mod-more-details {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
     position: sticky;
-    top: 110px;
+    top: 100px;
     width: 100%;
     max-width: 320px;
     flex-shrink: 0;
     margin-top: 110px;
 }
 
+
+/* --- 17.1 Основні деталі --- */
 .more-details-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    background-color: #0b1120;
+    background-color: var(--bg-widget-secondary);
+    border: 1px solid var(--border-widget-secondary);
+    backdrop-filter: blur(8px);
     border-radius: 16px;
     padding-inline: 20px;
     padding-block: 16px;
 }
 
-.more-details-container h3 {
+.more-details-title {
     color: var(--text-secondary);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-semi);
+    letter-spacing: 1.1px;
 }
 
 .detail-items {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
     list-style: none;
     padding: 0;
 }
@@ -1210,13 +1318,13 @@
 .detail-item {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .detail-item svg {
-    height: 36px;
-    width: 36px;
-    background-color: var(--bg-purple-muted);
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #23173B;
     padding: 10px;
     border-radius: 12px;
 }
@@ -1224,41 +1332,37 @@
 .detail-text {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
 }
 
 .detail-text span:first-child {
     color: var(--text-secondary);
     font-size: 0.85rem;
+    font-weight: var(--font-weight-semi);
 }
 
 .detail-text span:last-child {
     color: var(--text-primary);
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
 }
 
 
+/* --- 17.2 Середовище (Client / Server) --- */
 .evironment-details-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 14px;
-    background-color: #0b1120;
+    background-color: var(--bg-widget-secondary);
+    border: 1px solid var(--border-widget-secondary);
+    backdrop-filter: blur(8px);
     border-radius: 16px;
     padding-inline: 20px;
     padding-block: 16px;
 }
 
-.evironment-details-container h3 {
-    color: var(--text-secondary);
-    font-size: 1.3rem;
-    /* font-family: 'JetBrains Mono', monospace; */
-}
-
 .evironment-details {
     display: flex;
-    /* justify-content: space-between; */
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -1288,20 +1392,17 @@
 }
 
 
+/* --- 17.3 Категорії --- */
 .categories-details-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 14px;
-    background-color: #0b1120;
+    background-color: var(--bg-widget-secondary);
+    border: 1px solid var(--border-widget-secondary);
+    backdrop-filter: blur(8px);
     border-radius: 16px;
     padding-inline: 20px;
     padding-block: 16px;
-}
-
-.categories-details-container h3 {
-    font-size: 1.3rem;
-    color: var(--text-secondary);
 }
 
 .categories-details {
@@ -1314,26 +1415,25 @@
     padding: 6px 14px;
     border-radius: 100px;
     font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--accent-purple, #a64dff);
-    background-color: rgba(166, 77, 255, 0.15);
-    border: 1px solid rgba(166, 77, 255, 0.3);
+    font-weight: var(--font-weight-semi);
+    color: var(--tag-category-color);
+    background-color: var(--tag-category-bg);
+    border: 1px solid var(--tag-category-border);
+    text-shadow: var(--tag-category-glow);
 }
 
+
+/* --- 17.4 Версії Minecraft --- */
 .mc-version-details-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 14px;
-    background-color: #0b1120;
+    background-color: var(--bg-widget-secondary);
+    border: 1px solid var(--border-widget-secondary);
+    backdrop-filter: blur(8px);
     border-radius: 16px;
     padding-inline: 20px;
     padding-block: 16px;
-}
-
-.mc-version-details-container h3 {
-    font-size: 1.3rem;
-    color: var(--text-secondary);
 }
 
 .mc-version-details {
@@ -1346,27 +1446,28 @@
     padding: 6px 14px;
     border-radius: 100px;
     font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--accent-purple, #a64dff);
-    background-color: rgba(166, 77, 255, 0.15);
-    border: 1px solid rgba(166, 77, 255, 0.3);
+    font-weight: var(--font-weight-semi);
+    color: var(--tag-version-color);
+    background-color: var(--tag-version-bg);
+    border: 1px solid var(--tag-version-border);
+    text-shadow: var(--tag-version-glow);
 }
 
-.additional-mod-details {
+
+/* --- 17.5 Статистика (рейтинг, завантаження, тощо) --- */
+.additional-mod-stats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 14px;
     gap: 20px;
-    background-color: #0b1120;
+    background-color: var(--bg-widget-secondary);
+    border: 1px solid var(--border-widget-secondary);
+    backdrop-filter: blur(8px);
     border-radius: 16px;
     padding-inline: 20px;
     padding-block: 16px;
 }
 
-.additional-mod-rates,
-.additional-mod-downloads,
-.additional-mod-followers,
-.additional-mod-issues {
+.additional-mod-stat {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1374,43 +1475,40 @@
     gap: 4px;
 }
 
-.additional-mod-rates span:first-child {
+.stat-rating span:first-child {
     color: var(--accent-yellow);
     font-size: 1.6rem;
     font-family: 'Bebas Neue', sans-serif;
-    font-weight: 900;
-    letter-spacing: 1px;
+    font-weight: var(--font-weight-black);
+    letter-spacing: 1.1px;
 }
 
-.additional-mod-downloads span:first-child {
+.stat-downloading span:first-child {
     color: #A64DFA;
     font-size: 1.6rem;
     font-family: 'Bebas Neue', sans-serif;
-    font-weight: 900;
-    letter-spacing: 1px;
+    font-weight: var(--font-weight-black);
+    letter-spacing: 1.1px;
 }
 
-.additional-mod-followers span:first-child {
+.stat-following span:first-child {
     color: #00E5FD;
     font-size: 1.6rem;
     font-family: 'Bebas Neue', sans-serif;
-    font-weight: 900;
-    letter-spacing: 1px;
+    font-weight: var(--font-weight-black);
+    letter-spacing: 1.1px;
 }
 
-.additional-mod-issues span:first-child {
+.stat-issues span:first-child {
     color: #807D8D;
     font-size: 1.7rem;
     font-family: 'Bebas Neue', sans-serif;
-    font-weight: 900;
-    letter-spacing: 1px;
+    font-weight: var(--font-weight-black);
+    letter-spacing: 1.1px;
 }
 
-.additional-mod-rates span:last-child,
-.additional-mod-downloads span:last-child,
-.additional-mod-followers span:last-child,
-.additional-mod-issues span:last-child {
+.additional-mod-stat span:last-child {
     color: var(--text-secondary);
     font-size: 0.8rem;
-    font-weight: 500;
-} */
+    font-weight: var(--font-weight-semi);
+}

@@ -3,15 +3,21 @@
     --bg-gradient-main: linear-gradient(180deg, #0b0714 0%, #090511 50%, #050308 100%);
     --bg-card-default: #120d22;
     --bg-filter-default: #0b1120;
+    --bg-widget: #0b1120;
+    --bg-widget-secondary: rgba(14, 10, 24, 0.65);
+    --bg-yellow-muted: #2B220B;
 
     /* === 2. ТЕКСТ === */
     --text-primary: #FFFFFF;
     --text-secondary: #99A1AF;
     --text-muted: #888888;
+    --text-brighter: #b0b3b8;
 
     /* === 3. АКЦЕНТНІ КОЛЬОРИ (Для кнопок, іконок тощо) === */
     --accent-purple: #9D60FF;
+    --accent-purple-muted: #3d1a78;
     --accent-yellow: #FFC800;
+    --accent-yellow-muted: #9e7f24;
     --accent-green: #07DF72;
     --accent-red: #FF6467;
     --accent-cyan: #00D8D8;
@@ -21,13 +27,24 @@
     --border-default: rgba(255, 255, 255, 0.05);
     --border-hover: #a855f7;
     --border-cyan: #006675;
+    --border-widget-secondary: rgba(36, 20, 57, 0.6);
 
     /* === 5. СТАТУСИ (Для чекера сумісності) === */
     --status-bg-success: #032B1D;
     --status-border-success: #006B45;
 
+    --status-panel-bg-success: #0A0E1C;
+    --status-panel-border-success: #07303F;
+    --status-item-bg-success: #081C2A;
+    --status-item-border-success: #073241;
+
     --status-bg-error: #2D121B;
     --status-border-error: #6D1A23;
+
+    --status-panel-bg-error: #130817;
+    --status-panel-border-error: #421224;
+    --status-item-bg-error: #230C1C;
+    --status-item-border-error: #461227;
 
     /* === 6. БРЕНДИНГ МОДІВ === */
     --brand-optifine: #882829;
