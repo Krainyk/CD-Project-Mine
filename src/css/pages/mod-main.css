@@ -66,6 +66,8 @@
     flex-direction: column;
     justify-content: center;
     gap: 14px;
+    flex: 1;
+    min-width: 0;
 }
 
 
@@ -88,6 +90,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: nowrap;
 }
 
 .mod-name {
@@ -166,6 +169,7 @@
 .additional-info {
     display: flex;
     gap: 16px;
+    flex-wrap: wrap;
 }
 
 .additional-rate {
@@ -509,6 +513,10 @@
     gap: 12px;
     position: relative;
     padding-bottom: 16px;
+    overflow-x: auto;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+        scrollbar-width: none;
 }
 
 .mod-main-btn {
@@ -762,11 +770,6 @@
 .key-features-lists {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-}
-
-.key-feature-grid {
-    display: flex;
-    flex-direction: column;
     gap: 14px;
     list-style: none;
     padding: 0;

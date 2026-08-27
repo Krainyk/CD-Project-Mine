@@ -36,6 +36,10 @@
 }
 
 @media (max-width: 690px) {
+    .key-features-lists {
+        grid-template-columns: 1fr;
+    }
+
     .related-mod-container {
         flex-direction: column;
     }
@@ -61,11 +65,18 @@
     }
 }
 
-@media (max-width: 515px) {
-    .mod-main-btns {
-        overflow-x: auto;
-        overflow-y: hidden;
-        flex-wrap: nowrap;
-        scrollbar-width: none;
+@media (max-width: 525px) {
+   
+}
+
+@media (max-width: 490px) {
+    .mod-logo {
+        width: 7rem;
+        height: 7rem;
     }
+
+    .mod-name {
+        font-size: 2rem;
+    }
+
 }
