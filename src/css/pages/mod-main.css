@@ -37,8 +37,26 @@
    2. HERO-СЕКЦІЯ — ЗАГАЛЬНА СТРУКТУРА
    ========================================= */
 .mod-hero-section {
-    margin-top: 30px;
-    padding-bottom: 40px;
+    position: relative;
+    z-index: 1;
+    padding-top: 30px;
+    padding-bottom: 45px;
+    background-image: url("/src/assets/images/mod-hero-bg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mod-hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 17, 32, 0.85);
+    backdrop-filter: blur(2px);
+    z-index: -1;
 }
 
 .mod-hero-section .container {
@@ -348,8 +366,9 @@
 
 .btn-secondary {
     color: var(--text-secondary);
-    background-color: transparent;
+    background-color: var(--bg-widget-secondary);
     border: 1px solid #2A263D;
+    backdrop-filter: blur(8px);
     font-family: 'JetBrains Mono', monospace;
     font-size: 1rem;
     font-weight: var(--font-weight-medium);
@@ -514,9 +533,9 @@
     position: relative;
     padding-bottom: 16px;
     overflow-x: auto;
-        overflow-y: hidden;
-        flex-wrap: nowrap;
-        scrollbar-width: none;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
 }
 
 .mod-main-btn {
@@ -1111,7 +1130,7 @@
 .changelog-card.active {
     border-color: #3F1F62;
     box-shadow: 0 0 16px rgba(63, 31, 98, 0.5),
-            0 0 4px rgba(63, 31, 98, 0.6);
+        0 0 4px rgba(63, 31, 98, 0.6);
 }
 
 .timeline-dot {
