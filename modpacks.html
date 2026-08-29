@@ -50,7 +50,7 @@
                             <polyline points="3 17 9 11 13 15 21 7"></polyline>
                             <polyline points="14 7 21 7 21 14"></polyline>
                         </svg>
-                        <h2>Trending modpacks</h2>
+                        <h2>Featured modpack</h2>
                         <div class="trend-catalog-line"></div>
                     </div>
 
@@ -153,6 +153,300 @@
                             </div>
                         </div>
                     </a>
+
+                    <section class="all-modpacks">
+                        <div class="all-modpacks-header">
+                            <div class="all-modpacks-header-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="var(--accent-purple)" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-layers-icon lucide-layers">
+                                    <path
+                                        d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+                                    <path
+                                        d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+                                    <path
+                                        d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+                                </svg>
+                                <div class="all-mods-title">
+                                    <h2>Popular modpacks</h2>
+                                    <span class="mods-count" id="mods-count"></span>
+                                </div>
+                            </div>
+
+                            <div class="filter-dropdown">
+                                <button class="filter-toggle-btn" id="filter-btn">
+                                    <span class="selected-text">Select filters</span>
+                                    <div class="category-arrow">
+                                        <svg class="icon-dropdown" xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                </button>
+
+                                <div class="filter-menu" id="filter-items">
+                                    <div class="filter-menu-group">
+                                        <span class="filter-group-title">Loader</span>
+
+                                        <label class="filter-mobile-option">
+                                            <input type="checkbox" value="forge" class="js-filter">
+                                            <span class="option-text">Forge</span>
+                                        </label>
+
+                                        <label class="filter-mobile-option">
+                                            <input type="checkbox" value="fabric" class="js-filter">
+                                            <span class="option-text">Fabric</span>
+                                        </label>
+
+                                        <label class="filter-mobile-option">
+                                            <input type="checkbox" value="neoforge" class="js-filter">
+                                            <span class="option-text">NeoForge</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-menu-group">
+                                        <span class="filter-group-title">Version</span>
+
+                                        <label class="filter-mobile-option">
+                                            <input type="checkbox" value="1.20.1" class="js-filter">
+                                            <span class="option-text">1.20.1</span>
+                                        </label>
+
+                                        <label class="filter-mobile-option">
+                                            <input type="checkbox" value="1.21" class="js-filter">
+                                            <span class="option-text">1.21</span>
+                                        </label>
+
+                                        <label class="filter-mobile-option">
+                                            <input type="checkbox" value="1.19.2" class="js-filter">
+                                            <span class="option-text">1.19.2</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-menu-group">
+                                        <span class="filter-group-title">Categories</span>
+
+                                        <label class="filter-mobile-option">
+                                            <input type="checkbox" value="optimization" class="js-filter">
+                                            <span class="option-text">Optimization</span>
+                                        </label>
+
+                                        <label class="filter-mobile-option">
+                                            <input type="checkbox" value="magic" class="js-filter">
+                                            <span class="option-text">Magic</span>
+                                        </label>
+
+                                        <label class="filter-mobile-option">
+                                            <input type="checkbox" value="rpg" class="js-filter">
+                                            <span class="option-text">RPG</span>
+                                        </label>
+
+                                        <label class="filter-mobile-option">
+                                            <input type="checkbox" value="technology" class="js-filter">
+                                            <span class="option-text">Technology</span>
+                                        </label>
+
+                                        <label class="filter-mobile-option">
+                                            <input type="checkbox" value="adventure" class="js-filter">
+                                            <span class="option-text">Adventure</span>
+                                        </label>
+
+                                        <label class="filter-mobile-option">
+                                            <input type="checkbox" value="utility" class="js-filter">
+                                            <span class="option-text">Utility</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="filter-menu-group">
+                                        <span class="filter-group-title">Sort By</span>
+
+                                        <label class="filter-mobile-option">
+                                            <input type="radio" value="most-popular" name="sort">
+                                            <span class="option-text">Most Popular</span>
+                                        </label>
+
+                                        <label class="filter-mobile-option">
+                                            <input type="radio" value="trending" name="sort">
+                                            <span class="option-text">Trending</span>
+                                        </label>
+
+                                        <label class="filter-mobile-option">
+                                            <input type="radio" value="newest" name="sort">
+                                            <span class="option-text">Newest</span>
+                                        </label>
+
+                                        <label class="filter-mobile-option">
+                                            <input type="radio" value="best-rated" name="sort">
+                                            <span class="option-text">Best Rated</span>
+                                        </label>
+                                    </div>
+
+                                    <button class="clear-mobile-btn clear-btn"> Clear filters</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modpack-grid" id="modpack-placeholder">
+
+                            <div class="modpack-card" href="#">
+                                <div class="modpack-card-header">
+                                    <div class="modpack-card-header-wrapper">
+                                        <span class="tag-loader">Forge</span>
+                                        <div class="modpack-card-compat-info">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-shield-icon lucide-shield">
+                                                <path
+                                                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                                            </svg> <span>94%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modpack-card-footer">
+                                    <div class="modpack-card-main-info">
+                                        <div class="modpack-card-main-title">
+                                            <h3>All the mods 9</h3>
+                                            <p>The kitchen-sink modpack. Everything you could ever want.</p>
+                                        </div>
+
+                                        <div class="modpack-card-tags">
+                                            <span class="modpack-card-version-tag">1.20.1</span>
+                                            <span class="modpack-card-category-tag">Kitchen Sink</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="modpack-card-devider"></div>
+
+                                    <div class="modpack-card-additional-info">
+                                        <ul class="modpack-card-additional-items">
+                                            <li class="modpack-card-additional-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18"
+                                                    height="18" fill="none" stroke="var(--text-secondary)"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path
+                                                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                                                    <line x1="12" y1="22.08" x2="12" y2="12" />
+                                                    <line x1="7.5" y1="4.21" x2="16.5" y2="9.4" />
+                                                </svg> <span>400</span>
+                                            </li>
+
+                                            <li class="modpack-card-additional-item">
+                                                <svg viewBox="0 0 24 24" width="18" height="18"
+                                                    stroke="var(--text-secondary)" stroke-width="2" fill="none"
+                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                                </svg> <span>8.1M</span>
+                                            </li>
+
+                                            <li class="modpack-card-additional-item">
+                                                <svg viewBox="0 0 24 24" width="18" height="18"
+                                                    stroke="var(--accent-yellow)" stroke-width="2"
+                                                    fill="var(--accent-yellow)" stroke-linecap="round"
+                                                    stroke-linejoin="round">
+                                                    <polygon
+                                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                                    </polygon>
+                                                </svg> <span>9.5</span>
+                                            </li>
+                                        </ul>
+
+                                        <a class="modpack-card-view-btn" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-eye-icon lucide-eye">
+                                                <path
+                                                    d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
+                                                <circle cx="12" cy="12" r="3" />
+                                            </svg>
+                                            <span>View</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <a class="modpack-card" href="#">
+                                <div class="modpack-card-header">
+                                    <span class="tag-loader">Forge</span>
+                                    <div class="modpack-card-compat-info">
+                                        <!-- svg --
+                                        <span>94%</span>
+                                    </div>
+                                </div>
+
+                                <div class="modpack-card-footer">
+                                    <div class="modpack-card-main-info">
+                                        <div class="modpack-card-main-title">
+                                            <h3>All the mods 9</h3>
+                                            <p>The kitchen-sink modpack. Everything you could ever want.</p>
+                                        </div>
+
+                                        <div class="modpack-card-tags">
+                                            <span class="modpack-card-version-tag">1.20.1</span>
+                                            <span class="modpack-card-category-tag">Kitchen Sink</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="modpack-card-devider"></div>
+
+                                    <div class="modpack-card-additional-info">
+                                        <ul class="modpack-card-additional-items">
+                                            <li class="modpack-card-additional-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
+                                                    height="20" fill="none" stroke="var(--text-secondary)"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path
+                                                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                                                    <line x1="12" y1="22.08" x2="12" y2="12" />
+                                                    <line x1="7.5" y1="4.21" x2="16.5" y2="9.4" />
+                                                </svg> <span>400</span>
+                                            </li>
+
+                                            <li class="modpack-card-additional-item">
+                                                <svg viewBox="0 0 24 24" width="20" height="20"
+                                                    stroke="var(--text-secondary)" stroke-width="2" fill="none"
+                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                                </svg> <span>8.1M</span>
+                                            </li>
+
+                                            <li class="modpack-card-additional-item">
+                                                <svg viewBox="0 0 24 24" width="20" height="20"
+                                                    stroke="var(--accent-yellow)" stroke-width="2"
+                                                    fill="var(--accent-yellow)" stroke-linecap="round"
+                                                    stroke-linejoin="round">
+                                                    <polygon
+                                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                                    </polygon>
+                                                </svg> <span>9.5</span>
+                                            </li>
+                                        </ul>
+
+                                        <a class="modpack-card-view-btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-eye-icon lucide-eye">
+                                                <path
+                                                    d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
+                                                <circle cx="12" cy="12" r="3" />
+                                            </svg>
+                                            <span>View</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </a> -->
+                        </div>
+                    </section>
                     <!-- <div class="trend-catalog-container" id="trending-placeholder"></div> -->
                 </div>
             </section>
