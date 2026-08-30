@@ -270,11 +270,11 @@
     font-weight: var(--font-weight-semi);
 }
 
-/* .modpack-grid {
+.modpack-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 15px;
-} */
+}
 
 .modpack-card {
     position: relative;
@@ -314,11 +314,51 @@
 } */
 
 
-.modpack-card-header {
-    flex: 1;
-    background-image: linear-gradient(rgba(11, 7, 20, 0.5),
+.atm9 {
+    --modpack-bg: linear-gradient(rgba(11, 7, 20, 0.5),
             rgba(11, 7, 20, 0.5)),
         url("/src/assets/images/modpack-atm9-icon.png");
+}
+
+.createab {
+    --modpack-bg: linear-gradient(rgba(11, 7, 20, 0.5),
+            rgba(11, 7, 20, 0.5)),
+        url("/src/assets/images/modpack-create:a&b-icon.jpg");
+}
+
+.ftbskies {
+    --modpack-bg: url("/src/assets/images/modpack-ftbskies-icon.jpg");
+}
+
+.rlcraft {
+    --modpack-bg: url("/src/assets/images/modpack-rlcraft-icon.webp");
+}
+
+.bttermcfab {
+    --modpack-bg: url("/src/assets/images/modpack-bettermcfabric-icon.jpeg");
+}
+
+.roguelikeadven {
+    --modpack-bg: url("/src/assets/images/modpack-roguelikeadven-icon.jpg");
+}
+
+.nightfallcraft {
+    --modpack-bg: url("/src/assets/images/modpack-nightfallcraft-icon.jpeg");
+}
+
+.ohthebiomeswevedone {
+    --modpack-bg: url("/src/assets/images/modpack-ohthebiomes-icon.jpg");
+}
+
+.prominenceiirpg {
+    --modpack-bg: url("/src/assets/images/prominence-ii-bg.jpg");
+}
+
+.modpack-card-header {
+    flex: 1;
+    background-image: linear-gradient(rgba(11, 7, 20, 0.4),
+            rgba(11, 7, 20, 0.4)),
+        var(--modpack-bg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -334,14 +374,31 @@
 }
 
 .tag-loader {
-    color: var(--tag-loader-forge-color);
-    border: 1px solid var(--tag-loader-forge-border);
-    background-color: var(--tag-loader-forge-bg);
-    text-shadow: var(--tag-loader-forge-glow);
     font-weight: var(--font-weight-semi);
     font-size: 0.85rem;
     padding: 2px 8px;
     border-radius: 16px;
+}
+
+.forge {
+    color: var(--tag-loader-forge-color);
+    border: 1px solid var(--tag-loader-forge-border);
+    background-color: var(--tag-loader-forge-bg);
+    text-shadow: var(--tag-loader-forge-glow);
+}
+
+.fabric {
+    color: var(--tag-loader-fabric-color);
+    border: 1px solid var(--tag-loader-fabric-border);
+    background-color: var(--tag-loader-fabric-bg);
+    text-shadow: var(--tag-loader-fabric-glow);
+}
+
+.neoforge {
+    color: var(--tag-loader-neoforge-color);
+    border: 1px solid var(--tag-loader-neoforge-border);
+    background-color: var(--tag-loader-neoforge-bg);
+    text-shadow: var(--tag-loader-neoforge-glow);
 }
 
 .modpack-card-compat-info {
@@ -416,7 +473,7 @@
     border-radius: 16px;
 }
 
-.modpack-card-devider {
+.modpack-card-divider {
     height: 1px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.05);
