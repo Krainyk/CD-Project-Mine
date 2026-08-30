@@ -323,7 +323,7 @@
 .createab {
     --modpack-bg: linear-gradient(rgba(11, 7, 20, 0.5),
             rgba(11, 7, 20, 0.5)),
-        url("/src/assets/images/modpack-create:a&b-icon.jpg");
+        url("/src/assets/images/modpack-create-aandb-icon.jpg");
 }
 
 .ftbskies {
@@ -528,6 +528,36 @@
     font-size: 0.9rem;
     font-weight: var(--font-weight-semi);
 }
+
+
+
+
+
+
+
+
+/* .idk {
+    margin-top: 300px;
+    max-width: 1450px;
+    width: 100%;
+    height: 400px;
+    background: radial-gradient(ellipse at top left, rgba(147, 51, 234, 0.15) 0%, transparent 50%),
+        linear-gradient(160deg, #1e1030 0%, #120a24 40%, #0a0a14 100%);
+    border-radius: 24px;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    box-shadow: 0 0 60px rgba(139, 92, 246, 0.08);
+
+    margin-inline: auto;
+} */
+
+
+
+
+
+
+
+
+
 
 
 
