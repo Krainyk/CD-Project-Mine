@@ -21,7 +21,12 @@
         url("/src/assets/images/discover-hero-bg.jpeg");
 }
 
-/* .modpack-page {} */
+.modpack-page {
+    background-image: linear-gradient(rgba(11, 7, 20, 0.7),
+            rgba(11, 7, 20, 0.7)),
+        url("/src/assets/images/modpacks-hero-bg.jpeg");
+    background-position: 50% 70%;
+}
 
 .catalog-hero-section h1 {
     padding: 8px 20px;
