@@ -1,3 +1,6 @@
+/* ==========================================================================
+   01. ГОЛОВНИЙ КОНТЕЙНЕР СТОРІНКИ
+   ========================================================================== */
 .modpack-page-container {
     width: 100%;
     margin: 70px auto;
@@ -11,6 +14,10 @@
     height: 100%;
 }
 
+
+/* ==========================================================================
+   02. ДЕКОРАТИВНИЙ РОЗДІЛЮВАЧ (SVG PATTERN)
+   ========================================================================== */
 .devider-container {
     max-width: 1900px;
     width: 100%;
@@ -20,6 +27,10 @@
     background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg"><path d="M 0 0 V 32 H 16 V 48 H 48 V 32 H 80 V 48 H 112 V 64 H 144 V 80 H 160 V 64 H 192 V 48 H 224 V 64 H 256 V 48 H 288 V 32 H 320 V 0 Z" fill="%23110a1a" /><path d="M 0 0 V 16 H 16 V 32 H 32 V 16 H 48 V 48 H 64 V 32 H 96 V 16 H 112 V 48 H 128 V 64 H 144 V 48 H 160 V 32 H 176 V 48 H 192 V 16 H 208 V 32 H 224 V 48 H 240 V 16 H 272 V 32 H 288 V 16 H 320 V 0 Z" fill="%231b132b" /><g opacity="0.8"><rect x="16" y="16" width="16" height="16" fill="%23a64dff" /><rect x="128" y="32" width="16" height="16" fill="%23a64dff" /><rect x="272" y="0" width="16" height="16" fill="%23a64dff" /><rect x="80" y="16" width="16" height="16" fill="%2300e5ff" /><rect x="224" y="32" width="16" height="16" fill="%2300e5ff" /></g></svg>');
 }
 
+
+/* ==========================================================================
+   03. ОСНОВНА СЕКЦІЯ МОДПАКІВ (ЛЕЙАУТ)
+   ========================================================================== */
 .modpack-section {
     display: flex;
     justify-content: center;
@@ -29,7 +40,6 @@
     margin-bottom: 60px;
 }
 
-
 .main-modpacks {
     flex: 1;
     align-self: flex-start;
@@ -38,21 +48,15 @@
 }
 
 
-
-
-/* .prominence2 {
-    --mod-bg: url("https://github.com/nvb-uy/cdn/blob/main/desc/prominence/rpg/new_prominence_banner.webp?raw=true");
-    --bg-zoom: 115%;
-} */
-
+/* ==========================================================================
+   04. TREND MODPACK — ГОЛОВНА ВЕЛИКА КАРТКА
+   ========================================================================== */
 .trend-modpack {
     display: block;
     background-image: linear-gradient(rgba(11, 7, 20, 0.6),
             rgba(11, 7, 20, 0.6)),
         var(--mod-bg);
     background-size: var(--bg-zoom, cover);
-    /* background-position: center; */
-    /* background-size: cover; */
     background-position: 50% 82%;
     background-repeat: no-repeat;
     border-radius: 20px;
@@ -86,6 +90,8 @@
     flex-direction: column;
 }
 
+
+/* --- 04.1 Теги (категорія / версія) --- */
 .trend-modpack-tags {
     display: flex;
     align-items: center;
@@ -115,6 +121,8 @@
     text-shadow: var(--tag-version-glow);
 }
 
+
+/* --- 04.2 Заголовок і опис --- */
 .trend-modpack-info {
     display: flex;
     flex-direction: column;
@@ -136,6 +144,8 @@
     font-weight: var(--font-weight-medium);
 }
 
+
+/* --- 04.3 Футер (статистика картки) --- */
 .trend-modpack-footer-items {
     display: flex;
     gap: 24px;
@@ -156,7 +166,7 @@
 }
 
 
-
+/* --- 04.4 Дії: кільце сумісності та кнопка завантаження --- */
 .trend-modpack-actions {
     display: flex;
     flex-direction: column;
@@ -175,7 +185,6 @@
     justify-content: center;
     cursor: default;
 }
-
 
 .progress-ring {
     position: absolute;
@@ -253,7 +262,9 @@
 }
 
 
-
+/* ==========================================================================
+   05. СПИСОК УСІХ МОДПАКІВ — ЗАГОЛОВОК СЕКЦІЇ
+   ========================================================================== */
 .all-modpacks {
     margin-top: 40px;
 }
@@ -288,6 +299,10 @@
     gap: 15px;
 }
 
+
+/* ==========================================================================
+   06. КАРТКА МОДПАКА (MODPACK CARD)
+   ========================================================================== */
 .modpack-card {
     position: relative;
     display: flex;
@@ -312,21 +327,7 @@
 }
 
 
-
-/* .modpack-card:hover .modpack-card-view-btn {
-    background-color: #342254; 
-    transition: background-color 0.2s ease;
-} */
-
-
-/* .modpack-card-link::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 10;
-} */
-
-
+/* --- 06.1 Фонові зображення для конкретних модпаків --- */
 .atm9 {
     --modpack-bg: linear-gradient(rgba(11, 7, 20, 0.5),
             rgba(11, 7, 20, 0.5)),
@@ -367,6 +368,8 @@
     --modpack-bg: url("/src/assets/images/prominence-ii-bg.jpg");
 }
 
+
+/* --- 06.2 Хедер картки (зображення + теги лоадера) --- */
 .modpack-card-header {
     flex: 1;
     background-image: linear-gradient(rgba(11, 7, 20, 0.4),
@@ -429,6 +432,7 @@
 }
 
 
+/* --- 06.3 Футер картки (назва, теги, статистика) --- */
 .modpack-card-footer {
     display: flex;
     flex-direction: column;
@@ -545,8 +549,9 @@
 }
 
 
-
-
+/* ==========================================================================
+   07. СЕКЦІЯ "СУМІСНІСТЬ" (COMPATIBILITY FEATURE)
+   ========================================================================== */
 .modpack-container {
     display: flex;
     flex-direction: column;
@@ -572,6 +577,8 @@
     padding: 40px;
 }
 
+
+/* --- 07.1 Текстовий контент (заголовок, опис, переваги, кнопка) --- */
 .compatibility-feature-content {
     display: flex;
     flex-direction: column;
@@ -659,8 +666,7 @@
 }
 
 
-
-
+/* --- 07.2 Панель статистики сумісності --- */
 .compatibility-feature-stats {
     display: flex;
     flex-direction: column;
@@ -735,6 +741,9 @@
 }
 
 
+/* ==========================================================================
+   08. НЕЩОДАВНО ОНОВЛЕНІ МОДПАКИ (RECENT UPDATES)
+   ========================================================================== */
 .recent-update-modpacks {
     color: white;
     display: flex;
@@ -821,7 +830,9 @@
 }
 
 
-
+/* ==========================================================================
+   09. СЕКЦІЯ "СТВОРИТИ МОДПАК" (CTA-БЛОК)
+   ========================================================================== */
 .create-modpack-section {
     height: 50dvh;
     background-image: linear-gradient(rgba(11, 7, 20, 0.8),
@@ -883,179 +894,4 @@
     transform: scale(1.03);
     box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
     filter: brightness(1.01);
-}
-
-
-
-
-
-
-
-
-
-#mods-count {
-    display: inline-block;
-    /* color: #7b7b7b; */
-    font-size: 0.8rem;
-    font-weight: var(--font-weight-semi);
-    color: #8a4fff;
-    border: 1px solid #3d1a78;
-    background-color: #171126;
-    text-shadow: 0 0 8px rgba(138, 79, 255, 0.4);
-    padding: 4px 18px;
-    border-radius: 16px;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.count-fade {
-    opacity: 0;
-    transform: scale(0.5);
-}
-
-
-
-/* ==========================================
-   DROPDOWN FILTER
-========================================== */
-.filter-dropdown {
-    position: relative;
-    display: block;
-    /* display: none; */
-    padding-bottom: 24px;
-}
-
-.filter-toggle-btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 185px;
-    padding: 6px 20px;
-    background-color: var(--bg-filter-default);
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    border-radius: 12px;
-    color: white;
-    font-size: 1rem;
-    font-family: inherit;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.icon-dropdown {
-    color: #8b5cf6;
-    transition: transform 0.3s ease;
-}
-
-.filter-dropdown.active .icon-dropdown {
-    transform: rotate(180deg);
-}
-
-.filter-menu {
-    position: absolute;
-    top: 41px;
-    left: 0;
-    overflow-y: auto;
-    max-height: 350px;
-    max-width: 300px;
-    width: 100%;
-    z-index: 1000;
-    padding: 10px 0;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-
-    background-color: #0b1120;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-
-    scrollbar-width: thin;
-    scrollbar-color: #8b5cf6 #0b1120;
-}
-
-.filter-dropdown.active .filter-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.filter-menu-group {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.filter-menu-group:last-child {
-    border-bottom: none;
-}
-
-.filter-group-title {
-    font-size: 0.85rem;
-    color: #6a6775;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.filter-mobile-option {
-    position: relative;
-    display: block;
-    text-align: center;
-    width: 100%;
-    padding: 10px 15px;
-    margin-bottom: 4px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.filter-mobile-option input[type="radio"] {
-    display: none;
-}
-
-.filter-mobile-option:hover {
-    background-color: rgba(255, 255, 255, 0.03);
-}
-
-.filter-mobile-option input[type="checkbox"] {
-    display: none;
-}
-
-.filter-mobile-option:has(input:checked) {
-    background-color: rgba(139, 92, 246, 0.1);
-}
-
-.filter-mobile-option input:checked+.option-text {
-    color: #c441ff;
-    text-shadow: 0 0 8px rgba(196, 65, 255, 0.4);
-    font-weight: bold;
-}
-
-.option-text {
-    text-align: center;
-    font-size: 0.95rem;
-    color: #888888;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.clear-mobile-btn {
-    display: block;
-    margin: 0 auto;
-    margin-top: 12px;
-    padding: 8px;
-
-    background-color: #0b1120;
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    border-radius: 12px;
-    color: white;
-
-    cursor: pointer;
-    transition: color 0.3s ease,
-        transform 0.3s ease;
-}
-
-.clear-mobile-btn:hover {
-    color: #e2e2e5;
-    transform: translateY(-1px);
 }
