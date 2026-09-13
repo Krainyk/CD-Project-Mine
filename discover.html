@@ -113,17 +113,17 @@
                                     <span class="filter-group-title">Loader</span>
 
                                     <label class="filter-mobile-option">
-                                        <input type="checkbox" value="forge" class="js-filter">
+                                        <input type="checkbox" value="forge" name="loader" class="js-filter">
                                         <span class="option-text">Forge</span>
                                     </label>
 
                                     <label class="filter-mobile-option">
-                                        <input type="checkbox" value="fabric" class="js-filter">
+                                        <input type="checkbox" value="fabric" name="loader" class="js-filter">
                                         <span class="option-text">Fabric</span>
                                     </label>
 
                                     <label class="filter-mobile-option">
-                                        <input type="checkbox" value="neoforge" class="js-filter">
+                                        <input type="checkbox" value="neoforge" name="loader" class="js-filter">
                                         <span class="option-text">NeoForge</span>
                                     </label>
                                 </div>
@@ -132,18 +132,33 @@
                                     <span class="filter-group-title">Version</span>
 
                                     <label class="filter-mobile-option">
-                                        <input type="checkbox" value="1.20.1" class="js-filter">
-                                        <span class="option-text">1.20.1</span>
+                                        <input type="checkbox" value="26.2" name="version" class="js-filter">
+                                        <span class="option-text">26.2</span>
                                     </label>
 
                                     <label class="filter-mobile-option">
-                                        <input type="checkbox" value="1.21" class="js-filter">
+                                        <input type="checkbox" value="26.1" name="version" class="js-filter">
+                                        <span class="option-text">26.1</span>
+                                    </label>
+
+                                    <label class="filter-mobile-option">
+                                        <input type="checkbox" value="1.21" name="version" class="js-filter">
                                         <span class="option-text">1.21</span>
                                     </label>
 
                                     <label class="filter-mobile-option">
-                                        <input type="checkbox" value="1.19.2" class="js-filter">
+                                        <input type="checkbox" value="1.20.1" name="version" class="js-filter">
+                                        <span class="option-text">1.20.1</span>
+                                    </label>
+
+                                    <label class="filter-mobile-option">
+                                        <input type="checkbox" value="1.19.2" name="version" class="js-filter">
                                         <span class="option-text">1.19.2</span>
+                                    </label>
+
+                                    <label class="filter-mobile-option">
+                                        <input type="checkbox" value="1.19.1" name="version" class="js-filter">
+                                        <span class="option-text">1.19.1</span>
                                     </label>
                                 </div>
 
@@ -151,33 +166,33 @@
                                     <span class="filter-group-title">Categories</span>
 
                                     <label class="filter-mobile-option">
-                                        <input type="checkbox" value="optimization" class="js-filter">
-                                        <span class="option-text">Optimization</span>
+                                        <input type="checkbox" value="optimization" name="category" class="js-filter">
+                                        <span class="option-text">Performance</span>
                                     </label>
 
                                     <label class="filter-mobile-option">
-                                        <input type="checkbox" value="magic" class="js-filter">
-                                        <span class="option-text">Magic</span>
-                                    </label>
-
-                                    <label class="filter-mobile-option">
-                                        <input type="checkbox" value="rpg" class="js-filter">
-                                        <span class="option-text">RPG</span>
-                                    </label>
-
-                                    <label class="filter-mobile-option">
-                                        <input type="checkbox" value="technology" class="js-filter">
+                                        <input type="checkbox" value="technology" name="category" class="js-filter">
                                         <span class="option-text">Technology</span>
                                     </label>
 
                                     <label class="filter-mobile-option">
-                                        <input type="checkbox" value="adventure" class="js-filter">
+                                        <input type="checkbox" value="adventure" name="category" class="js-filter">
                                         <span class="option-text">Adventure</span>
                                     </label>
 
                                     <label class="filter-mobile-option">
-                                        <input type="checkbox" value="utility" class="js-filter">
+                                        <input type="checkbox" value="utility" name="category" class="js-filter">
                                         <span class="option-text">Utility</span>
+                                    </label>
+
+                                    <label class="filter-mobile-option">
+                                        <input type="checkbox" value="rpg" name="category" class="js-filter">
+                                        <span class="option-text">RPG</span>
+                                    </label>
+
+                                    <label class="filter-mobile-option">
+                                        <input type="checkbox" value="magic" name="category" class="js-filter">
+                                        <span class="option-text">Magic</span>
                                     </label>
                                 </div>
 
@@ -210,7 +225,7 @@
                         </div>
                     </div>
 
-                    <div class="mod-grid" id="mod-placeholder"></div>
+                    <div class="mod-grid filterable-grid" id="mod-placeholder"></div>
                 </section>
             </section>
         </section>
@@ -221,6 +236,7 @@
     <script type="module" src="src/scripts/discover.js"></script>
     <script src="src/components/navbar/navbar.js" defer></script>
     <script src="src/components/footer/footer.js" defer></script>
+    <script src="src/scripts/utils/compat-progress.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();

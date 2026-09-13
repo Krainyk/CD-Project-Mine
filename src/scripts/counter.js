@@ -6,7 +6,7 @@ export function updateModCount() {
 
     if (!modCount) return;
 
-    const visibleCards = document.querySelectorAll('.mod-card:not(.hidden)');
+    const visibleCards = document.querySelectorAll('.filterable-item:not(.hidden)');
     const count = visibleCards.length;
 
     if (count.toString() === modCount.textContent) {

@@ -16,24 +16,36 @@ export function initFilterLogic() {
         });
 
         const checkboxes = document.querySelectorAll('.js-filter');
-        const cards = document.querySelectorAll('.mod-card');
+        const filterableItem = document.querySelectorAll('.filterable-item');
+        // const cards = document.querySelectorAll('.mod-card');
         const selectedFilter = document.querySelector('.selected-text');
         const clearBtns = document.querySelectorAll('.clear-btn');
 
-        const modContainer = document.querySelector('.mod-grid');
-        const modCardArray = Array.from(modContainer.querySelectorAll('.mod-card'));
+        const filterableItemContainer = document.querySelector('.filterable-grid');
+        const filterableItemArray = Array.from(filterableItemContainer.querySelectorAll('.filterable-item'));
 
         function applyFilters() {
-            let activeFilters = []; // Порожній масив для зберігання фільтрів
+            let activeLoaders = [];
+            let activeVersions = [];
+            let activeCategories = [];
 
             let selectedOption = [];
 
             checkboxes.forEach(cb => {
                 if (cb.checked) {
-                    activeFilters.push(cb.value);
+                    if (cb.name === 'loader') {
+                        activeLoaders.push(cb.value);
+                    }
+                    else if (cb.name === 'version') {
+                        activeVersions.push(cb.value);
+                    }
+                    else if (cb.name === 'category') {
+                        activeCategories.push(cb.value);
+                    }
 
-                    selectedOption.push(cb);
+                    selectedOption.push(cb)
                 }
+
 
                 if (selectedOption.length === 0) {
                     selectedFilter.textContent = "Select filter";
@@ -47,10 +59,22 @@ export function initFilterLogic() {
                 }
             });
 
-            cards.forEach(card => {
-                const cardGenre = card.getAttribute('data-genre').split(",");
 
-                if (activeFilters.length === 0 || activeFilters.every(filter => cardGenre.includes(filter))) {
+            filterableItem.forEach(card => {
+                const itemLoader = (card.dataset.loader || "").split(",");
+                const itemVersion = (card.dataset.version || "").split(",");
+                const itemCategory = (card.dataset.category || "").split(",");
+                const matchLoader = activeLoaders.length === 0 || activeLoaders.some(filter => itemLoader.includes(filter));
+
+
+                const matchVersions = activeVersions.length === 0 || activeVersions.some(filter =>itemVersion.includes(filter));
+
+                const matchCategories = activeCategories.length === 0 || activeCategories.some(filter => itemCategory.includes(filter));
+
+                const matchFilters = (matchLoader && matchVersions && matchCategories);
+
+
+                if (matchFilters) {
                     card.classList.remove('hidden');
 
                     setTimeout(() => {
@@ -79,7 +103,7 @@ export function initFilterLogic() {
         clearBtns.forEach(btn => {
             btn.addEventListener('click', () => {
 
-                const currentlyVisible = document.querySelectorAll('.mod-card:not(.hidden)');
+                const currentlyVisible = document.querySelectorAll('.filterable-item:not(.hidden)');
 
                 currentlyVisible.forEach(card => {
                     card.classList.add('fade-out');
@@ -91,14 +115,14 @@ export function initFilterLogic() {
                 sortRadios.forEach(e => { e.checked = false; });
 
                 setTimeout(() => {
-                    modCardArray.forEach(card => {
-                        modContainer.append(card);
+                    filterableItemArray.forEach(card => {
+                        filterableItemContainer.append(card);
                     });
 
                     applyFilters();
 
                     setTimeout(() => {
-                        modCardArray.forEach(card => {
+                        filterableItemArray.forEach(card => {
                             card.classList.remove('fade-out');
                         });
                     }, 10);
@@ -117,17 +141,18 @@ export function initFilterLogic() {
 
         function applySorting() {
             const sortValue = document.querySelector('input[name="sort"]:checked').value;
-            const modContainer = document.querySelector('.mod-grid');
-            const visibleCards = Array.from(modContainer.querySelectorAll('.mod-card:not(.hidden)'));
+            // const modContainer = document.querySelector('.mod-grid');
+            const filterableItemContainer = document.querySelector('.filterable-grid');
+            const visibleItems = Array.from(filterableItemContainer.querySelectorAll('.filterable-item:not(.hidden)'));
 
             // console.log(sortValue);
 
-            visibleCards.forEach(card => {
+            visibleItems.forEach(card => {
                 card.classList.add('fade-out');
             });
 
             setTimeout(() => {
-                visibleCards.sort((cardA, cardB) => {
+                visibleItems.sort((cardA, cardB) => {
                     let valueA, valueB;
 
                     if (sortValue === 'most-popular') {
@@ -155,12 +180,12 @@ export function initFilterLogic() {
                     return valueB - valueA;
                 });
 
-                visibleCards.forEach(card => {
-                    modContainer.append(card);
+                visibleItems.forEach(card => {
+                    filterableItemContainer.append(card);
                 });
 
                 setTimeout(() => {
-                    visibleCards.forEach(card => {
+                    visibleItems.forEach(card => {
                         card.classList.remove('fade-out');
                     });
                 }, 10);

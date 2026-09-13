@@ -2,27 +2,27 @@ import { updateModCount } from "../../scripts/counter.js";
 
 export function initSearchLogic() {
     const searchInput = document.getElementById('mod-search');
-    const cards = document.querySelectorAll('.mod-card');
+    const filterableItem = document.querySelectorAll('.filterable-item');
 
     searchInput.addEventListener('input', () => {
         const searchText = searchInput.value.toLowerCase();
 
-        cards.forEach(card => {
-            const title = card.querySelector('.mod-title');
+        filterableItem.forEach(item => {
+            const title = item.querySelector('.mod-title');
             const text = title.textContent.toLowerCase();
 
             if (text.includes(searchText)) {
-                card.classList.remove('hidden');
+                item.classList.remove('hidden');
 
                 setTimeout(() => {
-                    card.classList.remove('fade-out');
+                    item.classList.remove('fade-out');
                 }, 10);
             } else {
-                card.classList.add('fade-out');
+                item.classList.add('fade-out');
 
                 setTimeout(() => {
-                    if (card.classList.contains('fade-out')) {
-                        card.classList.add('hidden');
+                    if (item.classList.contains('fade-out')) {
+                        item.classList.add('hidden');
                     }
                 }, 300);
             }

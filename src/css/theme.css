@@ -96,6 +96,11 @@
     --tag-loader-neoforge-bg: #171126;
     --tag-loader-neoforge-glow: 0 0 8px rgba(138, 79, 255, 0.4);
 
+    --tag-loader-quilt-color: #DC29DD;
+    --tag-loader-quilt-border: #5b1e67;
+    --tag-loader-quilt-bg: #2a1233;
+    --tag-loader-quilt-glow: 0 0 8px rgba(220, 41, 221, 0.4);
+
     --tag-loader-forgeorfabric-color: #9f73b6;
     --tag-loader-forgeorfabric-border: #4a355a;
     --tag-loader-forgeorfabric-bg: #211d29;

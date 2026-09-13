@@ -98,9 +98,12 @@ input:checked+label {
    PURPLE VARIANTS
 ========================================== */
 input#forge:checked+.forge-option,
+input#version-262:checked+.version-262-option,
+input#version-261:checked+.version-261-option,
 input#version-1201:checked+.version-1201-option,
 input#version-121:checked+.version-121-option,
 input#version-1192:checked+.version-1192-option,
+input#version-1191:checked+.version-1191-option,
 input#rpg:checked+.rpg-option,
 input#utility:checked+.utility-option,
 input#most-popular:checked+.most-popular-option,
@@ -125,7 +128,7 @@ input#adventure:checked+.adventure-option {
    CYAN VARIANTS
 ========================================== */
 input#fabric:checked+.fabric-option,
-input#optimization:checked+.optimization-option,
+input#performance:checked+.performance-option,
 input#technology:checked+.technology-option {
     color: var(--accent-cyan);
     border-color: var(--accent-cyan);
@@ -144,6 +147,16 @@ input#neoforge:checked+.neoforge-option {
 }
 
 /* ==========================================
+   MAGENTA VARIANTS
+========================================== */
+input#quilt:checked+.quilt-option {
+    color: var(--tag-loader-quilt-color);
+    border-color: var(--tag-loader-quilt-border);
+    background-color: var(--tag-loader-quilt-bg);
+    text-shadow: var(--tag-loader-quilt-glow);
+}
+
+/* ==========================================
    STATUS DOTS
 ========================================== */
 input#fabric:checked+label::after,
@@ -159,9 +172,12 @@ input#adventure:checked+label::after {
 }
 
 input#neoforge:checked+label::after,
+input#version-262:checked+label::after,
+input#version-261:checked+label::after,
 input#version-1201:checked+label::after,
 input#version-121:checked+label::after,
 input#version-1192:checked+label::after,
+input#version-1191:checked+label::after,
 input#rpg:checked+label::after,
 input#utility:checked+label::after,
 input#most-popular:checked+label::after,
@@ -171,6 +187,9 @@ input#best-rated:checked+label::after {
     background-color: var(--filter-violet-main);
 }
 
+input#quilt:checked+label::after {
+    background-color: var(--tag-loader-quilt-color);
+}
 
 /* ==========================================
    INPUT RESET
