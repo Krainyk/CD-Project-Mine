@@ -20,4 +20,8 @@ export function updateModCount() {
 
         modCount.classList.remove('count-fade');
     }, 200);
+
+    
+    const noModsFound = document.querySelector('.no-mods-found-section');
+    noModsFound.classList.toggle('active', count === 0);
 }

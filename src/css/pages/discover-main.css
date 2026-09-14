@@ -145,3 +145,59 @@
     font-size: 1rem;
     font-weight: var(--font-weight-medium);
 }
+
+
+/* =========================
+   No Mods Found Layout
+   ========================= */
+
+.no-mods-found-section {
+    display: none;
+}
+
+.no-mods-found-section.active {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    border: 1px solid #321A4E;
+    background-color: #140D23;
+}
+
+.no-mods-found-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 80px;
+}
+
+.no-mods-found-icon {
+    height: 3.5rem;
+    width: 3.5rem;
+    color: var(--accent-purple);
+}
+
+.no-mods-found-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+}
+
+.no-mods-found-text span:first-child {
+    color: var(--text-primary);
+    font-size: 1.6rem;
+    font-weight: var(--font-weight-semi);
+    letter-spacing: 1.2px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.no-mods-found-text span:last-child {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: var(--font-weight-medium);
+}
