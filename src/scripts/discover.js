@@ -17,20 +17,25 @@ Promise.all([
    fetch('src/components/filter/filter.html').then(res => res.text()),
    fetch('src/components/search/search.html').then(res => res.text())
 ])
-.then(([minitrendData, trendData, modData, filterData, searchData]) => {
-   if (miniTrendPlaceHolder) miniTrendPlaceHolder.innerHTML = minitrendData;
-   if (trendingPlaceHolder) trendingPlaceHolder.innerHTML = trendData;
-   if (modPlaceHolder) modPlaceHolder.innerHTML = modData;
-   if (filterPlaceHolder) filterPlaceHolder.outerHTML = filterData;
-   if (searchPlaceHolder) searchPlaceHolder.outerHTML = searchData;
+   .then(([minitrendData, trendData, modData, filterData, searchData]) => {
+      if (miniTrendPlaceHolder) miniTrendPlaceHolder.innerHTML = minitrendData;
+      if (trendingPlaceHolder) trendingPlaceHolder.innerHTML = trendData;
+      if (modPlaceHolder) modPlaceHolder.innerHTML = modData;
+      if (filterPlaceHolder) {
+         filterPlaceHolder.outerHTML = filterData;
+         initFilterOption();
+      }
+      if (searchPlaceHolder) searchPlaceHolder.outerHTML = searchData;
 
-   console.log("Всі елементи завантажились");
+      console.log("Всі елементи завантажились");
 
-   if (document.querySelector('.mod-grid')) {
-      initFilterLogic();
-      initSearchLogic();
-   }
-})
-.catch(error => console.log("Сталась помилка в завантаденні елементів", error));
+
+
+      if (document.querySelector('.mod-grid')) {
+         initFilterLogic();
+         initSearchLogic();
+      }
+   })
+   .catch(error => console.log("Сталась помилка в завантаденні елементів", error));
 
 
